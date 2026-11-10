@@ -6,10 +6,20 @@
 
 1. 七个优先分区已完整提取，**不要重新从头解包**。完整根目录由 `extracted/native-files.json` 定位；NTFS system_ext 为中止输出，不是权威目录。
 2. 已有本地 Java 分析输出在 `analysis/local/jadx/`；组件原文件哈希见 `analysis/evidence/components.json` 和 `input-copies.json`。
-3. AOSP 已固定 `94b4c163b7dfe5ce3607f7bb8456f9573f7de57d`；23 组方法证据与 reports/03、04 已完成初步研究并推送（1932655）。
+3. AOSP 已固定 `94b4c163b7dfe5ce3607f7bb8456f9573f7de57d`；reports/03、04 已完成初步研究并推送（1932655），后续补充 VoteSummary 下游筛选，共 24 组方法证据。
 4. JADX 在没有本 ROM framework-res 时会把 android.R 常量误标，必须用数值 ID 和 aapt2 输出核对。SelectiveJadx 默认禁用常量替换。
 5. MiuiHome 没有 DEX，SECONDARY_HOME 仅证明声明存在；原生行为未恢复，后续结论保持边界。
 6. 方案比较见 reports/05：优先验证次屏 Activity，再做最小配置对照。不要直接制作高刷/桌面“全开”模块。
+
+## 本轮已交付与下一轮边界
+
+- 六份报告、可续做脚本、24 组方法定位、97 个 Overlay 清单、工具和哈希均已保存；按阶段推送到 origin/main。
+- 阶段提交：初始化 6bb3a6f；阶段 1 50d6bbb；阶段 2 3459949；阶段 3 1932655；阶段 4 75f7ea7。阶段 5 以当前 Git HEAD 为准，避免交接文档引用自身提交形成循环。
+- 先运行 `python scripts/verify_research.py --local` 核对本地证据；没有必要重下工具或重解 ROM。
+- 默认仍只允许静态研究。`scripts/collect_readonly.ps1` 是未来计划，**未运行，后续未获得新的设备操作授权前也不得运行**。本轮仅用 -WhatIf 和 AST 检查验证。
+- 无手机时仍可继续：恢复 MiuiHome 的 libapp_launcher.so 中 SECONDARY_HOME 控制流；跟进 ExternalScreenCompatPolicy/controller 配置；定位 vendor 模式选择与 hdmi_cfg_idx 解析。不要把未完成的原生逆向写成已经确认的行为。
+- 需要设备的未知项集中在 reports/06：运行时 Overlay/资格/模式投票、外屏 Activity/桌面、输入、EDID/HWC/OSD、恢复。全部 NOT_RUN。
+- 只读核验记录见 analysis/evidence/verification.json；源码、指令及完整日志位于 analysis/local，不能提交公共仓库。
 
 ## 关键结论与避免误用
 

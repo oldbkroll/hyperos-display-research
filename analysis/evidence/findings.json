@@ -539,6 +539,26 @@
           ]
         }
       ]
+    },
+    {
+      "id": "F24",
+      "class": "com.android.server.display.mode.VoteSummary",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/mode/VoteSummary.java",
+      "decompiled_file_sha256": "8635c02a28b583bca08764c93940505cc419b0932b4c8bba33223761ba0c1993",
+      "anchors": [
+        {
+          "anchor": "private boolean validateModeWithinRenderRefreshRange(",
+          "lines": [
+            206
+          ]
+        },
+        {
+          "anchor": "private boolean validateModeRenderRateAchievable(",
+          "lines": [
+            229
+          ]
+        }
+      ]
     }
   ],
   "base_resources": [

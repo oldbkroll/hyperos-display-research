@@ -17,6 +17,8 @@
 
 **[ROM]** `RefreshRateVote.RenderVote.updateSummary()` 缩紧 render 范围上限，同时更新 physical 下限；它没有像 PhysicalVote 一样直接缩紧 physical 上限。因此它能限制渲染策略，**不能等价表述为 HWC 必定输出 60 Hz**。最终模式还受其他投票、帧率覆盖、模式切换策略和已暴露 supportedModes 影响。
 
+**[ROM] F24** 下游 `VoteSummary.validateModeWithinRenderRefreshRange()` 在不支持 frame-rate override 时，直接按 render 范围排除物理 mode；支持覆盖的普通分支则还检查 vsync/maxRender 是否接近整数比。因此上述 60 投票**可能进一步筛掉高刷 mode**，也可能保留可按整数比渲染的高刷 mode，不能把渲染与物理完全割裂。实际 mSupportsFrameRateOverride、候选模式和筛选日志仍未测量；这不改变“尚未证明物理 60 Hz 唯一根因”的结论。
+
 属性若为 1，会走另一个分支：将 `miui_refresh_rate` 向下取整为 60 的倍数，并至少使用 60；热限制等条件仍在。故改属性不等于解除所有限制，更不等于新增 120/180 Hz 物理模式。`mMiuiRefreshRateEnable`、连接设置、实际 enabled 状态及投票是否存在，必须通过未来 dumpsys 验证。本轮不关闭 MIUI optimization，也不修改任何属性。
 
 ## 二、Vendor / HWC 已确认与未确认

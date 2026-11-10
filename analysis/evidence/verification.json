@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-10",
+  "result": "PASS",
+  "checks": [
+    "Parsed 9 evidence JSON files",
+    "Seven completed EROFS records match payload manifest hashes",
+    "24 unique method records and numeric resource ID cross-checks pass",
+    "97 packaged overlay resource/manifest scans succeeded",
+    "Six reports and their relative file links exist",
+    "Git index excludes ROM, partition images, APK/DEX/ELF and local decompiled outputs",
+    "Local method anchors, selected binary copies and pinned AOSP files match recorded hashes",
+    "Original ROM final SHA256 still matches first inventory"
+  ],
+  "device_validation": "NOT_RUN",
+  "boundary": "Static workflow/artifact integrity only; no functional device or hardware acceptance"
+}

@@ -6,7 +6,7 @@
 
 ## 证据如何复查
 
-原文件哈希见 [components.json](../analysis/evidence/components.json) / [input-copies.json](../analysis/evidence/input-copies.json)。F01–F23 对应 [findings.json](../analysis/evidence/findings.json)：含类名、方法锚点、**本地反编译文件**行号和哈希。行号不是小米原始源码行号。完整反编译代码仅保存在 `analysis/local/jadx/`，不提交公共仓库。
+原文件哈希见 [components.json](../analysis/evidence/components.json) / [input-copies.json](../analysis/evidence/input-copies.json)。F01–F24 对应 [findings.json](../analysis/evidence/findings.json)：含类名、方法锚点、**本地反编译文件**行号和哈希。行号不是小米原始源码行号。完整反编译代码仅保存在 `analysis/local/jadx/`，不提交公共仓库。
 
 **[ROM] F19/F20**：生成的 MiuiImplManifest 将 DisplayModeDirectorStub、DisplayManagerServiceStub、DisplayContentStub、ActivityStarterStub、ExternalScreenCompatManagerStub 注册到相应 Impl.Provider；结合 services 的 stub 获取和调用，建立了厂商扩展的静态绑定关系，而非仅凭同名类推断。
 

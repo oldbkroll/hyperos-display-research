@@ -51,6 +51,8 @@ anchors = [
      ['public void updateExternalDisplayStatus(']),
     ('F23', 'services', 'com/android/server/display/mode/DisplayModeDirector.java',
      ['this.mDisplayModeDirectorImpl = DisplayModeDirectorStub.getInstance();', 'registerMiuiContentObserver(cr, this)', 'public void updateMiuiRefreshRateSettingLocked()']),
+    ('F24', 'services', 'com/android/server/display/mode/VoteSummary.java',
+     ['private boolean validateModeWithinRenderRefreshRange(', 'private boolean validateModeRenderRateAchievable(']),
 ]
 methods = []
 for ident, output, relative, signatures in anchors:

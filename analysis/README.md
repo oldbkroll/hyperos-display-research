@@ -12,7 +12,7 @@
 | evidence/input-copies.json | 原分区路径到本地目标副本的映射与哈希 |
 | evidence/aosp-sources.json | 固定 Android 17 提交和每文件哈希 |
 | evidence/overlays.json | 97 个 packaged RRO 的哈希、manifest 条件、相关资源；无运行时状态 |
-| evidence/findings.json | F01–F23 方法定位、本地反编译文件哈希、数值资源和关键属性 |
+| evidence/findings.json | F01–F24 方法定位、本地反编译文件哈希、数值资源和关键属性 |
 | evidence/vendor-binaries.json | 显示 ELF 的哈希和字符串偏移；字符串本身不证明控制流 |
 | evidence/tools.json | 工具来源/版本/校验边界 |
 
