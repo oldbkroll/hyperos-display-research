@@ -1,0 +1,151 @@
+[
+  {
+    "path": "vendor/bin/hw/vendor.qti.hardware.display.composer-service",
+    "size": 393744,
+    "sha256": "bedefb3c62839408fa4bb0bda2ae15798e27f886fda70bd86ed353711652df79",
+    "property_identifiers": [],
+    "matched_string_count": 2,
+    "symbol_match_count": 0,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libsdmcore.so",
+    "size": 1943032,
+    "sha256": "791bdc50952a45da197ad483e0f36a344317af7681f4f722dd9149084ca45e04",
+    "property_identifiers": [
+      {
+        "offset": 244049,
+        "text": "vendor.display.support_builtin_high_fps_when_pluggable_connected"
+      }
+    ],
+    "matched_string_count": 70,
+    "symbol_match_count": 47,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libsdmutils.so",
+    "size": 136920,
+    "sha256": "3a26addfea88e1114f7b1857f59ca30aa3af8db58d99a8facc0a384b275a0f0f",
+    "property_identifiers": [
+      {
+        "offset": 20361,
+        "text": "vendor.display.hdmi_cfg_idx"
+      },
+      {
+        "offset": 22439,
+        "text": "vendor.display.external_mixer_stages"
+      }
+    ],
+    "matched_string_count": 3,
+    "symbol_match_count": 1,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libsdmclient.so",
+    "size": 1827536,
+    "sha256": "fe660d2a3aa8037f7169c76592fef6491a9c2a8b482c900691e9ad29251821d9",
+    "property_identifiers": [
+      {
+        "offset": 238342,
+        "text": "vendor.display.external_action_safe_height"
+      },
+      {
+        "offset": 244237,
+        "text": "vendor.display.enable_external_downscale"
+      },
+      {
+        "offset": 260780,
+        "text": "vendor.display.external_action_safe_width"
+      }
+    ],
+    "matched_string_count": 103,
+    "symbol_match_count": 57,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libsdedrm.so",
+    "size": 855600,
+    "sha256": "75fbcd11b9b42b7f97c5562a1cbdf6ec671215f06ec244684fef5a2c34f70a57",
+    "property_identifiers": [],
+    "matched_string_count": 11,
+    "symbol_match_count": 11,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libdrmutils.so",
+    "size": 52152,
+    "sha256": "320f9d70ed66e63a18d1b0ef781521befcacbc96dd865c03411a8124b68aeb02",
+    "property_identifiers": [],
+    "matched_string_count": 0,
+    "symbol_match_count": 0,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libdisplaydebug.so",
+    "size": 69272,
+    "sha256": "a80f84e5f7aaedf0029b841411edd426c30ab5635286e3b1b6aa56fc1205649c",
+    "property_identifiers": [],
+    "matched_string_count": 0,
+    "symbol_match_count": 0,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "vendor/lib64/libsdmextension.so",
+    "size": 2590928,
+    "sha256": "f2328014b5724fc01c1c80bbb95a1e595c26cca9d7540dc2b0447f223f6b755f",
+    "property_identifiers": [
+      {
+        "offset": 399223,
+        "text": "vendor.display.allow_3d_adaptive_tm_external"
+      }
+    ],
+    "matched_string_count": 28,
+    "symbol_match_count": 13,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "system/system/bin/surfaceflinger",
+    "size": 485472,
+    "sha256": "37f10f9681703baee8b5070bb7abe788ee9f7a6c6d1a586191082a4994dbefdf",
+    "property_identifiers": [],
+    "matched_string_count": 6,
+    "symbol_match_count": 6,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "system_ext/lib64/libsurfaceflinger.so",
+    "size": 14274872,
+    "sha256": "43598f06ca2c3c96b9eb243e4acb177a5ee77c01794d1cbac92c3934ae32c40e",
+    "property_identifiers": [
+      {
+        "offset": 1702339,
+        "text": "vendor.display.pluggable_vsync_prioritized"
+      }
+    ],
+    "matched_string_count": 171,
+    "symbol_match_count": 70,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  },
+  {
+    "path": "system_ext/lib64/libmisurfaceflinger.so",
+    "size": 685800,
+    "sha256": "62acac4a795f6363a9fad9725cd3734a3517e3569a30f6bd26084b8830dfc01a",
+    "property_identifiers": [
+      {
+        "offset": 155299,
+        "text": "ro.vendor.mi_sf.enable_automode_for_maxfps_setting"
+      },
+      {
+        "offset": 173988,
+        "text": "ro.vendor.mi_sf.enable_qsyncmode_for_maxfps_setting"
+      },
+      {
+        "offset": 185728,
+        "text": "ro.vendor.mi_sf.supported_automode_maxfps_list"
+      }
+    ],
+    "matched_string_count": 16,
+    "symbol_match_count": 4,
+    "evidence_scope": "strings/symbols only; control flow must be checked separately"
+  }
+]

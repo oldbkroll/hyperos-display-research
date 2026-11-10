@@ -40,5 +40,35 @@
     "local": "analysis/local/inputs/hyperos.rustruntime.jar",
     "sha256": "56bc29f831bad2245da9bd25bbc61fa3b7156d67c8bbb49177cd13c4c6b58bff",
     "size": 898
+  },
+  {
+    "source": "system_ext/lib64/libsurfaceflinger.so",
+    "local": "analysis/local/inputs/libsurfaceflinger.so",
+    "sha256": "43598f06ca2c3c96b9eb243e4acb177a5ee77c01794d1cbac92c3934ae32c40e",
+    "size": 14274872
+  },
+  {
+    "source": "system_ext/lib64/libmisurfaceflinger.so",
+    "local": "analysis/local/inputs/libmisurfaceflinger.so",
+    "sha256": "62acac4a795f6363a9fad9725cd3734a3517e3569a30f6bd26084b8830dfc01a",
+    "size": 685800
+  },
+  {
+    "source": "vendor/lib64/libsdmcore.so",
+    "local": "analysis/local/inputs/libsdmcore.so",
+    "sha256": "791bdc50952a45da197ad483e0f36a344317af7681f4f722dd9149084ca45e04",
+    "size": 1943032
+  },
+  {
+    "source": "vendor/lib64/libsdmclient.so",
+    "local": "analysis/local/inputs/libsdmclient.so",
+    "sha256": "fe660d2a3aa8037f7169c76592fef6491a9c2a8b482c900691e9ad29251821d9",
+    "size": 1827536
+  },
+  {
+    "source": "vendor/lib64/libsdmutils.so",
+    "local": "analysis/local/inputs/libsdmutils.so",
+    "sha256": "3a26addfea88e1114f7b1857f59ca30aa3af8db58d99a8facc0a384b275a0f0f",
+    "size": 136920
   }
 ]

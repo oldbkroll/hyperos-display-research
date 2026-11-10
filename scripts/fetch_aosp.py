@@ -25,6 +25,8 @@ FILES = [
     'services/core/java/com/android/server/display/SecondaryDisplayPolicy.java',
     'services/core/java/com/android/server/wm/DisplayWindowSettings.java',
     'services/core/java/com/android/server/input/InputManagerService.java',
+    'services/core/java/com/android/server/om/OverlayManagerShellCommand.java',
+    'services/core/java/com/android/server/pm/PackageManagerShellCommand.java',
     'core/res/res/values/config.xml',
     'packages/SystemUI/AndroidManifest.xml',
     'libs/WindowManager/Shell/shared/src/com/android/wm/shell/shared/desktopmode/DesktopState.kt',

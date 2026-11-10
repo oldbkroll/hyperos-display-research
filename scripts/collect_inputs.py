@@ -8,8 +8,10 @@ TARGETS = {
     'system_ext': ['framework/miui-services.jar', 'framework/Miui-WindowManager-Shell.jar',
                    'framework/miui-framework.jar', 'framework/xiaomi-framework.jar',
                    'framework/hyperos.rustruntime.jar',
+                   'lib64/libsurfaceflinger.so', 'lib64/libmisurfaceflinger.so',
                    'priv-app/MiuiSystemUI/MiuiSystemUI.apk'],
     'product': ['priv-app/MiuiHome/MiuiHome.apk', 'priv-app/MIUIHome/MIUIHome.apk'],
+    'vendor': ['lib64/libsdmcore.so', 'lib64/libsdmclient.so', 'lib64/libsdmutils.so'],
 }
 state = json.loads(Path('extracted/native-files.json').read_text())
 records_path = Path('analysis/evidence/input-copies.json')

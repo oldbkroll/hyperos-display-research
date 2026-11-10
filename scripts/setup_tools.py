@@ -41,5 +41,9 @@ Path('analysis/evidence/tools.json').write_text(json.dumps({
         'install': 'apt download; dpkg-deb -x into tools/wsl/root; not installed globally'},
     'python': '3.14.6 (Windows)', 'java': 'Microsoft OpenJDK 17.0.9.8',
     'wsl': 'Ubuntu-24.04 / WSL2',
+    'existing_android_tools': {
+        'aapt2': 'SDK build-tools 37.0.0 / 2.20-15087165',
+        'llvm_objdump': 'NDK 30.0.15729638 / LLVM 21.0.0',
+        'installation': 'Already present in local Android SDK; no new SDK/NDK installation'},
     'note': 'JADX SHA256 recorded locally on first download; payload tool checksum also checked against upstream checksum asset',
 }, indent=2) + '\n', encoding='utf-8')

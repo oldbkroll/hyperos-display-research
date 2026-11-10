@@ -13,6 +13,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--partitions', default='system,system_ext,product,mi_ext,vendor,odm,mi_product')
 args = parser.parse_args()
 root = Path.cwd().resolve()
+inventory = json.loads((root / 'analysis/evidence/rom-inventory.json').read_text(encoding='utf-8'))
+expected = {item['name']: item['sha256'] for item in inventory['payload']['partitions']}
 def wslpath(path):
     return subprocess.check_output(['wsl', '-d', 'Ubuntu-24.04', '--', 'wslpath', '-a', path.resolve().as_posix()], text=True).strip()
 
@@ -23,6 +25,8 @@ for name in args.partitions.split(','):
     if not image.exists():
         raise SystemExit(f'Missing complete image: {image}')
     digest = sha256(image)
+    if digest != expected.get(name):
+        raise SystemExit(f'{name}: image does not match the payload manifest')
     with image.open('rb') as stream:
         stream.seek(1024)
         magic = stream.read(4).hex()

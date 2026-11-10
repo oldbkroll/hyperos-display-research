@@ -5,10 +5,10 @@
 | 阶段 | 状态 | 产物 / 验收条件 |
 |---|---|---|
 | 1 ROM 识别与合理解包 | 完成 | 七个目标分区通过 manifest SHA256，全部 EROFS，解出 15,061 个普通文件 |
-| 2 Android 原生机制 | 报告已完成，待阶段提交 | 固定 android17-release 提交，已分离六项能力 |
-| 3 HyperOS 限制定位 | 进行中 | 已确认桌面资格门控、镜像恢复调用链、SECONDARY_HOME；继续 vendor/Overlay/本地代码 |
-| 4 补全路径评估 | 待开始 | A–E 方案、权限与风险、优先顺序 |
-| 5 报告与验证计划 | 待开始 | 六份报告、待验证事项、可交接状态 |
+| 2 Android 原生机制 | 完成 | 固定 android17-release 提交，已分离六项能力 |
+| 3 HyperOS 限制定位 | 初步静态研究完成 | 23 组方法证据、资格与镜像调用链、渲染投票、Launcher 原生边界、HWC 符号与定向指令检查 |
+| 4 补全路径评估 | 报告已写，待阶段提交 | A–E 方案、权限与风险、优先顺序 |
+| 5 报告与验证计划 | 验证中 | 六份报告初稿、只读采集脚本、完整性检查 |
 
 ## 已确认
 
@@ -21,7 +21,11 @@
 
 - 建立 Git 排除规则，所有 ROM/镜像/APK/反编译输出与工具二进制保留本地。
 - `6bb3a6f` 项目初始化已推送 main。
+- `50d6bbb` 阶段 1 已推送；`3459949` 阶段 2 已推送。
 - 阶段 1：七个分区镜像和 EROFS 提取完成；成果保存于 reports/01 和 analysis/evidence/。
 - 原始 ROM 未改动；首次 NTFS 提取慢，改为隔离 WSL ext4，不删除已有输出。
 - 97 个 packaged Overlay 的 aapt2 资源与 manifest 均成功扫描；运行时启用情况未测。
 - MiuiHome 没有 DEX，APK 包含原生 libapp_launcher.so，并依赖 hyperos.rustruntime.v5；不能仅据 manifest 宣称次屏桌面可用。
+- 已追踪 DisplayAdapter 连接设置 → DisplayModeDirector 厂商 provider → 外屏实际启用检查 → priority 24 全局 RenderVote 的条件性 60 上限。物理输出模式与高刷能力仍未知。
+- 背屏 ID 1 的特殊限制与 EXTERNAL 分开，不建议全局绕过。
+- 关键剩余不确定性：设备运行时状态、Launcher 原生实现、模式/EDID/DP 链路。全部进入未来验证/续研究清单，本轮不执行。

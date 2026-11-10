@@ -123,6 +123,20 @@
       "status": "ok"
     },
     {
+      "path": "services/core/java/com/android/server/om/OverlayManagerShellCommand.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/om/OverlayManagerShellCommand.java",
+      "sha256": "79ce65cb39bb18ea431e1d65a8a77e8fef635dd74f52a9b79cca4470b49e0e82",
+      "lines": 595,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/pm/PackageManagerShellCommand.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/pm/PackageManagerShellCommand.java",
+      "sha256": "5b4b1376a83a7916609d09ca2d86b2715a18c751fa4ea140a5d13fb1bd408fc3",
+      "lines": 5434,
+      "status": "ok"
+    },
+    {
       "path": "core/res/res/values/config.xml",
       "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/core/res/res/values/config.xml",
       "sha256": "f38d596b66a4326b5135dbb6625e75565ba174214266cb565b912bae54bbd540",

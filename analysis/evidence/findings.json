@@ -1,0 +1,663 @@
+{
+  "scope": "Static ROM evidence only; method anchors refer to local decompiler output, not original source lines",
+  "methods": [
+    {
+      "id": "F01",
+      "class": "com.android.server.wm.DesktopModeHelper",
+      "local_output": "analysis/local/jadx/services-numeric/sources/com/android/server/wm/DesktopModeHelper.java",
+      "decompiled_file_sha256": "ff541c975aa48d242628b385f5f3cf19e53b24491276dfc01319a8097508b403",
+      "anchors": [
+        {
+          "anchor": "private static final boolean ENFORCE_DEVICE_RESTRICTIONS",
+          "lines": [
+            9
+          ]
+        },
+        {
+          "anchor": "private static boolean isDesktopModeSupported(",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "anchor": "static boolean isDesktopModeDevOptionsSupported(",
+          "lines": [
+            23
+          ]
+        },
+        {
+          "anchor": "public static boolean canEnterDesktopMode(",
+          "lines": [
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F02",
+      "class": "com.android.server.display.DisplayManagerService",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/DisplayManagerService.java",
+      "decompiled_file_sha256": "da00322d9354ceaf7a77f03bda26c66d500f8a19c96a7ed5d72124d5612f316b",
+      "anchors": [
+        {
+          "anchor": "this.mSecondaryDisplayPolicy = new SecondaryDisplayPolicy",
+          "lines": [
+            584
+          ]
+        },
+        {
+          "anchor": "forceEnableMirrorBuiltInDisplaySettingIfNeeded()",
+          "lines": [
+            813,
+            1138
+          ]
+        },
+        {
+          "anchor": "return DesktopModeHelper.canEnterDesktopMode(context);",
+          "lines": [
+            4280
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F03",
+      "class": "com.android.server.display.SecondaryDisplayPolicy",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/SecondaryDisplayPolicy.java",
+      "decompiled_file_sha256": "8acb29088a4ea2c0bcba8861ce717999222f3d4e4f49817e5aa57b0057fac84e",
+      "anchors": [
+        {
+          "anchor": "public boolean forceEnableMirrorBuiltInDisplaySettingIfNeeded()",
+          "lines": [
+            19
+          ]
+        },
+        {
+          "anchor": "private boolean shouldForceEnableMirrorBuiltInDisplaySetting()",
+          "lines": [
+            40
+          ]
+        },
+        {
+          "anchor": "private void enableMirrorBuiltInDisplaySetting()",
+          "lines": [
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F04",
+      "class": "com.android.internal.hidden_from_bootclasspath.com.android.window.flags.Flags",
+      "local_output": "analysis/local/jadx/framework-hidden-flags/sources/com/android/internal/hidden_from_bootclasspath/com/android/window/flags/Flags.java",
+      "decompiled_file_sha256": "4105b2d6e8c1a27a37d28981d92a17d2efb14c99853fbb12a19f41908013a0dc",
+      "anchors": [
+        {
+          "anchor": "public static boolean enableDesktopWindowingMode()",
+          "lines": [
+            723
+          ]
+        },
+        {
+          "anchor": "public static boolean enableDesktopModeThroughDevOption()",
+          "lines": [
+            675
+          ]
+        },
+        {
+          "anchor": "public static boolean enableProjectedDisplayDesktopMode()",
+          "lines": [
+            891
+          ]
+        },
+        {
+          "anchor": "public static boolean showDesktopExperienceDevOption()",
+          "lines": [
+            1283
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F05",
+      "class": "com.android.internal.hidden_from_bootclasspath.com.android.server.display.feature.flags.Flags",
+      "local_output": "analysis/local/jadx/framework-hidden-flags/sources/com/android/internal/hidden_from_bootclasspath/com/android/server/display/feature/flags/Flags.java",
+      "decompiled_file_sha256": "4943947e67cfb4aaf32a72f2e8bb5be5d6e1e89d6ef145401237184372f41b90",
+      "anchors": [
+        {
+          "anchor": "public static boolean enableDisplayContentModeManagement()",
+          "lines": [
+            103
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F06",
+      "class": "android.window.DesktopExperienceFlags",
+      "local_output": "analysis/local/jadx/framework-selected/sources/android/window/DesktopExperienceFlags.java",
+      "decompiled_file_sha256": "56d7b8af91b940e929f41752dced21a4898bbf10177f13b6a539e5f0fff1940d",
+      "anchors": [
+        {
+          "anchor": "public static final String SYSTEM_PROPERTY_NAME",
+          "lines": [
+            56
+          ]
+        },
+        {
+          "anchor": "private static boolean isToggleOverriddenBySystem()",
+          "lines": [
+            181
+          ]
+        },
+        {
+          "anchor": "private static boolean isDesktopModeDevOptionSupported()",
+          "lines": [
+            188
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F07",
+      "class": "com.android.wm.shell.shared.desktopmode.DesktopStateImpl",
+      "local_output": "analysis/local/jadx/miui-shell/sources/com/android/wm/shell/shared/desktopmode/DesktopStateImpl.java",
+      "decompiled_file_sha256": "8afd4d25d4de940545a7be05708fc97418bf1b86222bdfaec364046d7f2f8ee0",
+      "anchors": [
+        {
+          "anchor": "public DesktopStateImpl(Context context)",
+          "lines": [
+            51
+          ]
+        },
+        {
+          "anchor": "this.canEnterDesktopMode =",
+          "lines": [
+            76
+          ]
+        },
+        {
+          "anchor": "public final boolean isDesktopModeSupportedOnDisplay(Display display)",
+          "lines": [
+            153
+          ]
+        },
+        {
+          "anchor": "public final boolean isDeviceEligibleForDesktopMode()",
+          "lines": [
+            172
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F08",
+      "class": "com.android.wm.shell.dagger.WMShellModule",
+      "local_output": "analysis/local/jadx/miui-shell/sources/com/android/wm/shell/dagger/WMShellModule.java",
+      "decompiled_file_sha256": "b5683bde7a23d075ca92a452ed37e195783624a265f0767548ed47543aef0b6c",
+      "anchors": [
+        {
+          "anchor": "public static Optional provideDesktopDisplayEventHandler(",
+          "lines": [
+            399
+          ]
+        },
+        {
+          "anchor": "public static Optional provideDesktopDisplayModeController(",
+          "lines": [
+            404
+          ]
+        },
+        {
+          "anchor": "public static Optional provideDesktopTasksLimiter(",
+          "lines": [
+            542
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F09",
+      "class": "com.android.server.wm.ActivityTaskSupervisor",
+      "local_output": "analysis/local/jadx/services-numeric/sources/com/android/server/wm/ActivityTaskSupervisor.java",
+      "decompiled_file_sha256": "e0112a049ce24a6a12f15661c0e8cf556a0538f8b09d25d92fac18ff0e2503ad",
+      "anchors": [
+        {
+          "anchor": "boolean isCallerAllowedToLaunchOnDisplay(",
+          "lines": [
+            882
+          ]
+        },
+        {
+          "anchor": "if (display.getDisplayId() == 1",
+          "lines": [
+            932
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F10",
+      "class": "com.android.server.wm.DisplayContentStubImpl",
+      "local_output": "analysis/local/jadx/miui-services/sources/com/android/server/wm/DisplayContentStubImpl.java",
+      "decompiled_file_sha256": "4286927ddbc19861409ed97a023ae3c449de9fc5e2921275f2f46d96cfb8e345",
+      "anchors": [
+        {
+          "anchor": "public boolean desktopModeForceDisabled(",
+          "lines": [
+            2125
+          ]
+        },
+        {
+          "anchor": "public boolean shouldNeverShowSystemDecorations(",
+          "lines": [
+            2129
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F11",
+      "class": "com.android.server.wm.DisplayContent",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/wm/DisplayContent.java",
+      "decompiled_file_sha256": "45f57207712c252d15b53d4e94b4420c830ab4841a442efc99fde4e50a2cc046",
+      "anchors": [
+        {
+          "anchor": "boolean allowContentModeSwitch()",
+          "lines": [
+            2888
+          ]
+        },
+        {
+          "anchor": "boolean isPublicSecondaryDisplayWithDesktopModeForceEnabled()",
+          "lines": [
+            4816
+          ]
+        },
+        {
+          "anchor": "public boolean isEligibleForDesktopMode()",
+          "lines": [
+            4823
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F12",
+      "class": "com.android.server.display.mode.DisplayModeDirectorImpl",
+      "local_output": "analysis/local/jadx/miui-display-mode/sources/com/android/server/display/mode/DisplayModeDirectorImpl.java",
+      "decompiled_file_sha256": "04beaafd8702f839eac86c97403c30f7854939a788bce91a5b275a1cb6a3add6",
+      "anchors": [
+        {
+          "anchor": "this.mBspSupportExtraDisplayHigRefreshRate =",
+          "lines": [
+            184
+          ]
+        },
+        {
+          "anchor": "public boolean updateMiuiRefreshRateSettingLocked(",
+          "lines": [
+            569
+          ]
+        },
+        {
+          "anchor": "private SurfaceControl.RefreshRateRange getMiuiRefreshRateRange()",
+          "lines": [
+            662
+          ]
+        },
+        {
+          "anchor": "private boolean shouldExtraDisplayLimitRefresh()",
+          "lines": [
+            738
+          ]
+        },
+        {
+          "anchor": "private boolean shouldConvertRefreshForDpHigh()",
+          "lines": [
+            742
+          ]
+        },
+        {
+          "anchor": "private boolean queryExternalDisplayEnabled()",
+          "lines": [
+            797
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F13",
+      "class": "com.android.server.display.mode.VotesStorage",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/mode/VotesStorage.java",
+      "decompiled_file_sha256": "691e4ad3dd3e1e7d8dfdc0de156620c28077fea4f94ebe01315cda83cd9aa00f",
+      "anchors": [
+        {
+          "anchor": "SparseArray<Vote> getVotes(int displayId)",
+          "lines": [
+            31
+          ]
+        },
+        {
+          "anchor": "void updateGlobalVote(",
+          "lines": [
+            49
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F14",
+      "class": "com.android.server.display.mode.RefreshRateVote",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/mode/RefreshRateVote.java",
+      "decompiled_file_sha256": "ccb61bf1b56cd724e24105b1dedbd55cf18df3f4139504f960a7e9be3f855275",
+      "anchors": [
+        {
+          "anchor": "static class RenderVote",
+          "lines": [
+            34
+          ]
+        },
+        {
+          "anchor": "static class PhysicalVote",
+          "lines": [
+            60
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F15",
+      "class": "com.android.server.display.ExternalDisplayPolicy",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/ExternalDisplayPolicy.java",
+      "decompiled_file_sha256": "89de1e9df3f3bcafdde8007024be405408027381575182b7800fe91f175da066",
+      "anchors": [
+        {
+          "anchor": "boolean isDisplayReadyForMirroring(int displayId)",
+          "lines": [
+            261
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F16",
+      "class": "com.android.wm.shell.multitasking.stubs.miuidesktopmode.MiuiDesktopModeStatus",
+      "local_output": "analysis/local/jadx/miui-shell-extra/sources/com/android/wm/shell/multitasking/stubs/miuidesktopmode/MiuiDesktopModeStatus.java",
+      "decompiled_file_sha256": "22931dca07b53b17f6ad1286052d2616b7d0e8e6fe5997f593dbd8412f1526c6",
+      "anchors": [
+        {
+          "anchor": "private static final boolean IS_SUPPORTED",
+          "lines": [
+            12
+          ]
+        },
+        {
+          "anchor": "public static boolean isEnabled()",
+          "lines": [
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F17",
+      "class": "com.android.server.wm.RootWindowContainer",
+      "local_output": "analysis/local/jadx/services-numeric/sources/com/android/server/wm/RootWindowContainer.java",
+      "decompiled_file_sha256": "90a0e8a0cb3037b705a41a54633754023a7219a566d99c30a661cfc742ad42b0",
+      "anchors": [
+        {
+          "anchor": "boolean shouldPlaceSecondaryHomeOnDisplayArea(",
+          "lines": [
+            1612
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F18",
+      "class": "com.android.server.wm.ActivityTaskManagerService",
+      "local_output": "analysis/local/jadx/services-atms-numeric/sources/com/android/server/wm/ActivityTaskManagerService.java",
+      "decompiled_file_sha256": "75eeb70bddcbe1ea6d4b8fabbfef342f39ba43e6ee249d05a99685d7bbd9c4c2",
+      "anchors": [
+        {
+          "anchor": "Intent getSecondaryHomeIntent(",
+          "lines": [
+            6878
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F19",
+      "class": "com.android.server.display.mode.DisplayModeDirectorImpl$$GeneratedMiuiImplManifest",
+      "local_output": "analysis/local/jadx/miui-registrations/sources/com/android/server/display/mode/DisplayModeDirectorImpl$$GeneratedMiuiImplManifest.java",
+      "decompiled_file_sha256": "684abb31c733c77511b50a40b8d840a775ba6eb9ce2f6bc4158427b1f40c8b34",
+      "anchors": [
+        {
+          "anchor": "outProviders.put(\"com.android.server.display.DisplayManagerServiceStub\"",
+          "lines": [
+            22
+          ]
+        },
+        {
+          "anchor": "outProviders.put(\"com.android.server.display.mode.DisplayModeDirectorStub\"",
+          "lines": [
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F20",
+      "class": "com.android.server.wm.WindowStateStubImpl$$GeneratedMiuiImplManifest",
+      "local_output": "analysis/local/jadx/miui-wm-registrations/sources/com/android/server/wm/WindowStateStubImpl$$GeneratedMiuiImplManifest.java",
+      "decompiled_file_sha256": "fa7d94ce561c23495ac18a5031c0857c0137437ab1c4af82e9e16dbe6a7dfa13",
+      "anchors": [
+        {
+          "anchor": "outProviders.put(\"com.android.server.wm.DisplayContentStub\"",
+          "lines": [
+            116
+          ]
+        },
+        {
+          "anchor": "outProviders.put(\"com.android.server.wm.ActivityStarterStub\"",
+          "lines": [
+            119
+          ]
+        },
+        {
+          "anchor": "outProviders.put(\"com.android.server.wm.ExternalScreenCompatManagerStub\"",
+          "lines": [
+            114
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F21",
+      "class": "com.android.server.wm.ExternalScreenCompatManagerImpl",
+      "local_output": "analysis/local/jadx/miui-external/sources/com/android/server/wm/ExternalScreenCompatManagerImpl.java",
+      "decompiled_file_sha256": "9c174147209ea31fdff74eb26747d013fa7d510b7cbd8456d7ddb7f0a6f04f17",
+      "anchors": [
+        {
+          "anchor": "private final boolean mEnabled =",
+          "lines": [
+            37
+          ]
+        },
+        {
+          "anchor": "public boolean shouldApplyScaling(",
+          "lines": [
+            98
+          ]
+        },
+        {
+          "anchor": "public boolean applyScaleConfiguration(",
+          "lines": [
+            124
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F22",
+      "class": "com.android.server.display.DisplayAdapterImpl",
+      "local_output": "analysis/local/jadx/miui-external/sources/com/android/server/display/DisplayAdapterImpl.java",
+      "decompiled_file_sha256": "e969a25a3c3f97c3026717d12e6ad1f9c4a6a3e5b866d0eaba6a6016c9be6430",
+      "anchors": [
+        {
+          "anchor": "public void updateExternalDisplayStatus(",
+          "lines": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F23",
+      "class": "com.android.server.display.mode.DisplayModeDirector",
+      "local_output": "analysis/local/jadx/services/sources/com/android/server/display/mode/DisplayModeDirector.java",
+      "decompiled_file_sha256": "86da1b9be6c81a2a3920a171954f3df0ecbe6c458e8b0929f5dcd0be7ac89d4a",
+      "anchors": [
+        {
+          "anchor": "this.mDisplayModeDirectorImpl = DisplayModeDirectorStub.getInstance();",
+          "lines": [
+            229
+          ]
+        },
+        {
+          "anchor": "registerMiuiContentObserver(cr, this)",
+          "lines": [
+            774
+          ]
+        },
+        {
+          "anchor": "public void updateMiuiRefreshRateSettingLocked()",
+          "lines": [
+            894
+          ]
+        }
+      ]
+    }
+  ],
+  "base_resources": [
+    {
+      "header": "resource 0x0104037a string/config_secondaryHomePackage",
+      "line": 25934,
+      "default_value": "() \"com.android.launcher3\""
+    },
+    {
+      "header": "resource 0x0111006f bool/config_canInternalDisplayHostDesktops",
+      "line": 81937,
+      "default_value": "() false"
+    },
+    {
+      "header": "resource 0x011101f6 bool/config_isDesktopModeDevOptionSupported",
+      "line": 82772,
+      "default_value": "() false"
+    },
+    {
+      "header": "resource 0x011101f7 bool/config_isDesktopModeSupported",
+      "line": 82774,
+      "default_value": "() false"
+    },
+    {
+      "header": "resource 0x011102b8 bool/config_supportsMultiDisplay",
+      "line": 83203,
+      "default_value": "() true"
+    },
+    {
+      "header": "resource 0x011102b9 bool/config_supportsMultiWindow",
+      "line": 83206,
+      "default_value": "() true"
+    },
+    {
+      "header": "resource 0x011102bd bool/config_supportsSystemDecorsOnSecondaryDisplays",
+      "line": 83216,
+      "default_value": "() true"
+    },
+    {
+      "header": "resource 0x011102e1 bool/config_useSystemProvidedLauncherForSecondary",
+      "line": 83290,
+      "default_value": "() false"
+    }
+  ],
+  "properties": [
+    {
+      "path": "mi_ext/etc/build.prop",
+      "line": 35,
+      "key": "ro.mi.os.version.code",
+      "value": "4",
+      "file_sha256": "8afa9f7f4c9c36677edd1815ed28121e3ba4a454ab4bdb4586cfeedcb56c1a52"
+    },
+    {
+      "path": "mi_ext/etc/build.prop",
+      "line": 36,
+      "key": "ro.mi.os.version.name",
+      "value": "OS4.0",
+      "file_sha256": "8afa9f7f4c9c36677edd1815ed28121e3ba4a454ab4bdb4586cfeedcb56c1a52"
+    },
+    {
+      "path": "mi_ext/etc/build.prop",
+      "line": 37,
+      "key": "ro.mi.os.version.incremental",
+      "value": "OS4.0.6.0.XPBCNXM",
+      "file_sha256": "8afa9f7f4c9c36677edd1815ed28121e3ba4a454ab4bdb4586cfeedcb56c1a52"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 147,
+      "key": "vendor.display.support_builtin_high_fps_when_pluggable_connected",
+      "value": "0",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 188,
+      "key": "ro.vendor.display.default_fps",
+      "value": "60",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 193,
+      "key": "ro.vendor.mi_sf.supported_automode_maxfps_list",
+      "value": "60,120",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 222,
+      "key": "persist.sys.multi_display_type",
+      "value": "6",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 223,
+      "key": "persist.sys.secondary_builtin_display_id",
+      "value": "1",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    },
+    {
+      "path": "odm/etc/build.prop",
+      "line": 234,
+      "key": "vendor.display.pluggable_vsync_prioritized",
+      "value": "true",
+      "file_sha256": "d2ef439a49955fddace198a19c8f1026f2dea099d3a91e46f274ea5aed7d6263"
+    }
+  ],
+  "jadx_limitations": {
+    "services_full_errors": 73,
+    "services_numeric_errors": 3,
+    "miui_services_errors": 1,
+    "miui_shell_errors": 12,
+    "systemui_selected_errors": 1,
+    "services_gate_fallback_errors": 0,
+    "miui_display_mode_errors": 0,
+    "atms_numeric_errors": 6,
+    "miui_external_errors": 0,
+    "note": "Counts are per run, not a proof all methods are reliable. Failed unrelated methods are not evidence."
+  }
+}
