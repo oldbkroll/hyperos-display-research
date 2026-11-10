@@ -1,0 +1,44 @@
+[
+  {
+    "source": "system_ext/framework/miui-services.jar",
+    "local": "analysis/local/inputs/miui-services.jar",
+    "sha256": "ca66023435be866604830e512b4d86aac0dd33428801fee5bc4363ca9faa6ab1",
+    "size": 20692728
+  },
+  {
+    "source": "system_ext/framework/Miui-WindowManager-Shell.jar",
+    "local": "analysis/local/inputs/Miui-WindowManager-Shell.jar",
+    "sha256": "177e9ebbdf3650fc9d5d18fe170d3dbb0e97eaaddcd817d4e33be1d288a227be",
+    "size": 8717539
+  },
+  {
+    "source": "system_ext/framework/miui-framework.jar",
+    "local": "analysis/local/inputs/miui-framework.jar",
+    "sha256": "4757ff84ffd63ed0a2bb81558f00efa1f088f5541aad255124a6d2da6671bcb8",
+    "size": 7487974
+  },
+  {
+    "source": "system_ext/framework/xiaomi-framework.jar",
+    "local": "analysis/local/inputs/xiaomi-framework.jar",
+    "sha256": "867b94b6a777781dcff363433cec680f3158a583594af854010b586244cad86d",
+    "size": 612869
+  },
+  {
+    "source": "system_ext/priv-app/MiuiSystemUI/MiuiSystemUI.apk",
+    "local": "analysis/local/inputs/MiuiSystemUI.apk",
+    "sha256": "dc849ade5543ed6452020f7bbb2a165cd4da77a20c46618d072f8a23cebcb555",
+    "size": 52333704
+  },
+  {
+    "source": "product/priv-app/MiuiHome/MiuiHome.apk",
+    "local": "analysis/local/inputs/MiuiHome.apk",
+    "sha256": "38d681fa9683a005510f7961ea596fe46f964fc3446169025d8275135e6aa810",
+    "size": 58141437
+  },
+  {
+    "source": "system_ext/framework/hyperos.rustruntime.jar",
+    "local": "analysis/local/inputs/hyperos.rustruntime.jar",
+    "sha256": "56bc29f831bad2245da9bd25bbc61fa3b7156d67c8bbb49177cd13c4c6b58bff",
+    "size": 898
+  }
+]

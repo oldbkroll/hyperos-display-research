@@ -1,0 +1,149 @@
+[
+  {
+    "path": "extracted/files/system/system/framework/framework.jar",
+    "size": 51388797,
+    "sha256": "bfe477943ca7c58ea151897b2498f705ec4e9470ae727b6aa7d18305d342f5b8",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "1d55a0fff3c6bc299d55a3b248ec689f8a347493afd4213730da9497c5817b3f",
+        "class_count": 6943
+      },
+      {
+        "entry": "classes2.dex",
+        "sha256": "0beeea26ca4708ecf571819724c827b8464f0f1eb45603d27a7105428c6770cd",
+        "class_count": 7113
+      },
+      {
+        "entry": "classes3.dex",
+        "sha256": "3824df21bc99b81f8fb14b01c59cedb588ffd73628a140d5c109a63d23020179",
+        "class_count": 8300
+      },
+      {
+        "entry": "classes4.dex",
+        "sha256": "7be79736118f59b1664fd29f30751cae4167282895e2b722770eeb52c12c9d98",
+        "class_count": 7459
+      },
+      {
+        "entry": "classes5.dex",
+        "sha256": "b59dd55916ed4ff1dbc2b6c2632c1e2a64bd8d922f5ac3ae71981d642d79b1b9",
+        "class_count": 6166
+      },
+      {
+        "entry": "classes6.dex",
+        "sha256": "5762aadca66404993f71de8a3b64330ed883dca0c3da9fd7042508656d36d53e",
+        "class_count": 2228
+      }
+    ],
+    "defined_class_count": 38209
+  },
+  {
+    "path": "extracted/files/system/system/framework/services.jar",
+    "size": 39948112,
+    "sha256": "fe7406b3899872c3cf43239512e8e6b787e3bcd8080e0d91f50fa04af54a99b3",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "aa1f57c684266b35ae1da10fd5999e94fc2523ee56920abd19a6a26b3f015df0",
+        "class_count": 6414
+      },
+      {
+        "entry": "classes2.dex",
+        "sha256": "e282bccae76d4ec4569cfb5ab141bb4ef35ae31a3505147e55faa7704d3a8508",
+        "class_count": 6434
+      },
+      {
+        "entry": "classes3.dex",
+        "sha256": "4853b15750a3b4d52a5d36364181633fe9116f07ae6abcebb96bc44e0585c625",
+        "class_count": 6214
+      },
+      {
+        "entry": "classes4.dex",
+        "sha256": "57bd7223e7fc3c7dbb488ebf4ba2bf898b6cdcc211174c610667959cb9a66a70",
+        "class_count": 4727
+      }
+    ],
+    "defined_class_count": 23789
+  },
+  {
+    "path": "extracted/files/system/system/framework/framework-res.apk",
+    "size": 20978752,
+    "sha256": "1a7eccd729b69ea85189dfffd6469d635173a01d11b6144ad51b74adcb4093b7",
+    "dex": [],
+    "defined_class_count": 0
+  },
+  {
+    "path": "analysis/local/inputs/miui-services.jar",
+    "size": 20692728,
+    "sha256": "ca66023435be866604830e512b4d86aac0dd33428801fee5bc4363ca9faa6ab1",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "fa613ac3a29be8a57475116f79ec37863baa528d9c3f14615549ebf43580a61d",
+        "class_count": 6934
+      },
+      {
+        "entry": "classes2.dex",
+        "sha256": "bb656f3e4a0530e7f0917dbcf28047d0fc6a3e5612859d1235ee35a88e8ce368",
+        "class_count": 5189
+      }
+    ],
+    "defined_class_count": 12123
+  },
+  {
+    "path": "analysis/local/inputs/Miui-WindowManager-Shell.jar",
+    "size": 8717539,
+    "sha256": "177e9ebbdf3650fc9d5d18fe170d3dbb0e97eaaddcd817d4e33be1d288a227be",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "4962de37ec7ca367bc7bbfda257fec7dde6b56f9aa9b4f582fef581f40b362b5",
+        "class_count": 7818
+      }
+    ],
+    "defined_class_count": 7818
+  },
+  {
+    "path": "analysis/local/inputs/MiuiSystemUI.apk",
+    "size": 52333704,
+    "sha256": "dc849ade5543ed6452020f7bbb2a165cd4da77a20c46618d072f8a23cebcb555",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "114782c1316b9bec0ca1c93b6a8e820ad82c6b493df964a1595c2a54c7b01e73",
+        "class_count": 15899
+      },
+      {
+        "entry": "classes2.dex",
+        "sha256": "16a7c289e7d867fb8a6b4fbdac77602fed6743f4258c1ced00b14f6f9838dcce",
+        "class_count": 16074
+      },
+      {
+        "entry": "classes3.dex",
+        "sha256": "60909c1f02da9a691d6f941ee2686e0add2a776d7151b3165ef967a5cadaf3fd",
+        "class_count": 12210
+      }
+    ],
+    "defined_class_count": 44183
+  },
+  {
+    "path": "analysis/local/inputs/MiuiHome.apk",
+    "size": 58141437,
+    "sha256": "38d681fa9683a005510f7961ea596fe46f964fc3446169025d8275135e6aa810",
+    "dex": [],
+    "defined_class_count": 0
+  },
+  {
+    "path": "analysis/local/inputs/hyperos.rustruntime.jar",
+    "size": 898,
+    "sha256": "56bc29f831bad2245da9bd25bbc61fa3b7156d67c8bbb49177cd13c4c6b58bff",
+    "dex": [
+      {
+        "entry": "classes.dex",
+        "sha256": "3e0b5d4111b73a27e000ea969e12659654c2ad1937675ceefe80865c0f9bb5c6",
+        "class_count": 1
+      }
+    ],
+    "defined_class_count": 1
+  }
+]

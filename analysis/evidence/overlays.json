@@ -1,0 +1,1185 @@
+{
+  "scan_count": 97,
+  "runtime_state": "not measured",
+  "overlays": [
+    {
+      "path": "product/overlay/AospBluetoothResOverlay.apk",
+      "sha256": "5287e9948eb7775f43f5f77f7c508c75b09ad34eee16322beed6162f304c6e0d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.bluetooth\" (Raw: \"com.android.bluetooth\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/TelecommResCommon_Sys.apk",
+      "sha256": "36392235ea5c2bbadf5e9f149cf2a06b0e78afef5089c04ed6d945b3c967063d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.server.telecom.resources\" (Raw: \"com.android.server.telecom.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SystemUIResCommon_Sys.apk",
+      "sha256": "ed9dca03ca7da69bf864ae30216316ded45cefd521ce2ef6308352fd9af50e0b",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.systemui\" (Raw: \"com.android.systemui\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiFrameworkResOverlay.apk",
+      "sha256": "aa23daf6eddbd753f90b342f0e32605343f781dac9c0baaafb32c216e83a3f10",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.rom\" (Raw: \"com.miui.rom\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiCellBroadcastServiceOverlay.apk",
+      "sha256": "4d04334db410fdf7037b7f1881196ec4dd5dbbbde035e946d737264ed7e1e4b3",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.cellbroadcastservice\" (Raw: \"com.google.android.cellbroadcastservice\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiTelephonyExtResOverlay.apk",
+      "sha256": "2194d1a3110cfb365259523aa9c265ba99a966fad2991e62d20da58aa8747c1d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.xiaomi.phone\" (Raw: \"com.xiaomi.phone\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/ManagedProvisioningResOverlay.apk",
+      "sha256": "9c167d8a372254543e7124d87f9e74dfef056b7748e2368782061d2ae873e0ef",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.managedprovisioning\" (Raw: \"com.android.managedprovisioning\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiFrameworkTelephonyResOverlay.apk",
+      "sha256": "a0693f90bd218c6a1354d710a2bd3049efef9a4c47e93807df082e0229221601",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.rom\" (Raw: \"com.miui.rom\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DevicesAndroidOverlay.apk",
+      "sha256": "68c63b31c3aa2a28f38ce5293e652d3940120c458796ab2bbb6906f3c8643c4a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/AospWifiResOverlay_mainline.apk",
+      "sha256": "1d99f3a23716836c09c13924e2939976411a70b794097c98a8ebbc9f33cf6901",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1024",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.wifi.resources\" (Raw: \"com.google.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/FrameworksResNonModem_Sys.apk",
+      "sha256": "65d9d6e977f94ff60d151a1858ce9067f6d4e0a1b3ff59ef161b9df51b902f07",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=5",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.baseband\" (Raw: \"ro.baseband\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"apq\" (Raw: \"apq\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GestureLineOverlay.apk",
+      "sha256": "feeac91227ed1e1cde90936d43d272e1c979352ee683e883341e52d386750702",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=2",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsContactProviderOverlay.apk",
+      "sha256": "7cd9f1244cd0b8ed2712f1cc81467e80635a1b64575b4ae3e08f110a183000ad",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.providers.contacts\" (Raw: \"com.android.providers.contacts\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiSecurityCoreOverlay.apk",
+      "sha256": "33a51f15e4d0bdb38324718779413861a93915439fb5eae1cd6375805edb2ae1",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.securitycore\" (Raw: \"com.miui.securitycore\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NcmTetheringResCommonGMS_Sys.apk",
+      "sha256": "6cff66e666be19ef1e27b4e7f319fb1bd29beb53345151f379b9235432df4da3",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.networkstack.tethering\" (Raw: \"com.google.android.networkstack.tethering\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/ElderlyNavigationBarOverlay.apk",
+      "sha256": "b1dae74a0d0c40a549e5e3e144352b4f0900fe47ba2d84f3e2602bd080d437eb",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsProviderCustResOverlay.apk",
+      "sha256": "62f2c5f6916c6f1df7de3c471dfea569b3a8b129013a386ad9aa848904ce311c",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=999",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.providers.settings\" (Raw: \"com.android.providers.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/WifiResCommon_Sys.apk",
+      "sha256": "872446d9949bad613159c5368f17d4b2abc9816264956276506bafee40d2c557",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.wifi.resources\" (Raw: \"com.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MccMncOverlay.apk",
+      "sha256": "8691c312ab36746f36be5afe70ecc0ab367ca84a91c8641008523341d575d112",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.systemui\" (Raw: \"com.android.systemui\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/AospWifiResOverlay.apk",
+      "sha256": "593c61fca23e6432c92e4068ac40833fa90126e44332803702d6acf7a54e9e45",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1024",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.wifi.resources\" (Raw: \"com.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiPOCOWallpaperOverlay.apk",
+      "sha256": "a9549708364f06cc3ab398d6e483002aad3b3b2e042e4996b789b754e2da450e",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.product.brand\" (Raw: \"ro.product.brand\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"POCO\" (Raw: \"POCO\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/TeleService__nosdcard__auto_generated_characteristics_rro.apk",
+      "sha256": "86d56919701d41f6289ebb0c5f3982298ed3dc8e4c3730d41b6e5c2416711329",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.phone\" (Raw: \"com.android.phone\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/CellBroadcastReceiverResCommon_Sys.apk",
+      "sha256": "a4bb06c3f86238c2867887c831350d007deadab6dbcf986a78248be8019f30eb",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.cellbroadcastreceiver\" (Raw: \"com.android.cellbroadcastreceiver\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiSettingsResOverlay.apk",
+      "sha256": "6277115d349baac4e5ae0b92605c2bbbd8c0bc876ce4543d04c828b5ea0e85d5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiBtRRODeviceConfigOverlay.apk",
+      "sha256": "a635a94e18e93f6ab73991d218760fa8132b1a1942876e1863719cc27b0ab96e",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.xiaomi.bluetooth\" (Raw: \"com.xiaomi.bluetooth\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiDefaultLockscreenOverlay.apk",
+      "sha256": "23b5d503c1e4b12b2a91329c64b71ef77169341c95b5d8a4145590faff881474",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=6",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.theme_customize\" (Raw: \"ro.boot.product.theme_customize\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"BruceLee\" (Raw: \"BruceLee\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NcmTetheringResCommon_Sys.apk",
+      "sha256": "3be3e8014592d2a5c8af6dbc57a49444bc437c59f58f09d5bb46b2fcafa863d3",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.networkstack.tethering\" (Raw: \"com.android.networkstack.tethering\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsCnSettingsOverlay.apk",
+      "sha256": "7eaba882e32115c114700b202f21b310faea4f25aafa934eed04dcc585fc0b70",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiThemeManagerCnOverlay.apk",
+      "sha256": "ed9e1dbfa31031e654502d66a638bd753062a88bf91de4f353270599a30e31e5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.thememanager\" (Raw: \"com.android.thememanager\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiPowerInsightOverlay.apk",
+      "sha256": "0c2fbe29d18280a5968c855340818c22a1acdc98320fd7232df69901ee6fe645",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.powerinsight\" (Raw: \"com.miui.powerinsight\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsResCommon_Sys.apk",
+      "sha256": "0825cfa34869f532e301c4c6b61938f19f50cca6dfce3316a028034a794aa676",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/CompanionDeviceManager__nosdcard__auto_generated_characteristics_rro.apk",
+      "sha256": "261073dd20bc50ce6f53bcc5a985fb2c26c8d779098edeb51e6857cde026656e",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.companiondevicemanager\" (Raw: \"com.android.companiondevicemanager\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiTelecomResOverlay.apk",
+      "sha256": "6a3b2f3204b7c349376c68c48a7609085b1e9db5ac85386b985a48497cd3e34a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.server.telecom\" (Raw: \"com.android.server.telecom\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsRroDeviceSystemUiOverlay.apk",
+      "sha256": "9944d66c4d33a387dc3b5727662f6e5a6f595692955cb4c76c54d004ea8fa11d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsRroDeviceHideStatusBarOverlay.apk",
+      "sha256": "4a5b3818e00b77334f2d120074c9285653a6dd1d660733126b350812d2279411",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiLundunWallpaperOverlay.apk",
+      "sha256": "8bc578b7df8c33986d25a86b49e9ad6b8ed919656bb619b6c8475e201dd0bae0",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=5",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.hwversion\" (Raw: \"ro.boot.hwversion\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"4.9.1\" (Raw: \"4.9.1\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/framework-res__nosdcard__auto_generated_characteristics_rro.apk",
+      "sha256": "bce49bd9c7bee032d44c23bcbff65926521a5253ede10f93c65647e44a9d56e9",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/UwbResCommon_Sys.apk",
+      "sha256": "82d81f0c5359a388d7144689505980dd1ed94a7481423712ae0b0d6fad8ca092",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.uwb.resources\" (Raw: \"com.android.uwb.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiQRWallpaperOverlay.apk",
+      "sha256": "8185108f82c3ae7c22036af8e16f84b093468b6bf99d602b24f7b9d10768de3a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.theme_customize\" (Raw: \"ro.boot.product.theme_customize\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"valentine\" (Raw: \"valentine\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/AospFrameworkTelephonyResOverlay.apk",
+      "sha256": "967e582f510d134c8fcef625951749962ae00c33f3179df4277f43789add1ac7",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=2000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/TelephonyProvider__nosdcard__auto_generated_characteristics_rro.apk",
+      "sha256": "e5341bb2d41a20e5db9a5ff745b5108d027226c2eb76c1f19dfa402e40c6efac",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.providers.telephony\" (Raw: \"com.android.providers.telephony\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiPOCOLockscreenOverlay.apk",
+      "sha256": "ffbc9551648baa116c5021cf6c08455e748402a2e60e2b9bae410342bc9d5aba",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=5",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.product.brand\" (Raw: \"ro.product.brand\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"POCO\" (Raw: \"POCO\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsCnSystemUIOverlay.apk",
+      "sha256": "55018e5b6d3574319a3b7e94bf42271208274f078cd58224c3a7bb7d868d0706",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.systemui\" (Raw: \"com.android.systemui\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/CarrierConfigResCommon_Sys.apk",
+      "sha256": "87358bb362f92d623980e97012357e73b2038cf1d4197c22a4af80c5cea16af3",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100 (Raw: \"100\")",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.carrierconfig\" (Raw: \"com.android.carrierconfig\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true (Raw: \"true\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiHomeLauncherResOverlay.apk",
+      "sha256": "aab89227b76494c9f15bf6f04447c116a925f998cba7372ebfb8028fc00e8c58",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.miui.product.home\" (Raw: \"ro.miui.product.home\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"com.miui.home\" (Raw: \"com.miui.home\")"
+      ],
+      "relevant_resources": [
+        "resource 0x7f010001 string/config_secondaryHomeComponent\n      () \"com.miui.home/com.miui.home.launcher.SecondaryDisplayLauncher\"",
+        "resource 0x7f010002 string/config_secondaryHomePackage\n      () \"com.miui.home\""
+      ]
+    },
+    {
+      "path": "product/overlay/MiuiPocoLauncherResOverlay.apk",
+      "sha256": "f6ccba62a6141590367901ba502a27c12b669bff20059b47e4e9b3f9171fd9eb",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.miui.product.home\" (Raw: \"ro.miui.product.home\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"com.mi.android.globallauncher\" (Raw: \"com.mi.android.globallauncher\")"
+      ],
+      "relevant_resources": [
+        "resource 0x7f010001 string/config_secondaryHomeComponent\n      () \"com.mi.android.globallauncher/com.miui.home.launcher.SecondaryDisplayLauncher\"",
+        "resource 0x7f010002 string/config_secondaryHomePackage\n      () \"com.mi.android.globallauncher\""
+      ]
+    },
+    {
+      "path": "product/overlay/MiuiCustomizeLockscreenOverlay.apk",
+      "sha256": "152cb678bd6529d6249bf25cb36e869547a6586a381628d85381063c727adb37",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiNewCallSdkResOverlay.apk",
+      "sha256": "e9a1e904e21ccaf0c7af86e566d8cf09b4b1349bd3f5f3f8aae89a724a502bb0",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.newcall\" (Raw: \"com.newcall\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsSettingProviderOverlay.apk",
+      "sha256": "3a96b714c8765ce764ebd5277f5d556016538d1c3117925cb6744c0fb801a34a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.providers.settings\" (Raw: \"com.android.providers.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/FrameworksResCommonQva_Sys.apk",
+      "sha256": "244805267114ba819af4a1308620de342b333adf34c38dc677b23e9aa73cdfc9",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=300",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiSystemUIResOverlay.apk",
+      "sha256": "a4ad319b64d5c542fb2209c4fdc6df11fbb6e86e35acc48b9cf25407e0f3a0e8",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.systemui\" (Raw: \"com.android.systemui\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiLundunLockscreenOverlay.apk",
+      "sha256": "0e00b8ca3076b45b322b65a5c3484d02d67c810ad1d94747d4354355c531b3cf",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=6",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.hwversion\" (Raw: \"ro.boot.hwversion\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"4.9.1\" (Raw: \"4.9.1\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiQRLockscreenOverlay.apk",
+      "sha256": "29b27635a4372d9109d46204e6c57ec167aeed5eef0208d2865b8285601099a2",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.theme_customize\" (Raw: \"ro.boot.product.theme_customize\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"valentine\" (Raw: \"valentine\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsCnConfigOverlay.apk",
+      "sha256": "6314e4549c2bc1b86d2189de0330d9c8954222ab74316859fa09d8b326d7c5ce",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsRroCommonOverlay.apk",
+      "sha256": "1c9e971e866adf5f75ec4cb6cf668e4aeaa91a7aae36636f18068cbfccec02d5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DevicesOverlay.apk",
+      "sha256": "1cd129449daa083dffbf1dfe1b48c03e0a4bc047fafdb7c6487dab86e177a293",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.systemui\" (Raw: \"com.android.systemui\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NetworkStackOverlay.apk",
+      "sha256": "176d552198dcbad3b3c984bd807246473586e6d5f213ae2b127bf329a6c17d0a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1024",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.networkstack\" (Raw: \"com.android.networkstack\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/TelephonyResCommon_Sys.apk",
+      "sha256": "61c9d45854d7ef551f65631ab00f6959b0eade98bf3616fe3c43c00070e069ff",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.phone\" (Raw: \"com.android.phone\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsRroDeviceTypeOverlay.apk",
+      "sha256": "2f8500b273cbee6c364bda057e55ad7614dda61aefa65820c51e99f1912498b5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/AospFrameworkResOverlay.apk",
+      "sha256": "dd0955e0af85a0dbc4a905b303b32d4cb4d7539617562170afda8713bd2d3547",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiTelephonyResOverlay.apk",
+      "sha256": "0131a931e63bc433ef41d7069d9c651eb75c384d8cf51a86d1add452dd51b469",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.phone\" (Raw: \"com.android.phone\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/SettingsRroDeviceConfigOverlay.apk",
+      "sha256": "89588221997c23e6ad6143f1cb5dec085cf86004a06a9dea3822c2528c7aad3d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.settings\" (Raw: \"com.android.settings\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/FrameworksResCommon_Sys.apk",
+      "sha256": "3f12aa28516755dd0ed00fe2f6fe6074ce48529d0b0f34167b013e55090a5db7",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=100",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/UwbResCommonMainline_Sys.apk",
+      "sha256": "fe6a5f8ad4c9277dca1dd96fae9ae563b2a3b6265a6e4bc5845d38a4aadc6909",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.uwb.resources\" (Raw: \"com.google.android.uwb.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiSystemSdkResOverlay.apk",
+      "sha256": "fd4952b3c0af152322cc4c1cd49e721622e13a7f565a0bd78f6759d5fc6bc6be",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.system\" (Raw: \"com.miui.system\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiCellBroadcastReceiverOverlay.apk",
+      "sha256": "f31ec657e9ccf756648c5f3c869ade96ee577c822e120400f64ee82b4db093f8",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.cellbroadcastreceiver\" (Raw: \"com.google.android.cellbroadcastreceiver\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiCustomizeWallpaperOverlay.apk",
+      "sha256": "a57162ce3bfa51ea3e8dce45fa5f6c95e85fe405ad13cb48bb745bb7994ce4a8",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/WifiResCommonMainline_Sys.apk",
+      "sha256": "272438a8b2ddd2ce326607ea5b514ee904c62eb8262ff200849fad29d3aa8c91",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.wifi.resources\" (Raw: \"com.google.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiDefaultWallpaperOverlay.apk",
+      "sha256": "5434e3044fb0fa1ac0a129788da054047f31d07b6312b4aae5157772951c9c35",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.theme_customize\" (Raw: \"ro.boot.product.theme_customize\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"BruceLee\" (Raw: \"BruceLee\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/GmsCnTelecommOverlay.apk",
+      "sha256": "bbc3fc2cd1d202b8c39d4c2b1ad299f0cef11091ca96cb3ab80d3400147decc0",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.server.telecom\" (Raw: \"com.android.server.telecom\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiTelephonyProviderResOverlay.apk",
+      "sha256": "86c091991cd31ddb9fa0f18f99c6b255188208719a3b37aefa2d44b34a58603e",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.providers.telephony\" (Raw: \"com.android.providers.telephony\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MIWallpaperOverlay.apk",
+      "sha256": "19dca9d33b8f25feb8e7cb42db625e7ef2fc96653f35682006a159355388661f",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.miwallpaper\" (Raw: \"com.miui.miwallpaper\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DisplayCutoutEmulationCorner/DisplayCutoutEmulationCornerOverlay.apk",
+      "sha256": "0313ef86998729dc4e3596f9263f9491d9d9c11247d8fd788d396bf33d71c6ae",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/FontNotoSerifSource/FontNotoSerifSourceOverlay.apk",
+      "sha256": "e43e56dafcca9fc060eb66f197383f07a842396abda42aafed66c4e7e143baeb",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DisplayCutoutEmulationHole/DisplayCutoutEmulationHoleOverlay.apk",
+      "sha256": "c6d24da6de65b2f47dd9dd2d77d101ce0b540fc914567aca08c7e19fc7ba1164",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/TransparentNavigationBar/TransparentNavigationBarOverlay.apk",
+      "sha256": "4a9713e94e826ee4d5640ed331aa204ca26348bd1d02684b9805b539a709f1ae",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DisplayCutoutEmulationDouble/DisplayCutoutEmulationDoubleOverlay.apk",
+      "sha256": "80f38754071eddb8975870cc22c229effb66e2cd9cf604b661ecfa4622f140a1",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/VoiceAssistAndroidOverlay/VoiceAssistAndroidOverlay.apk",
+      "sha256": "18fdfaabf09bd55857ba2b73fe3b1117e11ce7ed6bf98a83726f2b51d9524fcc",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DisplayCutoutEmulationWaterfall/DisplayCutoutEmulationWaterfallOverlay.apk",
+      "sha256": "3335190fa075d5034791e4d37df5d3015f975f957134507f6c6cc36a80d6a0cc",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NavigationBarModeGestural/NavigationBarModeGesturalOverlay.apk",
+      "sha256": "47fe0ccb2d27f168eccac4bfc915de991c15b70454e4df44a3d25d6ea471153c",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NotesRoleEnabled/NotesRoleEnabledOverlay.apk",
+      "sha256": "e6d18279af7b96c49b88976237424ab36737a16972001bc86582705446ab75aa",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/NavigationBarMode3Button/NavigationBarMode3ButtonOverlay.apk",
+      "sha256": "9e3442ff51dea2a90aee58df3b8679c26eb312e9a17b92ce7a8ed3232a676af5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/DisplayCutoutEmulationTall/DisplayCutoutEmulationTallOverlay.apk",
+      "sha256": "06aac60a55a77e9c9937567c339872fbf67e6de227ebcff8b162f20d0ffd7549",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "product/overlay/MiuiServiceOverlay/MiuiServiceOverlay.apk",
+      "sha256": "724739d62cb42081edc7978dcb987d4eee3d06db60032bbe260b0a5d75e575ed",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "mi_ext/product/overlay/GmsMiCSPTelephonyOverlay.apk",
+      "sha256": "1db62a1f629673e0d85f90031ea493bda58d6a339d37a080a99f4d6e42b696f6",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.phone\" (Raw: \"com.android.phone\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "mi_ext/product/overlay/signed_PLATFORM_cf766d1e91_app_sec_overlay-release-unsigned.apk",
+      "sha256": "9acc7203e2cb823913f97fc50b5c9c12e41f98a649125ff952431dc3e3bc17ba",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.miui.securitycenter\" (Raw: \"com.miui.securitycenter\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "mi_ext/product/overlay/GmsMiCSPTelecommOverlay.apk",
+      "sha256": "1a1600c15bfe0cc96474eeedc82595905f1cd50b1876b6edd606fb4cf7e18688",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=0",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.server.telecom\" (Raw: \"com.android.server.telecom\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "mi_ext/product/overlay/MiuiStkResOverlay.apk",
+      "sha256": "bfa09a76895e30f7bceec8de9f71a9c87725ebbfae6790d1a054ce540d8aae94",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=1000",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.stk\" (Raw: \"com.android.stk\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/WifiResTarget_spf.apk",
+      "sha256": "9f0a63a8c54c9a409c49d02de1b7e2ff0cb66d8df82484b565b5c3a49fd5a40a",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.wifi.resources\" (Raw: \"com.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/WifiResTarget.apk",
+      "sha256": "547388cd93e34e7e0285de532a70428b0e94a97e89833dc3344be26065bc1875",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.wifi.resources\" (Raw: \"com.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.vendor.sku\" (Raw: \"ro.boot.product.vendor.sku\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"canoe\" (Raw: \"canoe\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/SecureElementResTarget_Vendor.apk",
+      "sha256": "8239aaaebbcb38fba3fa115f4eeef53ff9decedebc6b27e68402318c607e074d",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.se\" (Raw: \"com.android.se\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/UwbResTarget_Vendor.apk",
+      "sha256": "3df2db0a7f955690dc829588478ac8b977b8fc562a91d355b2b3fb74048536a7",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.uwb.resources\" (Raw: \"com.android.uwb.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/WifiResMainlineTarget_spf.apk",
+      "sha256": "a46e7e2e884397404310d3adeffc202a6b8238661473b9b3a2045ed63ae4be38",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.wifi.resources\" (Raw: \"com.google.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/WifiResMainlineTarget.apk",
+      "sha256": "f546d045e05b80b4a2568a1c3717543e28adbc0416b0ffd1cb59d81de8a329a0",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.google.android.wifi.resources\" (Raw: \"com.google.android.wifi.resources\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.vendor.sku\" (Raw: \"ro.boot.product.vendor.sku\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"canoe\" (Raw: \"canoe\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/XpanResTarget_Vendor.apk",
+      "sha256": "145ba4d3078f4a54574c2ee54a699867ddf8b122f6e7653db3332872423afec8",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"vendor.qti.bluetooth.xpan\" (Raw: \"vendor.qti.bluetooth.xpan\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "vendor/overlay/NfcResTarget.apk",
+      "sha256": "06bb0f614060433ef3784d1b16cf1099083b0ec48a1336a3732f84593e8336c5",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"com.android.nfc\" (Raw: \"com.android.nfc\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyName(0x01010565)=\"ro.boot.product.vendor.sku\" (Raw: \"ro.boot.product.vendor.sku\")",
+        "A: http://schemas.android.com/apk/res/android:requiredSystemPropertyValue(0x01010566)=\"canoe\" (Raw: \"canoe\")"
+      ],
+      "relevant_resources": []
+    },
+    {
+      "path": "odm/overlay/FrameworksResTarget_Vendor.apk",
+      "sha256": "0d5f4d519e3de29715ef575826fee144f5a20016e8e7a7dac698f5c81c79af90",
+      "resources_exit": 0,
+      "manifest_exit": 0,
+      "overlay_attributes": [
+        "A: http://schemas.android.com/apk/res/android:priority(0x0101001c)=500",
+        "A: http://schemas.android.com/apk/res/android:targetPackage(0x01010021)=\"android\" (Raw: \"android\")",
+        "A: http://schemas.android.com/apk/res/android:isStatic(0x0101055a)=true"
+      ],
+      "relevant_resources": []
+    }
+  ]
+}

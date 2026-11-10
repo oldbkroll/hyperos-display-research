@@ -1,0 +1,161 @@
+{
+  "branch_at_selection": "android17-release",
+  "commit": "94b4c163b7dfe5ce3607f7bb8456f9573f7de57d",
+  "warning": "Reference branch is not proven to match Xiaomi source revision",
+  "files": [
+    {
+      "path": "services/core/java/com/android/server/display/DisplayManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/display/DisplayManagerService.java",
+      "sha256": "4bcd0a935e70b9dfb692c892e749fc0fa295fb38660ea6c1310b0f6790422a5f",
+      "lines": 7323,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/display/LogicalDisplayMapper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/display/LogicalDisplayMapper.java",
+      "sha256": "9b838702c21363cdd7da0cf3e7571c5431d7a42a72f457a5d739fcc6f94106cb",
+      "lines": 1757,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/display/LocalDisplayAdapter.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/display/LocalDisplayAdapter.java",
+      "sha256": "0f7eae83f39e6bdf7b1dff6094e6cb969e2e45943029a896b96f9b284f5587a7",
+      "lines": 1936,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/display/mode/DisplayModeDirector.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/display/mode/DisplayModeDirector.java",
+      "sha256": "8600dffd7f4db04f2d97def431b5c1a667fd594e463702f80915ca0fa4543192",
+      "lines": 3440,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/ActivityTaskManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/ActivityTaskManagerService.java",
+      "sha256": "25ffd4166d7244379b5624c784c29659b5ecdcbdbd1c60d3c7fdab38693388a9",
+      "lines": 8453,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/ActivityTaskSupervisor.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/ActivityTaskSupervisor.java",
+      "sha256": "4a46a2d305284c669106f5b9dc2b274a764b827bbce6cecae0d96567552e0b70",
+      "lines": 3213,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/RootWindowContainer.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/RootWindowContainer.java",
+      "sha256": "b3116c711b8fb54d7a0ba82a0c28b7cfdf1f5cf62cdf2b7ad761755d2fbd99d1",
+      "lines": 3958,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/DisplayContent.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/DisplayContent.java",
+      "sha256": "37ea101f8cb1c9070df7db8a5e8a855cb999682b8aeca1e6c145dfe040a366a5",
+      "lines": 7741,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/DisplayPolicy.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/DisplayPolicy.java",
+      "sha256": "12ba7ecf65f3a20007294c3cb58d8a35f548f0c213321448ffed9c2e3d2f53b3",
+      "lines": 3478,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/WindowManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/WindowManagerService.java",
+      "sha256": "e44c9d49211db4d4679e6833a87cef1209756415fa779ebae53186c055967508",
+      "lines": 11593,
+      "status": "ok"
+    },
+    {
+      "path": "core/java/android/app/ActivityOptions.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/core/java/android/app/ActivityOptions.java",
+      "sha256": "414470723f80602112e90f4dbbd4f855679bf65d7a98b11b98360576440f3ed0",
+      "lines": 2982,
+      "status": "ok"
+    },
+    {
+      "path": "core/java/android/window/DesktopModeFlags.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/core/java/android/window/DesktopModeFlags.java",
+      "sha256": "d43ee0f28e0a7b47674557099f1f0573cbc05ac2cd76bab5968eba50514c465f",
+      "lines": 228,
+      "status": "ok"
+    },
+    {
+      "path": "core/java/com/android/internal/policy/DesktopModeCompatUtils.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/core/java/com/android/internal/policy/DesktopModeCompatUtils.java",
+      "sha256": "bc2d95b22263dfe48e60ade18d9275076bc68d0b521a5a6a510f65bf24e8b2fa",
+      "lines": 98,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/DesktopModeHelper.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/DesktopModeHelper.java",
+      "sha256": "23a8adc802c11ec82f92a1c012a9cd029f7cadcfa03937a12983f60a219c3f4c",
+      "lines": 115,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/display/SecondaryDisplayPolicy.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/display/SecondaryDisplayPolicy.java",
+      "sha256": "183c5772c28ac501a712737fb9de980f04ae14cc582a2b105ada8192eea6872a",
+      "lines": 110,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/wm/DisplayWindowSettings.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/wm/DisplayWindowSettings.java",
+      "sha256": "4267bbf5508ead23b27252bfab26b56615f04e337b2c02ec1be1e5e8ad261e44",
+      "lines": 887,
+      "status": "ok"
+    },
+    {
+      "path": "services/core/java/com/android/server/input/InputManagerService.java",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/services/core/java/com/android/server/input/InputManagerService.java",
+      "sha256": "df0e4cc78508383cd60fd2cd534ba450a0df2071b211ee21115fa71f35470dc1",
+      "lines": 4706,
+      "status": "ok"
+    },
+    {
+      "path": "core/res/res/values/config.xml",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/core/res/res/values/config.xml",
+      "sha256": "f38d596b66a4326b5135dbb6625e75565ba174214266cb565b912bae54bbd540",
+      "lines": 8076,
+      "status": "ok"
+    },
+    {
+      "path": "packages/SystemUI/AndroidManifest.xml",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/packages/SystemUI/AndroidManifest.xml",
+      "sha256": "ef7d48bfd87615cb11243adf493bf5420a84c55aec23aac5c3255eec981f7ddf",
+      "lines": 1338,
+      "status": "ok"
+    },
+    {
+      "path": "libs/WindowManager/Shell/shared/src/com/android/wm/shell/shared/desktopmode/DesktopState.kt",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/libs/WindowManager/Shell/shared/src/com/android/wm/shell/shared/desktopmode/DesktopState.kt",
+      "sha256": "86391e9661cf4ab1a97526327765fdaafab61bc54ea37f374964e0e45e207793",
+      "lines": 108,
+      "status": "ok"
+    },
+    {
+      "path": "libs/WindowManager/Shell/src/com/android/wm/shell/desktopmode/DesktopTasksController.kt",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/libs/WindowManager/Shell/src/com/android/wm/shell/desktopmode/DesktopTasksController.kt",
+      "sha256": "93d962602675f289da5256eddba9e9e208e6235d38c0c0ef092a7efc2f63085c",
+      "lines": 7226,
+      "status": "ok"
+    },
+    {
+      "path": "libs/WindowManager/Shell/src/com/android/wm/shell/desktopmode/DesktopDisplayEventHandler.kt",
+      "url": "https://android.googlesource.com/platform/frameworks/base/+/94b4c163b7dfe5ce3607f7bb8456f9573f7de57d/libs/WindowManager/Shell/src/com/android/wm/shell/desktopmode/DesktopDisplayEventHandler.kt",
+      "sha256": "794e7b88a9a264403eaf44df45f83e628472bbe454fc0d596178f84d256aecd2",
+      "lines": 522,
+      "status": "ok"
+    }
+  ]
+}

@@ -4,10 +4,11 @@
 
 ## 当前下一步
 
-1. 运行 `python scripts/rom_inventory.py <ROM.zip>`。
-2. 获取并校验 payload-dumper-go，在本地提取 system/system_ext/product/mi_ext/vendor 等目标分区。
-3. 探测文件系统并只读提取，不修改原始镜像。
-4. 固定 Android 17 的 AOSP 源码版本，再做 Framework 与 UI 方法追踪。
+1. 七个优先分区已完整提取，**不要重新从头解包**。完整根目录由 `extracted/native-files.json` 定位；NTFS system_ext 为中止输出，不是权威目录。
+2. 已有本地 Java 分析输出在 `analysis/local/jadx/`；组件原文件哈希见 `analysis/evidence/components.json` 和 `input-copies.json`。
+3. AOSP 已固定 `94b4c163b7dfe5ce3607f7bb8456f9573f7de57d`；原生架构报告已写，继续厂商限制与高刷分析。
+4. JADX 在没有本 ROM framework-res 时会把 android.R 常量误标，必须用数值 ID 和 aapt2 输出核对。SelectiveJadx 默认禁用常量替换。
+5. MiuiHome 没有 DEX，SECONDARY_HOME 仅证明声明存在；原生行为未恢复，后续结论保持边界。
 
 ## 约束
 

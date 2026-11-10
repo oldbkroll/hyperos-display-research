@@ -1,0 +1,57 @@
+{
+  "partitions": [
+    {
+      "sha256": "90f952e7e54c34c00980cd7bfc5c1579856dc7d1885019e39788294b63410fb4",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "system",
+      "regular_file_count": 4096
+    },
+    {
+      "sha256": "c05c91d0246d012d1462368a0db5c3467145a642b068b667085a5ac9d0f722f5",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "system_ext",
+      "regular_file_count": 3384
+    },
+    {
+      "sha256": "b7a5547a55f851f6fcfa8134deafa0b57cb48f6b15e5b57958dfcf090860ca13",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "product",
+      "regular_file_count": 1889
+    },
+    {
+      "sha256": "bedfcc090c6c2cc24f77b5b28d090303e75f8fe25322861f9e0e655ba4adc52b",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "mi_ext",
+      "regular_file_count": 83
+    },
+    {
+      "sha256": "ac9ce29d33b1d420ba506380275a4b16955ec5d80fa80f414a1bdf8071d92d70",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "vendor",
+      "regular_file_count": 3093
+    },
+    {
+      "sha256": "79372c9df90a17e93b9c6cd68e4c2cf9fdd3a30f4daecb2cb9edbfbbf114c21b",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "odm",
+      "regular_file_count": 2514
+    },
+    {
+      "sha256": "40237f7d908c99eda01facdb0569eec4d7ceb3c2825f30445f991285d33b1fa4",
+      "filesystem": "EROFS",
+      "status": "complete",
+      "partition": "mi_product",
+      "regular_file_count": 2
+    }
+  ],
+  "notes": [
+    "All seven images SHA256 verified against payload manifest; EROFS extracted successfully without mounts",
+    "Canonical filesystem extraction is WSL native; partial NTFS extraction is not authoritative"
+  ]
+}
