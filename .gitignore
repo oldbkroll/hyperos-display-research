@@ -1,0 +1,26 @@
+# Proprietary ROM inputs and all derived binary/code data stay local.
+*.zip
+*.tgz
+*.tar.gz
+*.7z
+*.img
+*.bin
+*.apk
+*.jar
+*.dex
+*.odex
+*.vdex
+*.so
+*.oat
+extracted/
+tools/downloads/
+tools/bin/
+tools/src/
+tools/wsl/
+analysis/local/
+.venv/
+__pycache__/
+*.pyc
+*.partial
+*.log
+

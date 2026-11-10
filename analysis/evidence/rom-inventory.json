@@ -1,0 +1,761 @@
+{
+  "rom": {
+    "name": "popsicle-ota_full-OS4.0.6.0.XPBCNXM-user-17.0-13c9e292db.zip",
+    "size": 9195708631,
+    "sha256": "3afe5d75428d6159a3ead77ad8ccc7ebb11910fd288a4fac6d40ffbf47a6655f"
+  },
+  "disk_free_bytes_at_inventory": 809543352320,
+  "ota_metadata": {
+    "ota-property-files": "payload_metadata.bin:5199:336276,payload.bin:5199:9195699760,payload_properties.txt:9195705017:156,apex_info.pb:2530:1486,care_map.pb:4063:1069,metadata:69:725,metadata.pb:862:1620                        ",
+    "ota-required-cache": "0",
+    "ota-streaming-property-files": "payload.bin:5199:9195699760,payload_properties.txt:9195705017:156,apex_info.pb:2530:1486,care_map.pb:4063:1069,metadata:69:725,metadata.pb:862:1620                          ",
+    "ota-type": "AB",
+    "post-build": "Xiaomi/popsicle/popsicle:17/CP2A.260605.016/17OS4.0.261026.213536012.QCPECN.S:user/release-keys",
+    "post-build-incremental": "17OS4.0.261026.213536012.QCPECN.S",
+    "post-sdk-level": "37",
+    "post-security-patch-level": "2026-10-01",
+    "post-timestamp": "1793027247",
+    "pre-device": "popsicle"
+  },
+  "zip_entries": [
+    {
+      "name": "META-INF/com/android/metadata",
+      "size": 725,
+      "compressed_size": 725,
+      "method": 0
+    },
+    {
+      "name": "META-INF/com/android/metadata.pb",
+      "size": 1620,
+      "compressed_size": 1620,
+      "method": 0
+    },
+    {
+      "name": "apex_info.pb",
+      "size": 1486,
+      "compressed_size": 1486,
+      "method": 0
+    },
+    {
+      "name": "care_map.pb",
+      "size": 1069,
+      "compressed_size": 1069,
+      "method": 0
+    },
+    {
+      "name": "payload.bin",
+      "size": 9195699760,
+      "compressed_size": 9195699760,
+      "method": 0
+    },
+    {
+      "name": "payload_properties.txt",
+      "size": 156,
+      "compressed_size": 156,
+      "method": 0
+    },
+    {
+      "name": "META-INF/com/android/otacert",
+      "size": 1594,
+      "compressed_size": 1077,
+      "method": 8
+    }
+  ],
+  "payload": {
+    "major": 2,
+    "minor": 0,
+    "block_size": 4096,
+    "manifest_size": 335985,
+    "manifest_sha256": "0a502fb9f8219f4ff0520880fe66009f8fe595e0e618edc1c597bf48c248f830",
+    "signature_size": 267,
+    "partitions": [
+      {
+        "name": "abl",
+        "size": 335872,
+        "sha256": "6d41d8bbd13efcdbd983ce1138663dc8aae5a22578566c659d002b3ffa420895",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 272880
+      },
+      {
+        "name": "aop",
+        "size": 421888,
+        "sha256": "f2213ef8ad4b3e949758dda2e70cf09e0252c29890de8c4244d63095a8e37012",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 105020
+      },
+      {
+        "name": "aop_config",
+        "size": 28672,
+        "sha256": "c34baf53f2be11a3425e304ec876b42305da3b380cb7dc64db82f91b8149fe66",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 3820
+      },
+      {
+        "name": "bluetooth",
+        "size": 8388608,
+        "sha256": "ce1e3713f8eafb74ea2cda090d9a5bdca967ca10a151942e34293e6e7633d114",
+        "old_partition_info_present": false,
+        "operations": 4,
+        "operation_types": {
+          "8": 2,
+          "1": 2
+        },
+        "payload_data_bytes": 858012
+      },
+      {
+        "name": "boot",
+        "size": 100663296,
+        "sha256": "84e5aded3a181265b4a53132d3e4aafa29a8946112b166b8bc78f0724da390e8",
+        "old_partition_info_present": false,
+        "operations": 48,
+        "operation_types": {
+          "8": 21,
+          "1": 27
+        },
+        "payload_data_bytes": 12555384
+      },
+      {
+        "name": "cpucp",
+        "size": 454656,
+        "sha256": "72a854ec1ce0ea0c07d0442cefa67f34aa0d954af0f19e78be74404f494a354e",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 132736
+      },
+      {
+        "name": "cpucp_dtb",
+        "size": 12288,
+        "sha256": "ab7575aa3b7fd82f19d6d2f16c487939e9a0a49cca00226520a736f21e04cda1",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 1836
+      },
+      {
+        "name": "dcp",
+        "size": 8388608,
+        "sha256": "ee1efe09ed2f27198869c02fcc3d8db1322b00dc662f49535aff077b83523d41",
+        "old_partition_info_present": false,
+        "operations": 4,
+        "operation_types": {
+          "8": 1,
+          "1": 3
+        },
+        "payload_data_bytes": 319168
+      },
+      {
+        "name": "devcfg",
+        "size": 57344,
+        "sha256": "79d06bb11ff43f3dd22476386d00fa5fb53c6480dc2834637a7f9b056dd8141e",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 17264
+      },
+      {
+        "name": "dsp",
+        "size": 77594624,
+        "sha256": "6f7bf6a2f4dbff87bd22a6be63b66a8a6975dbfa8729bd3ba62e028b74948e6c",
+        "old_partition_info_present": false,
+        "operations": 37,
+        "operation_types": {
+          "8": 33,
+          "1": 3,
+          "0": 1
+        },
+        "payload_data_bytes": 26783200
+      },
+      {
+        "name": "dtbo",
+        "size": 23068672,
+        "sha256": "9dacf470953cf2a4f470e3bb6c51b4088b5d5a3f71e6841bf3c13d6ba4398c21",
+        "old_partition_info_present": false,
+        "operations": 11,
+        "operation_types": {
+          "8": 1,
+          "1": 10
+        },
+        "payload_data_bytes": 77581
+      },
+      {
+        "name": "featenabler",
+        "size": 106496,
+        "sha256": "d280e6322c2813b3d5d2c02b55ece4c73bdd7e53b9c9e8794ee70e8830bcb74d",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 30724
+      },
+      {
+        "name": "hyp",
+        "size": 1531904,
+        "sha256": "bff73fa9bbb784e70cc5350f16a9e61f77c3e74ad530481fdf556ce09f8b8c79",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 519316
+      },
+      {
+        "name": "hyp_ac_config",
+        "size": 77824,
+        "sha256": "2e726a266a3aa95f334d75f042058a6d5a38cd3269a42b8cdb1957936e40986b",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 8096
+      },
+      {
+        "name": "idmanager",
+        "size": 69632,
+        "sha256": "af89aac16875c5936af79eb4e77d18989357bc570e7aeeef9d460d1e96569396",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 20600
+      },
+      {
+        "name": "imagefv",
+        "size": 6299648,
+        "sha256": "3decdb1e4f4822c423853b98bc7729541ad8d8eca61705e396165a43a1abbe6d",
+        "old_partition_info_present": false,
+        "operations": 4,
+        "operation_types": {
+          "8": 2,
+          "1": 2
+        },
+        "payload_data_bytes": 1326032
+      },
+      {
+        "name": "init_boot",
+        "size": 8388608,
+        "sha256": "f1703fcc0e23a48d6e1d106d571c04ec5f8ba0302c081ca52ad52fee806b87b8",
+        "old_partition_info_present": false,
+        "operations": 4,
+        "operation_types": {
+          "8": 2,
+          "1": 2
+        },
+        "payload_data_bytes": 2011347
+      },
+      {
+        "name": "keymaster",
+        "size": 3366912,
+        "sha256": "d069309021f4a272d4ebede0ced91255d330597a75395219bb8bef25b08b3ab8",
+        "old_partition_info_present": false,
+        "operations": 2,
+        "operation_types": {
+          "8": 2
+        },
+        "payload_data_bytes": 967988
+      },
+      {
+        "name": "modem",
+        "size": 167772160,
+        "sha256": "263225b841e2b9185039e84cf68180768e722429e8fc6b6f9f6bcfae10204cc4",
+        "old_partition_info_present": false,
+        "operations": 80,
+        "operation_types": {
+          "8": 69,
+          "1": 11
+        },
+        "payload_data_bytes": 58516404
+      },
+      {
+        "name": "modemfirmware",
+        "size": 176386048,
+        "sha256": "8686d98da0a0d6eb5d01deb7230cc03098b674c6d8f76c53c587080b007afa83",
+        "old_partition_info_present": false,
+        "operations": 85,
+        "operation_types": {
+          "8": 56,
+          "0": 29
+        },
+        "payload_data_bytes": 107614100
+      },
+      {
+        "name": "multiimgqti",
+        "size": 12288,
+        "sha256": "2217be1cb14e8e4075f3071323909a1c26e58b627b24199586cad1a24d7a8847",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 2168
+      },
+      {
+        "name": "odm",
+        "size": 3892228096,
+        "sha256": "79372c9df90a17e93b9c6cd68e4c2cf9fdd3a30f4daecb2cb9edbfbbf114c21b",
+        "old_partition_info_present": false,
+        "operations": 1856,
+        "operation_types": {
+          "8": 1613,
+          "1": 45,
+          "0": 198
+        },
+        "payload_data_bytes": 3079010918
+      },
+      {
+        "name": "pdp",
+        "size": 376832,
+        "sha256": "4a5c309ac3700c6f114f3625e9eab844180e2f5342d3d5dbbb23e0622f9b81c4",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 94440
+      },
+      {
+        "name": "pdp_cdb",
+        "size": 12288,
+        "sha256": "357dbe44e92f22749b57482c8a2e744c4be571f07bd74d5fd0e2ca9ab8f82bbc",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 1700
+      },
+      {
+        "name": "product",
+        "size": 4742344704,
+        "sha256": "b7a5547a55f851f6fcfa8134deafa0b57cb48f6b15e5b57958dfcf090860ca13",
+        "old_partition_info_present": false,
+        "operations": 2262,
+        "operation_types": {
+          "8": 1954,
+          "0": 272,
+          "1": 36
+        },
+        "payload_data_bytes": 3926995856
+      },
+      {
+        "name": "pvmfw",
+        "size": 1048576,
+        "sha256": "f4783fa9dd57b8448309b724ec377e50edf44b1737f161b4ca9d0bb77b351cc4",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 264392
+      },
+      {
+        "name": "qtvm_dtbo",
+        "size": 5242880,
+        "sha256": "a64793305acb6ebbc6d56757f2c22510958f3e95f2fdf38aae9165523f5c6dfc",
+        "old_partition_info_present": false,
+        "operations": 3,
+        "operation_types": {
+          "8": 1,
+          "1": 2
+        },
+        "payload_data_bytes": 28644
+      },
+      {
+        "name": "qupfw",
+        "size": 65536,
+        "sha256": "6040b20e49023dfe594928cf01354bb847aaaf5762f29725397da1172cb9f305",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 19300
+      },
+      {
+        "name": "recovery",
+        "size": 104857600,
+        "sha256": "cfd845ae5b18812757ba83170d0dce690bb998d1310e7bc0b186e362be7ad9e5",
+        "old_partition_info_present": false,
+        "operations": 50,
+        "operation_types": {
+          "8": 14,
+          "1": 36
+        },
+        "payload_data_bytes": 24399708
+      },
+      {
+        "name": "secretkeeper",
+        "size": 1056768,
+        "sha256": "47279c9883a20336f7b737942a6cb5e7e2c7f5907896f654dd84dc8865b7d60a",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 347832
+      },
+      {
+        "name": "shrm",
+        "size": 184320,
+        "sha256": "d801378ed6ebc86d13caf6e9ea813887fa11a79ecc1880d853f993c2a9244604",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 92360
+      },
+      {
+        "name": "soccp",
+        "size": 8388608,
+        "sha256": "bc12d68759b9bf88297875ace7c4ee2407e5a53ed8cf3df71c6e9748c9bc85e3",
+        "old_partition_info_present": false,
+        "operations": 4,
+        "operation_types": {
+          "8": 2,
+          "1": 2
+        },
+        "payload_data_bytes": 708064
+      },
+      {
+        "name": "soccp_dcd",
+        "size": 20480,
+        "sha256": "3567a049bb373bb657222e82db813b3a024e10eb83be885557a113a8444c2207",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 3968
+      },
+      {
+        "name": "soccp_debug",
+        "size": 73728,
+        "sha256": "1cc6345347821084888e77df5d2fa3c85c31026ec75814c6379142aec51c0d54",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 14840
+      },
+      {
+        "name": "spuservice",
+        "size": 94208,
+        "sha256": "61b54fcd290e15e3ecee19c738a93b61749a8c7c2cdddca34fe651c0ad9c6fc9",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 25196
+      },
+      {
+        "name": "system",
+        "size": 977289216,
+        "sha256": "90f952e7e54c34c00980cd7bfc5c1579856dc7d1885019e39788294b63410fb4",
+        "old_partition_info_present": false,
+        "operations": 467,
+        "operation_types": {
+          "8": 455,
+          "0": 9,
+          "1": 3
+        },
+        "payload_data_bytes": 721475593
+      },
+      {
+        "name": "system_dlkm",
+        "size": 17334272,
+        "sha256": "4241b2c6e29ae694d6f4b3458ff29d4bc18a3952aebc1e45ad62acc0dc30ec50",
+        "old_partition_info_present": false,
+        "operations": 9,
+        "operation_types": {
+          "8": 7,
+          "0": 2
+        },
+        "payload_data_bytes": 13858280
+      },
+      {
+        "name": "system_ext",
+        "size": 816467968,
+        "sha256": "c05c91d0246d012d1462368a0db5c3467145a642b068b667085a5ac9d0f722f5",
+        "old_partition_info_present": false,
+        "operations": 390,
+        "operation_types": {
+          "8": 373,
+          "0": 16,
+          "1": 1
+        },
+        "payload_data_bytes": 564238132
+      },
+      {
+        "name": "tme_config",
+        "size": 45056,
+        "sha256": "2930219a6321c79be1c01aa08155f25faec93c9155db922f958f380ca3637433",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 8036
+      },
+      {
+        "name": "tme_fw",
+        "size": 208896,
+        "sha256": "cc117938c4f1a01461981178f36575471cbcf7df0f067d7d4081aea5f246dc9f",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 92140
+      },
+      {
+        "name": "tme_seq_patch",
+        "size": 8192,
+        "sha256": "35d85544a793890932c877a5da14c63a6a539223c9929e00055318fe03063b9b",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 760
+      },
+      {
+        "name": "tz",
+        "size": 4231168,
+        "sha256": "865443c7cc0aeaa7e920388e6888428c8beedf127aadb4637172f3b2cb6457df",
+        "old_partition_info_present": false,
+        "operations": 3,
+        "operation_types": {
+          "8": 3
+        },
+        "payload_data_bytes": 1141380
+      },
+      {
+        "name": "tz_ac_config",
+        "size": 65536,
+        "sha256": "18cdda12666641b17ab34af08f4b89f54025e94d1ea22488a037ea79b565d522",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 10132
+      },
+      {
+        "name": "tz_qti_config",
+        "size": 139264,
+        "sha256": "504abacde14c2608a27d3421b6f6ec524dadab6668e8188f42dc034a42ae1c51",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 14716
+      },
+      {
+        "name": "uefi",
+        "size": 2793472,
+        "sha256": "ef92050f2340de827f6408895be849af2be9993ad7df965f81a55d3a4cd08aa3",
+        "old_partition_info_present": false,
+        "operations": 2,
+        "operation_types": {
+          "8": 2
+        },
+        "payload_data_bytes": 1411628
+      },
+      {
+        "name": "uefisecapp",
+        "size": 204800,
+        "sha256": "1cd846e99bf5035b2053326ac10573a0d66876cc580a8dfcce2587eb11063523",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 54020
+      },
+      {
+        "name": "vbmeta",
+        "size": 12288,
+        "sha256": "6993b5a32b3e37a8f73e6f0155d5c46b2fcf2401a3062806186ca707f61451d6",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 2888
+      },
+      {
+        "name": "vbmeta_system",
+        "size": 4096,
+        "sha256": "40419dc3425b996201a6baec4546615c790bf8e5d2c5d35ba381532cfa3ae64b",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 2268
+      },
+      {
+        "name": "vendor",
+        "size": 589344768,
+        "sha256": "ac9ce29d33b1d420ba506380275a4b16955ec5d80fa80f414a1bdf8071d92d70",
+        "old_partition_info_present": false,
+        "operations": 282,
+        "operation_types": {
+          "8": 279,
+          "0": 2,
+          "1": 1
+        },
+        "payload_data_bytes": 413594661
+      },
+      {
+        "name": "vendor_boot",
+        "size": 100663296,
+        "sha256": "6dda7c00c04326ee819e66e5b5b6a40b24f4fc3006aecb11100cc91e59eb3b4b",
+        "old_partition_info_present": false,
+        "operations": 48,
+        "operation_types": {
+          "8": 14,
+          "1": 34
+        },
+        "payload_data_bytes": 17809060
+      },
+      {
+        "name": "vendor_dlkm",
+        "size": 59727872,
+        "sha256": "b839bf7f6b8a62ccdbb4b52be3121b1ebbc9fbd2841e91ee393ca1a6f1a44750",
+        "old_partition_info_present": false,
+        "operations": 29,
+        "operation_types": {
+          "8": 29
+        },
+        "payload_data_bytes": 38412328
+      },
+      {
+        "name": "vm-bootsys",
+        "size": 41943040,
+        "sha256": "9d8d4f31ef77812a46ede13779657dfbff5c098041419924ef1112a6d11901f6",
+        "old_partition_info_present": false,
+        "operations": 20,
+        "operation_types": {
+          "1": 7,
+          "8": 13
+        },
+        "payload_data_bytes": 8108845
+      },
+      {
+        "name": "xbl",
+        "size": 1187840,
+        "sha256": "e14ef6a3985bed1af478b914d9cfb857eafff401bd56d24791374257d488d41a",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 383044
+      },
+      {
+        "name": "xbl_ac_config",
+        "size": 45056,
+        "sha256": "742c1ff5385b34cccfb3967c42c5e271408dc313b8808b274d244049f12b6c78",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 7548
+      },
+      {
+        "name": "xbl_config",
+        "size": 397312,
+        "sha256": "4e48c932f5516d3263b953ad647796773a69a71f3a609b389bfaca4172a38dc2",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 40216
+      },
+      {
+        "name": "xbl_ramdump",
+        "size": 901120,
+        "sha256": "64e353d81efa6d665dbe64feb42c20380eb2ce51dfab9991954c3b6d00f0d96f",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 306960
+      },
+      {
+        "name": "mi_product",
+        "size": 348160,
+        "sha256": "40237f7d908c99eda01facdb0569eec4d7ceb3c2825f30445f991285d33b1fa4",
+        "old_partition_info_present": false,
+        "operations": 1,
+        "operation_types": {
+          "8": 1
+        },
+        "payload_data_bytes": 1812
+      },
+      {
+        "name": "mi_ext",
+        "size": 171528192,
+        "sha256": "bedfcc090c6c2cc24f77b5b28d090303e75f8fe25322861f9e0e655ba4adc52b",
+        "old_partition_info_present": false,
+        "operations": 82,
+        "operation_types": {
+          "8": 39,
+          "0": 43
+        },
+        "payload_data_bytes": 170237876
+      }
+    ],
+    "dynamic_groups": [
+      {
+        "name": "qti_dynamic_partitions",
+        "size": 13411287040,
+        "partitions": [
+          "odm",
+          "product",
+          "system",
+          "system_dlkm",
+          "system_ext",
+          "vendor",
+          "vendor_dlkm",
+          "mi_product",
+          "mi_ext"
+        ]
+      }
+    ],
+    "snapshot_enabled": true,
+    "vabc_enabled": true,
+    "vabc_compression": "lz4"
+  },
+  "payload_properties": "FILE_HASH=VYibn2Vuj0WzOsHQYjRi+i6r+UXC0A61n5dQUCFGTtw=\nFILE_SIZE=9195699760\nMETADATA_HASH=L0KouHndCDcdNTGD4BcxLI+nSwm6NvQVgKmqq+nNLnw=\nMETADATA_SIZE=336009\n",
+  "verification_scope": "ZIP SHA256 and manifest inventory; OTA signature authenticity not verified"
+}
