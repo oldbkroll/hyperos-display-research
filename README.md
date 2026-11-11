@@ -12,6 +12,8 @@
 
 续测确认系统会自动恢复镜像，SurfaceFlinger 会拒绝已到达的外屏模式请求。镜像锁屏和解锁后画面自动恢复，全程重启 0 次。[报告 14](reports/14-device-mirror-policy-and-mode-routing.md)
 
+单资源资格 Overlay 已通过启动和回退对照。原生次屏 HOME 与计算器均能落到外屏，但物理外屏进入 `OFF`，实际画面全黑。试验模块已卸载，1440p60 镜像已恢复。[报告 15](reports/15-device-desktop-qualification-preflight.md)
+
 后续按 [原生外接桌面计划](docs/NATIVE_EXTERNAL_DESKTOP_PLAN.md) 优先复用 MiuiHome 与系统窗口组件。阶段 2/3 为 `PARTIAL`，尚未选定实现路线。[证据矩阵](reports/07-native-desktop-evidence-matrix.md) · [调用链和职责](reports/08-native-desktop-call-chain.md) · [最小改动条件设计](reports/09-native-desktop-minimal-design.md)
 
 2026-11-10：五个阶段的**本轮初步静态研究**已完成。七个优先分区全部通过 payload manifest 哈希并解包，97 个 packaged Overlay 已扫描，保留 24 组方法证据。设备验证全部 NOT_RUN；没有制作/安装模块，没有修改 ROM 或手机。
@@ -26,8 +28,9 @@
 | [06 真机计划](reports/06-device-validation-plan.md) | 只读采集、分级实验、恢复与验收矩阵 |
 | [13 真机基线](reports/13-device-display-baseline.md) | 镜像插拔、任务拒绝、实际渲染投票和物理模式对照 |
 | [14 真机续测](reports/14-device-mirror-policy-and-mode-routing.md) | 镜像恢复策略、外屏模式请求和锁屏回归 |
+| [15 桌面资格实测](reports/15-device-desktop-qualification-preflight.md) | 单资源 Overlay、次屏 HOME 和任务承载、黑屏诊断与回退 |
 
-下一步核对连接入口、桌面资格和外屏任务承载的联动。MiuiHome 次屏入口已在真机解析，仍待验证创建和窗口操作。
+下一步追踪桌面模式下外屏显示组的电源请求，定位逻辑外屏有内容但物理外屏为 `OFF` 的原因。
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 

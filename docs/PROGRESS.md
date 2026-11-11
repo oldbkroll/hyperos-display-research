@@ -1,6 +1,6 @@
 # 分阶段进度
 
-最后更新：2026-11-11（北京时间）。已完成两轮真机对照，设备恢复镜像，全程重启 0 次。[续测结果](../reports/14-device-mirror-policy-and-mode-routing.md)
+最后更新：2026-11-11（北京时间）。已完成桌面资格启动对照和回退，设备恢复 1440p60 镜像。[资格和黑屏实测](../reports/15-device-desktop-qualification-preflight.md)
 
 ## 已接受的后续计划
 
@@ -11,10 +11,10 @@
 | 1 统一证据 | 分析完成 | [N1–N6 证据矩阵、对照与缺项](../reports/07-native-desktop-evidence-matrix.md) |
 | 2 追踪原生调用链 | `PARTIAL` | 已确认九个次屏回调槽位、窗口创建参数、HOME 启动显示区和窗口写入路径。待定位次屏点击启动与真机任务归属。[窗口归属](../reports/11-native-desktop-window-ownership.md) · [应用落屏](../reports/12-native-secondary-home-display-routing.md) |
 | 3 设计最小改动 | `PARTIAL`，条件设计已交付 | [路线准入、单变量实验和恢复](../reports/09-native-desktop-minimal-design.md)；A 优先评估、B 保留，均未通过实现准入 |
-| 4 真机只读基线 | `PARTIAL` | 已采镜像、断开和插线待选，核对 ROM 哈希、外屏身份、资格、HOME、EDID 和模式。WM Shell 已记录内屏 MIUI 装饰，外屏写入归属和启动恢复待验。 |
-| 5 原生桌面 | `PARTIAL` | 镜像外屏 `canHostTasks=false`，拒绝启动系统应用。MiuiHome 次屏入口可解析，连接弹窗只有镜像和取消。D4 已实测系统强制恢复镜像。 |
+| 4 真机基线 | `PARTIAL` | 已采镜像、断开和插线待选，核对 ROM、资格、HOME、EDID 和模式。有线 ADB 和一次 RescueBrick 回退已实测。外屏窗口写入归属仍待验。 |
+| 5 原生桌面 | `PARTIAL` | 单资源资格 Overlay 让次屏 HOME 与计算器落到 Display 2，物理输出为黑屏。已观察到外屏电源控制器请求 `DOZE/OFF`，来源待查。 |
 | 6 尺寸和高刷 | `PARTIAL` | 1440p60 与 OSD 一致。精确 120 Hz 偏好已匹配但 DMS 目标维持 60。1440p50 和精确 1080p60 请求到达 SF 后触发外屏警告，HWC 维持 1440p60。 |
-| 7 回归与恢复 | `PARTIAL` | 镜像拔插、锁屏唤醒各一轮通过。独立桌面下的输入、背屏功能及启动恢复待验。 |
+| 7 回归与恢复 | `PARTIAL` | 镜像拔插、锁屏唤醒及测试 Overlay 卸载恢复通过。独立桌面的输入、背屏功能仍待验。 |
 
 阶段 2 首次检查点为 `340875d`，阶段 3 条件设计为 `95a3972`，次屏回调和窗口归属检查点为 `fcbbd7c`、`f0efdd5`。静态检查点校验了 31 条方法证据、九个回调槽位、启动分支及指标向量析构重定位。
 
