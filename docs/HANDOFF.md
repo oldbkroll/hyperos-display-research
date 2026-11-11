@@ -8,8 +8,11 @@
 
 ## 当前下一步
 
+首轮真机对照已完成，设备已恢复镜像，重启 0 次。先读[报告 13](../reports/13-device-display-baseline.md)，原始证据在 `analysis/local/device-validation/`。
+
 1. `0x77a130` 已确认是指标向量析构。离线从次屏窗口其余事件槽与 Flutter 桥接入口定位点击处理，再追踪应用启动的来源 token 和 Bundle。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[窗口参数与应用落屏](../reports/12-native-secondary-home-display-routing.md)
-2. 阶段 4 先采断开及镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析、共享装饰绑定和恢复条件。按 task 和 transition 关联实际写入的实验留待基线之后。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
+2. 真机已确认镜像下外屏不能承载任务，次屏 HOME 可按 `com.miui.home` 解析。下一步追踪桌面资格、连接入口和任务承载的联动。外屏任务可用后再按 task 和 transition 核对共享装饰绑定及写入归属。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
+3. 拔插对照确认外屏实际启用时全局 RenderVote 为 0–60，拔线和待选均为 0–120。继续追踪临时 120 Hz 偏好与 HWC 配置的差异。现有 KernelSU 已核对，模块启动恢复仍待验证。
 
 ## 首轮研究交接
 
@@ -20,14 +23,14 @@
 5. MiuiHome 没有 DEX，SECONDARY_HOME 仅证明声明存在；原生行为未恢复，后续结论保持边界。
 6. 方案比较见 reports/05：优先验证次屏 Activity，再做最小配置对照。不要直接制作高刷/桌面“全开”模块。
 
-## 本轮已交付与下一轮边界
+## 首轮离线交付与设备实验记录
 
 - 六份报告、可续做脚本、24 组方法定位、97 个 Overlay 清单、工具和哈希均已保存；按阶段推送到 origin/main。
 - 阶段提交：初始化 6bb3a6f；阶段 1 50d6bbb；阶段 2 3459949；阶段 3 1932655；阶段 4 75f7ea7。阶段 5 以当前 Git HEAD 为准，避免交接文档引用自身提交形成循环。
 - 先运行 `python scripts/verify_research.py --local` 核对本地证据；没有必要重下工具或重解 ROM。
-- 默认仍只允许静态研究。`scripts/collect_readonly.ps1` 是未来计划，**未运行，后续未获得新的设备操作授权前也不得运行**。本轮仅用 -WhatIf 和 AST 检查验证。
+- 首轮离线研究只做了 `scripts/collect_readonly.ps1` 的 `-WhatIf` 和 AST 检查。2026-11-11 获得设备测试授权后用于实际采集四种状态。
 - 无手机时仍可继续：恢复 MiuiHome 的 libapp_launcher.so 中 SECONDARY_HOME 控制流；跟进 ExternalScreenCompatPolicy/controller 配置；定位 vendor 模式选择与 hdmi_cfg_idx 解析。不要把未完成的原生逆向写成已经确认的行为。
-- 需要设备的未知项集中在 reports/06：运行时 Overlay/资格/模式投票、外屏 Activity/桌面、输入、EDID/HWC/OSD、恢复。全部 NOT_RUN。
+- 设备项目计划见 [报告 06](../reports/06-device-validation-plan.md)，已经执行和仍待验证的项目见 [报告 13](../reports/13-device-display-baseline.md)。
 - 只读核验记录见 analysis/evidence/verification.json；源码、指令及完整日志位于 analysis/local，不能提交公共仓库。
 
 ## 关键结论与避免误用
@@ -41,7 +44,7 @@
 
 ## 约束
 
-- 不使用 ADB，不安装模块，不修改设备；必须真机的项目加入验证计划。
+- 离线步骤使用本地 ROM 和证据。设备实验按已授权范围和阶段准入条件执行。
 - 关键结论区分 ROM 静态证据、AOSP、推测、待真机。
 - 不上传私有 ROM 或反编译代码；提交前检查暂存文件。
 - 每个阶段保存运行参数、工具版本、失败与替代方案，再提交推送。
