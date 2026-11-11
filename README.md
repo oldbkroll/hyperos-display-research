@@ -8,6 +8,8 @@
 
 见 [docs/PROGRESS.md](docs/PROGRESS.md) 和 [docs/HANDOFF.md](docs/HANDOFF.md)。各阶段完成后提交、推送；无法完成或缺少证据的部分明确保留。
 
+后续方向已接受，见 [原生外接桌面接通与兼容性修复计划](docs/NATIVE_EXTERNAL_DESKTOP_PLAN.md)：不依赖第三方桌面，优先复用 MiuiHome 与系统窗口组件；先补齐离线调用链与最小设计，再另行安排设备验证。计划文档已建立，后续阶段尚未执行。
+
 2026-11-10：五个阶段的**本轮初步静态研究**已完成。七个优先分区全部通过 payload manifest 哈希并解包，97 个 packaged Overlay 已扫描，保留 24 组方法证据。设备验证全部 NOT_RUN；没有制作/安装模块，没有修改 ROM 或手机。
 
 | 报告 | 内容 |
