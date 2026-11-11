@@ -549,6 +549,24 @@
     "ui_name_rodata_offset": "0x266097",
     "ui_name_relative_relocation_target": "0xe7e178",
     "app_entry_point_va": "0x9c491c",
-    "boundary": "class-name dispatch recovered; lifecycle and app launch not recovered"
+    "boundary": "class-name dispatch and direct lifecycle callbacks recovered; indirect surface callback and app launch not recovered"
+  },
+  "native_lifecycle": {
+    "runtime_partition": "system_ext",
+    "runtime_path": "lib64/libhyper_os_ui_private.dylib.so",
+    "runtime_sha256": "0da78c3ec0e3719893890ba21a5456e2c857fdc8b0bdd232bac43c765a3eedc3",
+    "ui_vtable_va": "0xe1d318",
+    "window_vtable_va": "0xe1e1f8",
+    "callbacks": [
+      {"name": "on_create", "table": "ui", "runtime_accessor_va": "0x1e310c", "slot": "0x18", "launcher_target_va": "0x776854"},
+      {"name": "on_resume", "table": "ui", "runtime_accessor_va": "0x1e312c", "slot": "0x28", "launcher_target_va": "0xd49a28", "returns_immediately": true},
+      {"name": "on_destroy", "table": "ui", "runtime_accessor_va": "0x1e2ecc", "slot": "0x40", "launcher_target_va": "0xd49a28", "returns_immediately": true},
+      {"name": "request_window", "table": "ui", "runtime_accessor_va": "0x1e2f4c", "slot": "0x48", "launcher_target_va": "0x776834"},
+      {"name": "on_configuration_changed", "table": "ui", "runtime_accessor_va": "0x1e2fec", "slot": "0x78", "launcher_target_va": "0x74cbe4", "returns_immediately": true},
+      {"name": "on_new_intent", "table": "ui", "runtime_accessor_va": "0x1e2f2c", "slot": "0x80", "launcher_target_va": "0x74cbe4", "returns_immediately": true},
+      {"name": "on_surface_created", "table": "window", "runtime_accessor_va": "0x1e30ec", "slot": "0x20", "launcher_target_va": "0x77a110"},
+      {"name": "on_surface_changed", "table": "window", "runtime_accessor_va": "0x1e312c", "slot": "0x28", "launcher_target_va": "0xd49c40"},
+      {"name": "on_window_config_changed", "table": "window", "runtime_accessor_va": "0x1e2f8c", "slot": "0x50", "launcher_target_va": "0xd49c5c"}
+    ]
   }
 }

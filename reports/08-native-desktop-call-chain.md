@@ -1,5 +1,7 @@
 # 08 原生外接桌面：调用链与窗口职责
 
+本报告保留首个检查点。后续的回调识别见 [次屏 HOME 生命周期](10-native-secondary-home-lifecycle.md)。
+
 2026-11-11，原生计划阶段 2。**静态分析 `PARTIAL`，真机 `NOT_RUN`。** 已定位系统启动 HOME、MiuiHome 的原生名称分派、共享任务组织器和兼容缩放规则来源。HOME 生命周期、配置传播和实际窗口写入归属仍未闭合。[新增方法与 ELF 锚点](../analysis/evidence/native-desktop-stage2.json)；F 编号见[首轮证据](../analysis/evidence/findings.json)。
 
 ```mermaid

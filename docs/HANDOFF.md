@@ -8,7 +8,7 @@
 
 ## 当前下一步
 
-1. 如继续离线：从 ELF 两个描述符追查次屏 HOME lifecycle / 应用启动，按同一 task 和 transition 对照 MIUI 与 WM Shell 对 bounds、surface、焦点和动画的写入点。使用 `python scripts/verify_native_desktop.py --local` 复核新增证据。
+1. [次屏 HOME 生命周期](../reports/10-native-secondary-home-lifecycle.md)已定位九个直接回调，续查 `0x77a130` 的窗口间接回调和应用启动。窗口体系仍需按同一 task 和 transition 对照 bounds、surface、焦点和动画的写入点。使用 `python scripts/verify_native_desktop.py --local` 复核证据。
 2. 如另行安排阶段 4：先采断开/镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析和恢复条件。不要把阶段 3 的候选变量提前当成设备操作清单。
 
 ## 首轮研究交接

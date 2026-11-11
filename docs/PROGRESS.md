@@ -9,10 +9,10 @@
 | 原生计划阶段 | 状态 | 交付 / 下一步 |
 |---|---|---|
 | 1 统一证据 | 分析完成 | [N1–N6 证据矩阵、对照与缺项](../reports/07-native-desktop-evidence-matrix.md) |
-| 2 追踪原生调用链 | `PARTIAL` | [调用图与职责表](../reports/08-native-desktop-call-chain.md)：已定位原生分派、共享 organizer 与缩放规则；生命周期、配置传播和窗口写入归属未闭合 |
+| 2 追踪原生调用链 | `PARTIAL` | [调用图与职责表](../reports/08-native-desktop-call-chain.md)、[次屏 HOME 生命周期](../reports/10-native-secondary-home-lifecycle.md)。已确认九个回调槽位，应用启动、间接回调及窗口写入归属待续 |
 | 3 设计最小改动 | `PARTIAL`，条件设计已交付 | [路线准入、单变量实验和恢复](../reports/09-native-desktop-minimal-design.md)；A 优先评估、B 保留，均未通过实现准入 |
 
-阶段 2 已推送（`340875d`）；校验 17 条方法证据、输入哈希、两个 ELF 字符串偏移与公开索引。阶段 3 检查点以当前 Git HEAD 为准。阶段 4 的只读基线需另行明确设备操作范围，未开始。
+阶段 2 首次检查点为 `340875d`，阶段 3 条件设计为 `95a3972`。本次新增九个 native 回调槽位与重定位校验。阶段 4 的只读基线需另行明确设备操作范围，未开始。
 
 下表保留首轮研究阶段状态，不表示后续原生桌面实施与功能验收已经完成。
 

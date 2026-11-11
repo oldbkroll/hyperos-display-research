@@ -5,12 +5,49 @@ import hashlib
 import json
 from pathlib import Path
 import re
+import struct
 import subprocess
 
 
 def sha256(path):
     with Path(path).open('rb') as stream:
         return hashlib.file_digest(stream, 'sha256').hexdigest()
+
+
+def elf_sections(data):
+    assert data[:6] == b'\x7fELF\x02\x01' and struct.unpack_from('<H', data, 18)[0] == 183
+    header_offset = struct.unpack_from('<Q', data, 40)[0]
+    entry_size, count, names_index = struct.unpack_from('<HHH', data, 58)
+    assert entry_size == 64
+    entries = [struct.unpack_from('<IIQQQQIIQQ', data, header_offset + i * entry_size) for i in range(count)]
+    names_offset = entries[names_index][4]
+    return {data[names_offset + entry[0]:data.index(0, names_offset + entry[0])].decode(): entry
+            for entry in entries}
+
+
+def verify_native_lifecycle(record, launcher_path):
+    roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
+    runtime_path = Path(roots[record['runtime_partition']]['windows_path']) / record['runtime_path']
+    assert sha256(runtime_path) == record['runtime_sha256']
+    runtime = runtime_path.read_bytes()
+    launcher = Path(launcher_path).read_bytes()
+    runtime_text = elf_sections(runtime)['.text']
+    launcher_sections = elf_sections(launcher)
+    launcher_text = launcher_sections['.text']
+    rela = launcher_sections['.rela.dyn']
+    relative_targets = {address: addend for address, info, addend in
+                        struct.iter_unpack('<QQq', launcher[rela[4]:rela[4] + rela[5]]) if info == 1027}
+    for callback in record['callbacks']:
+        slot = int(callback['slot'], 16)
+        base = int(record[f"{callback['table']}_vtable_va"], 16)
+        target = int(callback['launcher_target_va'], 16)
+        accessor = int(callback['runtime_accessor_va'], 16)
+        instruction = struct.unpack_from('<I', runtime, accessor + 16 - runtime_text[3] + runtime_text[4])[0]
+        assert instruction == 0xf9400100 | ((slot // 8) << 10), callback['name']
+        assert relative_targets[base + slot] == target, callback['name']
+        if callback.get('returns_immediately'):
+            assert struct.unpack_from('<I', launcher, target - launcher_text[3] + launcher_text[4])[0] == 0xd65f03c0
+    print(f"PASS: {len(record['callbacks'])} named lifecycle slots and launcher relocation targets")
 
 
 def main():
@@ -47,6 +84,7 @@ def main():
                                   ('ui_name_rodata_offset', b'SecondaryDisplayLauncherUi')):
                 stream.seek(int(native[field], 16))
                 assert stream.read(len(anchor)) == anchor, field
+        verify_native_lifecycle(data['native_lifecycle'], data['inputs'][native['input']]['local'])
     documents = [Path('README.md'), Path('analysis/README.md'), *Path('reports').glob('*.md'), *Path('docs').glob('*.md')]
     count = 0
     for source in documents:
