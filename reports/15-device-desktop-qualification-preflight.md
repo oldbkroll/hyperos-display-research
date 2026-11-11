@@ -19,7 +19,7 @@
 
 显示器有信号，用户现场看到黑屏。通过正常 shell 命令启动系统计算器，返回 `Status: ok`，其 fullscreen task 实际处于 Display 2。HOME 和计算器两次分别从同一外屏物理 ID 抓取 2560×1440 PNG，RGB 三通道全部为 0。两次 `dumpsys SurfaceFlinger` 的外屏 composition 都是 `isEnabled=false`、`layerStack=4294967295`，HWC layer 表为空。当前有证据的阻断点是物理外屏没有合成输出，需追踪关闭镜像后逻辑 Display 2 的 layer stack 如何交给该物理显示器。桌面资格、HOME 创建和外屏任务承载通过，独立画面和窗口操作未通过验收。
 
-进一步对照同一采样的 DMS dump，逻辑 Display 2 属于显示组 1，`mHasContent=true`、逻辑 layer stack 为 2。对应的 DisplayPowerController 收到 `policy=DOZE`、`dozeScreenState=OFF`，物理设备的 `mState` 和 `mCommittedState` 均为 `OFF`，`mCurrentLayerStack=-1`。ROM 的 `DisplayManagerService.configureDisplayLocked()` 把物理 OFF 传给 `LogicalDisplay.configureDisplayLocked()` 作为 blank 参数，后者在 blank 时写入 layer stack `-1`。下一步先查外屏电源请求为何落入 DOZE/OFF，以及它与显示组唤醒策略的关系。当前记录未定位该请求的来源。[静态调用链](08-native-desktop-call-chain.md)
+进一步对照同一采样的 DMS dump，逻辑 Display 2 属于显示组 1，`mHasContent=true`、逻辑 layer stack 为 2。对应的 DisplayPowerController 收到 `policy=DOZE`、`dozeScreenState=OFF`，物理设备的 `mState` 和 `mCommittedState` 均为 `OFF`，`mCurrentLayerStack=-1`。ROM 的 `DisplayManagerService.configureDisplayLocked()` 把物理 OFF 传给 `LogicalDisplay.configureDisplayLocked()` 作为 blank 参数，后者在 blank 时写入 layer stack `-1`。后续已定位外屏与背屏共组的 ROM 分支及电源请求下发路径。[电源组与验证计划](16-external-desktop-power-group.md)
 
 短对照后停止计算器，将 `mirror_built_in_display` 恢复到 `1`。有线 ADB 下卸载测试模块并重启，确认测试 APK 和模块目录均已移除，原有 8 个模块的状态、活动 Overlay 列表和三个资格资源均恢复。用户重新接外屏后确认镜像画面恢复，OSD 为 2560×1440 @ 60 Hz。
 

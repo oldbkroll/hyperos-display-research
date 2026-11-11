@@ -1,6 +1,6 @@
 # 分阶段进度
 
-最后更新：2026-11-11（北京时间）。已完成桌面资格启动对照和回退，设备恢复 1440p60 镜像。[资格和黑屏实测](../reports/15-device-desktop-qualification-preflight.md)
+最后更新：2026-11-11（北京时间）。桌面资格启动对照已回退，设备恢复 1440p60 镜像。离线追踪已定位外屏与背屏共组及电源请求下发路径，时间线对照 `NOT_RUN`。[资格和黑屏实测](../reports/15-device-desktop-qualification-preflight.md) · [电源组分析](../reports/16-external-desktop-power-group.md)
 
 ## 已接受的后续计划
 
@@ -12,7 +12,7 @@
 | 2 追踪原生调用链 | `PARTIAL` | 已确认九个次屏回调槽位、窗口创建参数、HOME 启动显示区和窗口写入路径。待定位次屏点击启动与真机任务归属。[窗口归属](../reports/11-native-desktop-window-ownership.md) · [应用落屏](../reports/12-native-secondary-home-display-routing.md) |
 | 3 设计最小改动 | `PARTIAL`，条件设计已交付 | [路线准入、单变量实验和恢复](../reports/09-native-desktop-minimal-design.md)；A 优先评估、B 保留，均未通过实现准入 |
 | 4 真机基线 | `PARTIAL` | 已采镜像、断开和插线待选，核对 ROM、资格、HOME、EDID 和模式。有线 ADB 和一次 RescueBrick 回退已实测。外屏窗口写入归属仍待验。 |
-| 5 原生桌面 | `PARTIAL` | 单资源资格 Overlay 让次屏 HOME 与计算器落到 Display 2，物理输出为黑屏。已观察到外屏电源控制器请求 `DOZE/OFF`，来源待查。 |
+| 5 原生桌面 | `PARTIAL` | 单资源资格 Overlay 让次屏 HOME 与计算器落到 Display 2。外屏与背屏共组并收到 `DOZE/OFF`，导致物理外屏使用空图层栈。已定位组名分配和策略下发，仍缺切换时的组唤醒和 Dream 时间线。[最小对照](../reports/16-external-desktop-power-group.md) |
 | 6 尺寸和高刷 | `PARTIAL` | 1440p60 与 OSD 一致。精确 120 Hz 偏好已匹配但 DMS 目标维持 60。1440p50 和精确 1080p60 请求到达 SF 后触发外屏警告，HWC 维持 1440p60。 |
 | 7 回归与恢复 | `PARTIAL` | 镜像拔插、锁屏唤醒及测试 Overlay 卸载恢复通过。独立桌面的输入、背屏功能仍待验。 |
 

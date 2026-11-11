@@ -71,6 +71,19 @@ java -Xmx6g -cp tools/bin/jadx/lib/jadx-1.5.6-all.jar scripts/SelectiveJadx.java
 
 用已有 SDK aapt2 `dump resources` 产生 `analysis/local/framework-res-aapt2.txt`，`dump xmltree APK --file AndroidManifest.xml` 得到 manifest。重新生成代码/资源后运行 `python scripts/build_evidence.py`，缺失锚点会失败；代码变化后要重新人工审核，不能只更新哈希。
 
+## 外屏电源组
+
+复用上面的 full services 输出。按下列命令补查 Mapper 的分组参数和 MIUI 的电源组 provider。JADX 1.5.6 两次定向运行均报告 0 个错误。Mapper 的普通 Java 输出有重组不清的分支，组号条件及实参以 fallback 为准。
+
+```powershell
+$jadxJar = 'tools/bin/jadx/lib/jadx-1.5.6-all.jar'
+$servicesJar = 'extracted/files/system/system/framework/services.jar'
+java -Xmx5g -cp $jadxJar scripts/SelectiveJadx.java $servicesJar analysis/local/jadx/desktop-power-fallback 'com\.android\.server\.display\.LogicalDisplayMapper$' fallback
+java -Xmx5g -cp $jadxJar scripts/SelectiveJadx.java analysis/local/inputs/miui-services.jar analysis/local/jadx/desktop-power-miui 'com\.android\.server\.(power\.(PowerManagerServiceImpl|GeneratedMiuiImplManifest)|display\.(DisplayManagerServiceImpl|LogicalDisplayMapperImpl|LocalDisplayAdapterImpl|GeneratedMiuiImplManifest))$'
+```
+
+对照 D3 的 `desktop-dms.txt`、`d1-restored-dms.txt` 与 D7 的 `00-dms.txt`、`00-power.txt`。从 Display Groups 小节核实成员，从对应 DPC 核实 `mPowerRequest`，再用同一物理设备的状态和 layer stack 核实输出。报告列出精确行锚点和待采时间线。[报告 16](../reports/16-external-desktop-power-group.md)
+
 ## ELF 分析
 
 `probe_vendor.py` 保存 readelf/c++filt 和有界字符串输出。已有 NDK llvm-objdump 参数示例：

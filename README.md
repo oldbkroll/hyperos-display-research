@@ -29,8 +29,9 @@
 | [13 真机基线](reports/13-device-display-baseline.md) | 镜像插拔、任务拒绝、实际渲染投票和物理模式对照 |
 | [14 真机续测](reports/14-device-mirror-policy-and-mode-routing.md) | 镜像恢复策略、外屏模式请求和锁屏回归 |
 | [15 桌面资格实测](reports/15-device-desktop-qualification-preflight.md) | 单资源 Overlay、次屏 HOME 和任务承载、黑屏诊断与回退 |
+| [16 外屏电源组](reports/16-external-desktop-power-group.md) | 外屏和背屏共组的 ROM 分支、DOZE/OFF 下发及同一启动周期的验证计划 |
 
-下一步追踪桌面模式下外屏显示组的电源请求，定位逻辑外屏有内容但物理外屏为 `OFF` 的原因。
+下一步在获准的真机对照中采集外屏切入桌面前后的 PMS/Dream 时间线，确认是否继承背屏组已有的电源状态。
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 
