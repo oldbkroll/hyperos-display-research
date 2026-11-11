@@ -1,0 +1,554 @@
+{
+  "date": "2026-11-11",
+  "baseline": "OS4.0.6.0.XPBCNXM",
+  "device_validation": "NOT_RUN",
+  "inputs": {
+    "services": {
+      "local": "extracted/files/system/system/framework/services.jar",
+      "sha256": "fe7406b3899872c3cf43239512e8e6b787e3bcd8080e0d91f50fa04af54a99b3"
+    },
+    "systemui": {
+      "local": "analysis/local/inputs/MiuiSystemUI.apk",
+      "sha256": "dc849ade5543ed6452020f7bbb2a165cd4da77a20c46618d072f8a23cebcb555"
+    },
+    "shell": {
+      "local": "analysis/local/inputs/Miui-WindowManager-Shell.jar",
+      "sha256": "177e9ebbdf3650fc9d5d18fe170d3dbb0e97eaaddcd817d4e33be1d288a227be"
+    },
+    "miui-services": {
+      "local": "analysis/local/inputs/miui-services.jar",
+      "sha256": "ca66023435be866604830e512b4d86aac0dd33428801fee5bc4363ca9faa6ab1"
+    },
+    "home": {
+      "local": "analysis/local/inputs/MiuiHome.apk",
+      "sha256": "38d681fa9683a005510f7961ea596fe46f964fc3446169025d8275135e6aa810"
+    },
+    "launcher": {
+      "local": "analysis/local/inputs/libapp_launcher.so",
+      "sha256": "971e62def084aa58848ac3c061f030794afbc42020f5cb7a9e7b1582c07286db"
+    }
+  },
+  "method_records": [
+    {
+      "id": "N01",
+      "input": "services",
+      "local_output": "analysis/local/jadx/native-stage2/services/sources/com/android/server/wm/RootWindowContainer.java",
+      "decompiled_file_sha256": "2580e8a7d12256fb66f1ca616c5c8a6c5ab1d3a9da02c1a5451481845ed1916e",
+      "anchors": [
+        {
+          "anchor": "public void onDisplayAdded(int displayId)",
+          "lines": [
+            2632
+          ]
+        },
+        {
+          "anchor": "startSystemDecorations(display, \"displayAdded\")",
+          "lines": [
+            2647
+          ]
+        },
+        {
+          "anchor": "notifyDisplayAddSystemDecorations()",
+          "lines": [
+            2670
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N02",
+      "input": "services",
+      "local_output": "analysis/local/jadx/native-stage2/services/sources/com/android/server/wm/RootWindowContainer.java",
+      "decompiled_file_sha256": "2580e8a7d12256fb66f1ca616c5c8a6c5ab1d3a9da02c1a5451481845ed1916e",
+      "anchors": [
+        {
+          "anchor": "Pair<ActivityInfo, Intent> resolveSecondaryHomeActivity(",
+          "lines": [
+            1517
+          ]
+        },
+        {
+          "anchor": "getSecondaryHomeIntent(aInfo.applicationInfo.packageName)",
+          "lines": [
+            1542
+          ]
+        },
+        {
+          "anchor": "getSecondaryHomeIntent(null)",
+          "lines": [
+            1564
+          ]
+        },
+        {
+          "anchor": "canStartHomeOnDisplayArea(",
+          "lines": [
+            1455,
+            1560,
+            1633
+          ]
+        },
+        {
+          "anchor": "startHomeActivity(homeIntent, aInfo, myReason, taskDisplayArea2, onTop)",
+          "lines": [
+            1473
+          ]
+        },
+        {
+          "anchor": "display.mDisplay.canHostTasks()",
+          "lines": [
+            1626,
+            2425
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N03",
+      "input": "systemui",
+      "local_output": "analysis/local/jadx/native-stage2/dialog-fallback/sources/com/android/systemui/display/ui/viewmodel/ConnectingDisplayViewModel.java",
+      "decompiled_file_sha256": "b1f0754b4aa2b8a95d55a0a252d0095d9bbd1950773132e5d4b3e2bd61412f26",
+      "anchors": [
+        {
+          "anchor": "access$applyConnectionChoice(",
+          "lines": [
+            165
+          ]
+        },
+        {
+          "anchor": "DisplayRepository#enable(",
+          "lines": [
+            244
+          ]
+        },
+        {
+          "anchor": "isDesktopModeSupportedOnDisplay(r3)",
+          "lines": [
+            383
+          ]
+        },
+        {
+          "anchor": "canEnterDesktopMode()",
+          "lines": [
+            405,
+            479
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N04",
+      "input": "systemui",
+      "local_output": "analysis/local/jadx/native-stage2/dialog/sources/com/android/systemui/display/ui/view/ExternalDisplayConnectionDialogDelegate.java",
+      "decompiled_file_sha256": "4f61604edead186fdb17dfb83ce266514b334ebd473966993d9e5d9e732c68e5",
+      "anchors": [
+        {
+          "anchor": "if (z || !this.isDesktopModeSupported)",
+          "lines": [
+            86
+          ]
+        },
+        {
+          "anchor": "button.setOnClickListener(",
+          "lines": [
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N05",
+      "input": "services",
+      "local_output": "analysis/local/jadx/native-stage2/services/sources/com/android/server/wm/TaskOrganizerController.java",
+      "decompiled_file_sha256": "83ebe45a49ec0f8dac3a78ffa3edb646a5f6e299be77bf6c717801d83d769b6f",
+      "anchors": [
+        {
+          "anchor": "registerTaskOrganizer(ITaskOrganizer organizer)",
+          "lines": [
+            528,
+            598
+          ]
+        },
+        {
+          "anchor": "this.mTaskOrganizers.add(organizer)",
+          "lines": [
+            578
+          ]
+        },
+        {
+          "anchor": "this.mTaskOrganizers.peekLast()",
+          "lines": [
+            648,
+            807,
+            832,
+            867,
+            1100,
+            1681,
+            1749
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N06",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell/sources/com/android/wm/shell/ShellTaskOrganizer.java",
+      "decompiled_file_sha256": "961b5c33397494f6f11ab1569b2023d264161e153462857df44cf8564f7e7241",
+      "anchors": [
+        {
+          "anchor": "private void onInit()",
+          "lines": [
+            423
+          ]
+        },
+        {
+          "anchor": "registerOrganizer()",
+          "lines": [
+            436,
+            884,
+            1151,
+            1158,
+            1352,
+            1353
+          ]
+        },
+        {
+          "anchor": "multiTaskingListener.onTaskAppeared(",
+          "lines": [
+            452
+          ]
+        },
+        {
+          "anchor": "multiTaskingListener.onTaskInfoChanged(",
+          "lines": [
+            1017
+          ]
+        },
+        {
+          "anchor": "multiTaskingListener.onTaskVanished(",
+          "lines": [
+            1092
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N07",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell-fallback/sources/com/android/wm/shell/multitasking/common/taskmanager/MultiTaskingTaskListener.java",
+      "decompiled_file_sha256": "93acfb8c0ae15dde279cdb9fa1687bdee41688dd20643316d38d32f68b7df8dc",
+      "anchors": [
+        {
+          "anchor": "mMultiTaskingTaskRepository",
+          "lines": [
+            10,
+            16,
+            36,
+            55,
+            92
+          ]
+        },
+        {
+          "anchor": "mMiuiDesktopModeStub",
+          "lines": [
+            6,
+            21,
+            40,
+            100
+          ]
+        },
+        {
+          "anchor": "r4.getWindowingMode()",
+          "lines": [
+            61
+          ]
+        },
+        {
+          "anchor": "mMulWinSwitchDecorViewModel",
+          "lines": [
+            9,
+            18,
+            45,
+            66,
+            79,
+            84,
+            94
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N08",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell/sources/com/android/wm/shell/dagger/WMShellModule.java",
+      "decompiled_file_sha256": "b5683bde7a23d075ca92a452ed37e195783624a265f0767548ed47543aef0b6c",
+      "anchors": [
+        {
+          "anchor": "provideDesktopDisplayEventHandler(",
+          "lines": [
+            399
+          ]
+        },
+        {
+          "anchor": "provideDesktopModeWindowDecorViewModel(",
+          "lines": [
+            475
+          ]
+        },
+        {
+          "anchor": "canEnterDesktopModeOrShowAppHandle()",
+          "lines": [
+            382,
+            425,
+            476,
+            648,
+            953
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N09",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell/sources/com/android/wm/shell/desktopmode/DesktopDisplayEventHandler.java",
+      "decompiled_file_sha256": "a95828ca1ad3d69dab949b3c82d1e4ed907a1d9ebbc5c5876400f35ddee3ef4a",
+      "anchors": [
+        {
+          "anchor": "addDisplayWindowListener(this)",
+          "lines": [
+            358
+          ]
+        },
+        {
+          "anchor": "updateExternalDisplayWindowingMode(i)",
+          "lines": [
+            317,
+            442,
+            465
+          ]
+        },
+        {
+          "anchor": "updateDefaultDisplayWindowingMode()",
+          "lines": [
+            443,
+            467,
+            522
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N10",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/miui-services/sources/com/android/server/wm/ExternalScreenCompatPolicy.java",
+      "decompiled_file_sha256": "7315dedc5e18aa1fb87325230762e0b6056997156bebd19b7ffe380aa2d4f3ed",
+      "anchors": [
+        {
+          "anchor": "isDisplayFolded()",
+          "lines": [
+            46
+          ]
+        },
+        {
+          "anchor": "ar.inMultiWindowMode()",
+          "lines": [
+            46
+          ]
+        },
+        {
+          "anchor": "setAppBounds(state.scaledBounds)",
+          "lines": [
+            84
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N11",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/miui-services/sources/com/android/server/wm/MiuiExternalScreenCompatConfigParser.java",
+      "decompiled_file_sha256": "bc075927fff17cf32df953f59a5f49827eab0a72aa58cbb536057c84136bc9e2",
+      "anchors": [
+        {
+          "anchor": "external_screen_compat_list.xml",
+          "lines": [
+            31,
+            38,
+            74,
+            75,
+            330,
+            480,
+            530
+          ]
+        },
+        {
+          "anchor": "externalScreenCompatRule",
+          "lines": [
+            32,
+            47,
+            113,
+            299,
+            301,
+            341,
+            473
+          ]
+        },
+        {
+          "anchor": "selectRuleConfig()",
+          "lines": [
+            73,
+            98
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N12",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/miui-services/sources/com/android/server/wm/ExternalScreenCompatManagerImpl.java",
+      "decompiled_file_sha256": "7027cd70f923a7390080126ef974a204ef089b10cb5be3f7a3515ab35b2dd23a",
+      "anchors": [
+        {
+          "anchor": "persist.wm.external_compat.enabled",
+          "lines": [
+            30,
+            37
+          ]
+        },
+        {
+          "anchor": "getControllerConfigsMap()",
+          "lines": [
+            267,
+            346,
+            367
+          ]
+        },
+        {
+          "anchor": "LocalServices.getService(MiuiSizeCompatInternal.class)",
+          "lines": [
+            370
+          ]
+        },
+        {
+          "anchor": "matchConfigLocked(",
+          "lines": [
+            299,
+            311
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N13",
+      "input": "systemui",
+      "local_output": "analysis/local/jadx/native-stage2/dialog/sources/com/android/systemui/display/ui/viewmodel/ConnectingDisplayViewModel$setDisplayMirrorSetting$2.java",
+      "decompiled_file_sha256": "99294f0b12ba94bb3b0c396e628641f3572eb3f82fcc3c3cd0c3e8fe56f1aef2",
+      "anchors": [
+        {
+          "anchor": "mirror_built_in_display",
+          "lines": [
+            55
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N14",
+      "input": "systemui",
+      "local_output": "analysis/local/jadx/native-stage2/systemui/sources/com/android/systemui/dagger/DaggerReferenceGlobalRootComponent.java",
+      "decompiled_file_sha256": "81a9c02a582019941886d9b8013db49f7161bea9ea57e7ad8a7b7aeed10cafcf",
+      "anchors": [
+        {
+          "anchor": "MiuiWMShellModule_ProvideMultiTaskingListenerFactory.provideMultiTaskingListener(",
+          "lines": [
+            16802
+          ]
+        },
+        {
+          "anchor": "WMShellModule_ProvideDesktopModeWindowDecorViewModelFactory.provideDesktopModeWindowDecorViewModel(",
+          "lines": [
+            16890
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N15",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/compat-service/sources/com/android/server/wm/MiuiSizeCompatService.java",
+      "decompiled_file_sha256": "7ffa350a75b7c8b6b2b25e183b320d57eec582bfaa785984c2150ff0aac449f5",
+      "anchors": [
+        {
+          "anchor": "new MiuiExternalScreenCompatController(context)",
+          "lines": [
+            678
+          ]
+        },
+        {
+          "anchor": "LocalServices.addService(MiuiSizeCompatInternal.class",
+          "lines": [
+            679
+          ]
+        },
+        {
+          "anchor": "getExternalScreenCompatConfigs()",
+          "lines": [
+            2853
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N16",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/miui-services/sources/com/android/server/wm/MiuiFreeFormGestureController.java",
+      "decompiled_file_sha256": "736ae2943522cfcf65066cc29d6eff9175286e6905773d9a279da33207c4d86c",
+      "anchors": [
+        {
+          "anchor": "mRootWindowContainer.getDisplayContent(0)",
+          "lines": [
+            117,
+            323,
+            507
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N17",
+      "input": "miui-services",
+      "local_output": "analysis/local/jadx/native-stage2/miui-services/sources/com/android/server/wm/MiuiFreeFormManagerService.java",
+      "decompiled_file_sha256": "88b73d99d1e8f2f47546294593d463bc5249e10279285869fb341cf400c77797",
+      "anchors": [
+        {
+          "anchor": "mffas2.mTask.getDisplayId()",
+          "lines": [
+            1139,
+            1169,
+            1198
+          ]
+        },
+        {
+          "anchor": "task.getDisplayContent()",
+          "lines": [
+            1848
+          ]
+        }
+      ]
+    }
+  ],
+  "native_anchors": {
+    "input": "launcher",
+    "architecture": "AArch64",
+    "class_name_rodata_offset": "0x265279",
+    "class_name_compare_va": "0x94e444",
+    "match_branch_va": "0x94e448",
+    "match_descriptor_vas": [
+      "0xe1d318",
+      "0xe3f2a0"
+    ],
+    "ui_name_rodata_offset": "0x266097",
+    "ui_name_relative_relocation_target": "0xe7e178",
+    "app_entry_point_va": "0x9c491c",
+    "boundary": "class-name dispatch recovered; lifecycle and app launch not recovered"
+  }
+}

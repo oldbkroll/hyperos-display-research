@@ -2,6 +2,10 @@
 
 公共仓库仅放原创报告、脚本、哈希、符号定位和必要配置元数据。ROM 派生代码、完整资源、ELF 指令、APK 和日志均在 `local/`，禁止提交。
 
+原生计划阶段 2 复用 `SelectiveJadx.java` 和 JADX 1.5.6，按 [新增证据](evidence/native-desktop-stage2.json) 的 `input`、类路径与输出分组定位；`dialog-fallback`、`shell-fallback` 分组使用 `fallback`。工具日志 `local/stage2-jadx-*.log` 保留常规重组失败及补查。类名分派用 NDK LLVM 在 `0x94e41c–0x94e469` 做定向反汇编，UI 名称用 `llvm-readelf -r -W` 核对 `0xe7e178` 重定位，应用入口用 `llvm-objdump -d --disassemble-symbols=app_entry_point`。完整日志和反汇编不入 Git。
+
+`python scripts/verify_native_desktop.py --local` 校验输入 SHA-256、私有方法文件和行锚点、两个 ELF 字符串偏移及公开索引；无本地输入时省略 `--local`。脚本只读，ELF 指令与重定位语义按 [报告 08](../reports/08-native-desktop-call-chain.md) 手动复核。
+
 ## 证据入口
 
 | 文件 | 范围 |

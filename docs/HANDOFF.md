@@ -4,7 +4,7 @@
 
 ## 已接受的后续方向
 
-先读 [原生外接桌面接通与兼容性修复计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md) 与 [阶段 1 证据矩阵](../reports/07-native-desktop-evidence-matrix.md)。优先复用 MiuiHome、SystemUI、WM Shell 与现有 MIUI 窗口能力，不引入第三方桌面，不默认全局放开桌面限制。下一离线检查点是阶段 2：补齐次屏 HOME 与双窗口体系链路。下文保留首轮成果与技术交接。
+先读 [原生外接桌面接通与兼容性修复计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md)、[阶段 1 证据矩阵](../reports/07-native-desktop-evidence-matrix.md) 和 [阶段 2 调用图](../reports/08-native-desktop-call-chain.md)。计划与阶段 1 已分别推送（`5cc4c75`、`2971527`）。阶段 2 定位到 MiuiHome 名称分派及共享 organizer 的双路任务通知；原生 lifecycle 和窗口写入归属仍不明确。下一检查点是阶段 3 的条件设计；实现门槛尚未通过。
 
 ## 当前下一步
 
