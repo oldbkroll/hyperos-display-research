@@ -8,11 +8,11 @@
 
 ## 当前下一步
 
-首轮真机对照已完成，设备已恢复镜像，重启 0 次。先读[报告 13](../reports/13-device-display-baseline.md)，原始证据在 `analysis/local/device-validation/`。
+两轮真机对照已完成，设备已恢复镜像，重启 0 次。先读[报告 13](../reports/13-device-display-baseline.md)和[报告 14](../reports/14-device-mirror-policy-and-mode-routing.md)，原始证据在 `analysis/local/device-validation/`。
 
 1. `0x77a130` 已确认是指标向量析构。离线从次屏窗口其余事件槽与 Flutter 桥接入口定位点击处理，再追踪应用启动的来源 token 和 Bundle。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[窗口参数与应用落屏](../reports/12-native-secondary-home-display-routing.md)
-2. 真机已确认镜像下外屏不能承载任务，次屏 HOME 可按 `com.miui.home` 解析。下一步追踪桌面资格、连接入口和任务承载的联动。外屏任务可用后再按 task 和 transition 核对共享装饰绑定及写入归属。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
-3. 拔插对照确认外屏实际启用时全局 RenderVote 为 0–60，拔线和待选均为 0–120。继续追踪临时 120 Hz 偏好与 HWC 配置的差异。现有 KernelSU 已核对，模块启动恢复仍待验证。
+2. D4 已确认资格不足时 `SecondaryDisplayPolicy` 会立即恢复镜像，单独改镜像键无法承载任务。下一步评估单项资格配置及恢复路径。现有 Shell dump 已匹配 MIUI 内屏装饰，外屏任务可用后再按 task 和 transition 核对外屏写入。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
+3. 继续定位 ROM 内 SF 的外屏拒绝分支。1440p50 与 1080p60 已证明 DMS 目标能送到 SF，但 HWC 配置保持 1440p60。精确 `120.00001` 还要追踪 DMS 的目标筛选。模块启动恢复仍待验证。
 
 ## 首轮研究交接
 

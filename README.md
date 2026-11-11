@@ -10,6 +10,8 @@
 
 2026-11-11 完成首轮无重启真机对照。镜像外屏实测为 2560×1440 @ 60 Hz，系统拒绝向镜像外屏启动普通任务，连接弹窗只提供镜像和取消。临时请求 120 Hz 未通过物理输出验证。结果与恢复记录见 [报告 13](reports/13-device-display-baseline.md)。
 
+续测确认系统会自动恢复镜像，SurfaceFlinger 会拒绝已到达的外屏模式请求。镜像锁屏和解锁后画面自动恢复，全程重启 0 次。[报告 14](reports/14-device-mirror-policy-and-mode-routing.md)
+
 后续按 [原生外接桌面计划](docs/NATIVE_EXTERNAL_DESKTOP_PLAN.md) 优先复用 MiuiHome 与系统窗口组件。阶段 2/3 为 `PARTIAL`，尚未选定实现路线。[证据矩阵](reports/07-native-desktop-evidence-matrix.md) · [调用链和职责](reports/08-native-desktop-call-chain.md) · [最小改动条件设计](reports/09-native-desktop-minimal-design.md)
 
 2026-11-10：五个阶段的**本轮初步静态研究**已完成。七个优先分区全部通过 payload manifest 哈希并解包，97 个 packaged Overlay 已扫描，保留 24 组方法证据。设备验证全部 NOT_RUN；没有制作/安装模块，没有修改 ROM 或手机。
@@ -23,6 +25,7 @@
 | [05 实施方案](reports/05-implementation-options.md) | A–E 路线、普通/Root/系统组件权限、可逆性与风险 |
 | [06 真机计划](reports/06-device-validation-plan.md) | 只读采集、分级实验、恢复与验收矩阵 |
 | [13 真机基线](reports/13-device-display-baseline.md) | 镜像插拔、任务拒绝、实际渲染投票和物理模式对照 |
+| [14 真机续测](reports/14-device-mirror-policy-and-mode-routing.md) | 镜像恢复策略、外屏模式请求和锁屏回归 |
 
 下一步核对连接入口、桌面资格和外屏任务承载的联动。MiuiHome 次屏入口已在真机解析，仍待验证创建和窗口操作。
 
