@@ -4,9 +4,14 @@
 
 ## 已接受的后续方向
 
-先读 [原生外接桌面接通与兼容性修复计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md)、[阶段 1 证据矩阵](../reports/07-native-desktop-evidence-matrix.md) 和 [阶段 2 调用图](../reports/08-native-desktop-call-chain.md)。计划与阶段 1 已分别推送（`5cc4c75`、`2971527`）。阶段 2 定位到 MiuiHome 名称分派及共享 organizer 的双路任务通知；原生 lifecycle 和窗口写入归属仍不明确。下一检查点是阶段 3 的条件设计；实现门槛尚未通过。
+先读 [原生计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md)、[阶段 1 矩阵](../reports/07-native-desktop-evidence-matrix.md)、[阶段 2 调用图](../reports/08-native-desktop-call-chain.md)和[阶段 3 条件设计](../reports/09-native-desktop-minimal-design.md)。计划 `5cc4c75`、阶段 1 `2971527`、阶段 2 `340875d` 已推送；阶段 3 以当前 Git HEAD 为准。阶段 2/3 标为 `PARTIAL`，实现门槛尚未通过。
 
 ## 当前下一步
+
+1. 如继续离线：从 ELF 两个描述符追查次屏 HOME lifecycle / 应用启动，按同一 task 和 transition 对照 MIUI 与 WM Shell 对 bounds、surface、焦点和动画的写入点。使用 `python scripts/verify_native_desktop.py --local` 复核新增证据。
+2. 如另行安排阶段 4：先采断开/镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析和恢复条件。不要把阶段 3 的候选变量提前当成设备操作清单。
+
+## 首轮研究交接
 
 1. 七个优先分区已完整提取，**不要重新从头解包**。完整根目录由 `extracted/native-files.json` 定位；NTFS system_ext 为中止输出，不是权威目录。
 2. 已有本地 Java 分析输出在 `analysis/local/jadx/`；组件原文件哈希见 `analysis/evidence/components.json` 和 `input-copies.json`。

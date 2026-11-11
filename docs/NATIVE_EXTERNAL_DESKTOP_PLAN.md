@@ -2,7 +2,7 @@
 
 日期：2026-11-10（北京时间）
 
-状态：用户已接受方向；计划文档已建立，后续阶段尚未执行。
+状态：用户已接受方向。本文末尾保留建档时的状态；执行进度与接续工作见 [PROGRESS.md](PROGRESS.md) 和 [HANDOFF.md](HANDOFF.md)。
 
 研究基线：`a1cab8a`，popsicle / `OS4.0.6.0.XPBCNXM` / Android 17 / SDK 37。
 
