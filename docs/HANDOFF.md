@@ -11,7 +11,7 @@
 单资源资格 Overlay 的启动对照和回退已完成，设备恢复 1440p60 镜像。先读[报告 15](../reports/15-device-desktop-qualification-preflight.md)，前两轮证据见[报告 13](../reports/13-device-display-baseline.md)和[报告 14](../reports/14-device-mirror-policy-and-mode-routing.md)。原始证据在 `analysis/local/device-validation/`。
 
 1. `0x77a130` 已确认是指标向量析构。离线从次屏窗口其余事件槽与 Flutter 桥接入口定位点击处理，再追踪应用启动的来源 token 和 Bundle。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[窗口参数与应用落屏](../reports/12-native-secondary-home-display-routing.md)
-2. D3 外屏与背屏同在组 1，收到同一 `DOZE/OFF` 请求。ROM 的 Mapper 将 projected 外屏判为 `secondary_mode`，却仍以空布局组名分配 ID，可复用背屏组。下一次先按报告 16 的单次启动对照补采 PMS/Dream 时间线，核实组策略继承及镜像回退。D3 共组时按外屏 ID 唤醒会作用于整个组 1。画面恢复后再按 task 和 transition 核对窗口写入。[电源组与对照计划](../reports/16-external-desktop-power-group.md) · [外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
+2. D3 外屏与背屏同在组 1，收到同一 `DOZE/OFF` 请求。ROM 的 Mapper 将 projected 外屏判为 `secondary_mode`，却仍以空布局组名分配 ID，可复用背屏组。D8 已用无线 ADB 采完原厂基线，外屏在组 0 且物理 ON，背屏单独在组 1 并持有 doze wake lock。确认有线回退和本次有状态授权后，按报告 16 的单次启动对照补采 PMS/Dream 时间线。D3 共组时按外屏 ID 唤醒会作用于整个组 1。画面恢复后再按 task 和 transition 核对窗口写入。[电源组与对照计划](../reports/16-external-desktop-power-group.md) · [外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
 3. ROM 内 SF 的两个外屏模式拒绝分支已定位。1440p50 与 1080p60 的 DMS 目标能送到 SF，但 HWC 维持 1440p60。精确 `120.00001` 仍需追踪 DMS 的目标筛选。启动回退已验证有线 ADB 和本机 RescueBrick 的一次触发，内置安全模式仍未验证。
 
 ## 首轮研究交接

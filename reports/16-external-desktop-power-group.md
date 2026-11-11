@@ -1,6 +1,6 @@
 # 16 原生外接桌面黑屏与背屏电源组
 
-2026-11-11（北京时间），popsicle / `OS4.0.6.0.XPBCNXM`。复查[报告 15](15-device-desktop-qualification-preflight.md)的 D3 快照和匹配 ROM。开始时 `adb devices -l` 列表为空。本轮完成离线追踪，设备对照 `NOT_RUN`。
+2026-11-11（北京时间），popsicle / `OS4.0.6.0.XPBCNXM`。复查[报告 15](15-device-desktop-qualification-preflight.md)的 D3 快照和匹配 ROM。完成离线追踪后，用户接通无线 ADB 并授权采集 D8 原厂基线。重新加载 Overlay 的桌面对照仍为 `NOT_RUN`。
 
 ## 已保存的真机对照
 
@@ -9,10 +9,15 @@
 | D7 原厂镜像，`00-dms.txt:513–553`、`00-power.txt:402–428` | 内屏 0、外屏 2，`Awake` | 背屏 1，`Dozing`，wake-lock summary 为 `0x40`，有 `dream:doze:1` | `BRIGHT/UNKNOWN`，物理 `ON/ON` |
 | D3 单资源 Overlay，原生桌面，`desktop-dms.txt:513–553,2173–2220` | 内屏 0，DPC 为 `BRIGHT/UNKNOWN` | 背屏 1、外屏 2，组名为空、flags 为 0。两块屏的 DPC 都是 `DOZE/OFF`，reason 为 `UNKNOWN` | 外屏逻辑 enabled、可承载任务、有内容、layer stack 为 2；物理 `OFF/OFF`、layer stack 为 `-1`。HOME 与计算器的外屏物理截图均全黑 |
 | D3 同一次启动写回镜像，`d1-restored-dms.txt:10,513–553,2174–2220` | 内屏 0 | 背屏 1、外屏 2，仍共组 | `mMirrorBuiltInDisplaySetting=true`、外屏基础 DisplayInfo 的 `canHostTasks=false`，该快照仍为 `DOZE/OFF` 和物理 `OFF/OFF` |
+| D8 回退后原厂镜像，`display.txt:513–553`、`power.txt:394–420` | 内屏 0、外屏 2，`Awake` | 背屏 1，`Dozing`，wake-lock summary 为 `0x40`，持有 `dream:doze:1` | `BRIGHT/UNKNOWN`，物理 `ON/ON`，SF 合成已启用 |
 
 D3 的两次 DMS 快照都显示 `separate_timeouts=true`。外屏设备类型为 EXTERNAL，物理设备标记里没有 `FLAG_OWN_DISPLAY_GROUP`。背屏设备有该标记。D3 的实际镜像恢复由卸载 Overlay、重启、重新接外屏后的现场画面确认。写回设置时的快照只证明该时点仍共组，单独改设置后是否会在后续事件中重分组仍待测。
 
 D3 没有桌面激活时段的 `dumpsys power`、`dumpsys dreams` 或连接前后的 PMS/Dream 时间线。D7 可以确认背屏组在原厂镜像下已正常持有 doze wake lock 并发送 `DOZE/OFF`。D3 外屏实际收到了同形请求，但组 1 在那次插线前是否已处于 Dozing、是否曾被唤醒、谁最后一次写入 OFF，均缺少对应的运行时记录。
+
+D8 经无线 ADB 核对当前 ROM、`framework-res.apk` 哈希和镜像值 `1`。三项资格均为 `false`，Android Overlay 列表与 D3 回退后一致，测试 Overlay 已卸载，原有 8 个 KernelSU 模块的标记与保存的基线相符。无线 ADB 的 root 可用，有线回退路径仍需在下次有状态实验前确认。D8 复现了 D7 的组成员和电源策略。成对采集的 DMS 显示外屏 1440p120，SF 的外屏活动模式及 HWC 则同时为 2560×1440 @ 60 Hz。D8 只记录该差异，无刷新率写入或现场 OSD 记录。
+
+[ROM] `DreamManagerService.dumpInternal()` 打印 `mCurrentDream`，未列出双屏分支使用的 `mCurrentDreams`。D8 读到 `mCurrentDream=null` 时，PMS 仍记录组 1 的 `dream:doze:1`。下次判断组 1 的 Doze 来源应结合 PMS 和 Dream 的事件时间线。
 
 ## [ROM] 从桌面资格到复用背屏组
 
@@ -35,7 +40,7 @@ D3 没有桌面激活时段的 `dumpsys power`、`dumpsys dreams` 或连接前�
 
 [ROM] 窗口与 Activity 有显式点亮分支，分别经 `WindowState` 或 `ActivityTaskSupervisor` 向 `PowerManager.wakeUp(…, displayId)` 发请求。任务已 resumed 本身不能证明进入这些分支。ROM 还有 `cmd power power-on <displayId>`，经 Binder `wakeUpWithDisplayId()` 检查 `DEVICE_POWER` 后，将 Display ID 映射为组 ID，再经 `wakeupDisplayGroupsLocked()` → `wakePowerGroupLocked()` → `PowerGroup.wakeUpLocked()`，保留系统就绪、强制休眠、背屏省电等检查。D3 拓扑下对外屏 ID 使用该命令会请求唤醒**整个组 1**，组内含背屏。将它排除出本轮单屏对照，同样不使用直写 SF/HWC 电源模式或全局电源策略。
 
-[待真机] 以下步骤均为 `NOT_RUN`。先确认批准范围，再重新加载[原单资源 Overlay](15-device-desktop-qualification-preflight.md)。本轮无需制作新模块。
+[待真机] 已完成 D8 原厂基线的无线只读采集。确认有线回退路径和批准范围后，再重新加载[原单资源 Overlay](15-device-desktop-qualification-preflight.md)。Overlay 激活、桌面对照和本次卸载回归均为 `NOT_RUN`。
 
 | 步骤 | 单次启动内的操作与判据 |
 | --- | --- |
@@ -62,6 +67,6 @@ ROM JAR 以 [组件清单](../analysis/evidence/components.json) 的 `services.j
 | `jadx/services/sources/com/android/server/` | `dreams/DreamManagerService.java:1061–1111`；`wm/ActivityTaskSupervisor.java:2482`；`wm/WindowState.java:2116` |
 | `jadx/desktop-power-miui/sources/com/android/server/power/` | `PowerManagerServiceImpl.java:2097–2099,2249–2271,2483–2501` |
 
-设备文件路径以 `analysis/local/device-validation/` 为根。D3 使用 `*-D3-overlay-idmap` 内的 `desktop-dms.txt`、`d1-restored-dms.txt`、`d1-mirror-restored.txt`、`desktop-sf.txt`、`d1-sf-active.txt` 和物理截图。D7 对照在 `*-D7-mirror-lock-wake`，包含 `00-dms.txt` 与 `00-power.txt`，后者在第 221 行记录 `dream:doze:1`。原始设备日志与 ROM 派生代码留在本地。
+设备文件路径以 `analysis/local/device-validation/` 为根。D3 使用 `*-D3-overlay-idmap` 内的 `desktop-dms.txt`、`d1-restored-dms.txt`、`d1-mirror-restored.txt`、`desktop-sf.txt`、`d1-sf-active.txt` 和物理截图。D7 对照在 `*-D7-mirror-lock-wake`，包含 `00-dms.txt` 与 `00-power.txt`，后者在第 221 行记录 `dream:doze:1`。D8 在 `*-D8-stock-power-preflight`，采样时间与哈希见 `capture.json`。D8 的 `power.txt:213` 记录 `dream:doze:1`，`mode-pair-surfaceflinger.txt:142–145,2691–2702` 记录 1440p60。原始设备日志与 ROM 派生代码留在本地。
 
 本轮通过本仓库两个验证脚本的 `--local` 完整性核验，并对三份 DMS 快照的成员、请求、物理状态和 layer stack 做了字段断言。原有核验记录保留，本轮通用核验输出保存到 `analysis/local/desktop-power-verification.json`。
