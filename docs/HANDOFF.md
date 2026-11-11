@@ -4,12 +4,12 @@
 
 ## 已接受的后续方向
 
-先读 [原生计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md)、[阶段 1 矩阵](../reports/07-native-desktop-evidence-matrix.md)、[阶段 2 调用图](../reports/08-native-desktop-call-chain.md)和[阶段 3 条件设计](../reports/09-native-desktop-minimal-design.md)。计划 `5cc4c75`、阶段 1 `2971527`、阶段 2 `340875d` 已推送；阶段 3 以当前 Git HEAD 为准。阶段 2/3 标为 `PARTIAL`，实现门槛尚未通过。
+计划 `5cc4c75`、阶段 1 `2971527`、阶段 2 首次检查点 `340875d`、阶段 3 条件设计 `95a3972`、次屏回调检查点 `fcbbd7c`。阶段 2/3 仍为 `PARTIAL`。[原生计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md) · [证据矩阵](../reports/07-native-desktop-evidence-matrix.md) · [调用图](../reports/08-native-desktop-call-chain.md) · [条件设计](../reports/09-native-desktop-minimal-design.md)
 
 ## 当前下一步
 
-1. [次屏 HOME 生命周期](../reports/10-native-secondary-home-lifecycle.md)已定位九个直接回调，续查 `0x77a130` 的窗口间接回调和应用启动。窗口体系仍需按同一 task 和 transition 对照 bounds、surface、焦点和动画的写入点。使用 `python scripts/verify_native_desktop.py --local` 复核证据。
-2. 如另行安排阶段 4：先采断开/镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析和恢复条件。不要把阶段 3 的候选变量提前当成设备操作清单。
+1. 离线接续从 `0x77a130` 的间接调用追查窗口回调实参，再定位次屏应用启动与目标显示传递。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[次屏 HOME 生命周期](../reports/10-native-secondary-home-lifecycle.md)
+2. 阶段 4 先采断开及镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析、共享装饰绑定和恢复条件。按 task 和 transition 关联实际写入的实验留待基线之后。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
 
 ## 首轮研究交接
 

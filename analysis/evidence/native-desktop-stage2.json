@@ -534,6 +534,389 @@
           ]
         }
       ]
+    },
+    {
+      "id": "N18",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell/sources/com/android/wm/shell/dagger/WMShellModule.java",
+      "decompiled_file_sha256": "b5683bde7a23d075ca92a452ed37e195783624a265f0767548ed47543aef0b6c",
+      "anchors": [
+        {
+          "anchor": "provideWindowDecorViewModel(",
+          "lines": [
+            985
+          ]
+        },
+        {
+          "anchor": "isMiuiShellModuleEnable()",
+          "lines": [
+            986
+          ]
+        },
+        {
+          "anchor": "getMulWinSwitchDecorViewModel()",
+          "lines": [
+            987
+          ]
+        },
+        {
+          "anchor": "CaptionWindowDecorViewModel",
+          "lines": [
+            205,
+            206,
+            207,
+            992,
+            1014
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N19",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell-vendor/sources/com/android/wm/shell/dagger/MultiTaskingControllerImpl.java",
+      "decompiled_file_sha256": "e2e5f1fda7fbedb3038ff863cc88a69828bb3d7c98305c815d755fe73604fc96",
+      "anchors": [
+        {
+          "anchor": "isMiuiShellModuleEnable()",
+          "lines": [
+            225
+          ]
+        },
+        {
+          "anchor": "getMulWinSwitchDecorViewModel()",
+          "lines": [
+            121,
+            122,
+            273
+          ]
+        },
+        {
+          "anchor": "return this.mMulWinSwitchDecorViewModel;",
+          "lines": [
+            274
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N20",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership/sources/com/android/wm/shell/transition/Transitions.java",
+      "decompiled_file_sha256": "55cce478e50fc25b2c180efb8f4a9ba747425abfba5345945a51404c73c8bc12",
+      "anchors": [
+        {
+          "anchor": "dispatchReady(ActiveTransition",
+          "lines": [
+            1863
+          ]
+        },
+        {
+          "anchor": "dispatchTransition(IBinder",
+          "lines": [
+            2006
+          ]
+        },
+        {
+          "anchor": "handleRequestOnly(",
+          "lines": [
+            1999,
+            2348,
+            2845
+          ]
+        },
+        {
+          "anchor": "onTransitionReady(activeTransition.mToken",
+          "lines": [
+            1899
+          ]
+        },
+        {
+          "anchor": "startAnimation(iBinder, transitionInfo",
+          "lines": [
+            2012,
+            2430,
+            2436,
+            2867
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N21",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-decor-fallback/sources/com/android/wm/shell/freeform/FreeformTaskTransitionObserver.java",
+      "decompiled_file_sha256": "a0d2fba6b97b5169ee37952e1aca1a604dbaa1075ba3c91c747f4905c20ea028",
+      "anchors": [
+        {
+          "anchor": "private void onOpenTransitionReady(",
+          "lines": [
+            232
+          ]
+        },
+        {
+          "anchor": "r0.onTaskOpening(r1, r2, r5, r6)",
+          "lines": [
+            244
+          ]
+        },
+        {
+          "anchor": "registerObserver(",
+          "lines": [
+            394
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N22",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-fallback/sources/com/android/wm/shell/multitasking/miuimultiwinswitch/miuiwindowdecor/MulWinSwitchDecorViewModel.java",
+      "decompiled_file_sha256": "39cc9d424049f7c458d5de7fc6f00e72cdf5bdf307faeb69826e292481551eb5",
+      "anchors": [
+        {
+          "anchor": "shouldShowWindowDecor(",
+          "lines": [
+            1423,
+            1482,
+            2086,
+            2118,
+            2181
+          ]
+        },
+        {
+          "anchor": "isIndependentRearDevice()",
+          "lines": [
+            1484
+          ]
+        },
+        {
+          "anchor": "createWindowDecoration(",
+          "lines": [
+            555,
+            1446,
+            2111,
+            2189,
+            2774
+          ]
+        },
+        {
+          "anchor": "relayout(r2, r0)",
+          "lines": [
+            2173
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N23",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-fallback/sources/com/android/wm/shell/multitasking/common/taskmanager/MultiTaskingTransitionObserver.java",
+      "decompiled_file_sha256": "f2f59e18379cc378ab6c8ef413158d411ad264cdfea8020fca48bcac5b019a49",
+      "anchors": [
+        {
+          "anchor": "registerObserver(",
+          "lines": [
+            312
+          ]
+        },
+        {
+          "anchor": "onTransitionReady(r9, r10, r11)",
+          "lines": [
+            604
+          ]
+        },
+        {
+          "anchor": "cancelFocusAnimationIfNeed(r2)",
+          "lines": [
+            627
+          ]
+        },
+        {
+          "anchor": "exitAllFreeform()",
+          "lines": [
+            610
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N24",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-follow/sources/com/android/wm/shell/multitasking/common/MultiTaskingFocusAnimHelper.java",
+      "decompiled_file_sha256": "ddd46276f62aa7f2c3bb584824b19209d15385c32ac91f566c62096509159e6f",
+      "anchors": [
+        {
+          "anchor": "mRunningFocusAnimTasks.contains(",
+          "lines": [
+            169,
+            321
+          ]
+        },
+        {
+          "anchor": "isInResetSurfaceWhitelist(taskInfo)",
+          "lines": [
+            197
+          ]
+        },
+        {
+          "anchor": "setPosition(leash, 0.0f, 0.0f)",
+          "lines": [
+            200
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N25",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell-vendor/sources/com/android/wm/shell/multitasking/miuifreeform/MiuiFreeformModeController.java",
+      "decompiled_file_sha256": "6664d89451bc57fae3ed15f85ed3cace1700661cb07371891c82cbed014f158a",
+      "anchors": [
+        {
+          "anchor": "adjustBoundsForDisplayChange(",
+          "lines": [
+            598,
+            1796,
+            2612
+          ]
+        },
+        {
+          "anchor": "setBoundsChangeTransaction(",
+          "lines": [
+            633
+          ]
+        },
+        {
+          "anchor": "adjustFreeformBoundsAndScaleIfNeed(",
+          "lines": [
+            1759,
+            3711,
+            3712
+          ]
+        },
+        {
+          "anchor": "applyTransaction(windowContainerTransaction)",
+          "lines": [
+            884,
+            1797,
+            1947,
+            2971,
+            3057
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N26",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-miui-handler/sources/com/android/wm/shell/multitasking/common/animation/MultiTaskingTransitionHandler.java",
+      "decompiled_file_sha256": "abc2ea72a34777f72733accdc47358ab1278e67066ec0d0331cde0c966f6c5cb",
+      "anchors": [
+        {
+          "anchor": "addHandler(r1)",
+          "lines": [
+            229
+          ]
+        },
+        {
+          "anchor": "handleRequest(r3, r4)",
+          "lines": [
+            359
+          ]
+        },
+        {
+          "anchor": "startAnimation animated handler",
+          "lines": [
+            655
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N27",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/shell/sources/com/android/wm/shell/desktopmode/DesktopTasksController.java",
+      "decompiled_file_sha256": "e25cf98372b85a500a08166c05525d3b494a2e4b02d2b09afababf6fec7b56f8",
+      "anchors": [
+        {
+          "anchor": "taskDisplaySupportDesktopMode(",
+          "lines": [
+            3369,
+            4184
+          ]
+        },
+        {
+          "anchor": "isDesktopModeSupportedOnDisplay(runningTaskInfo.displayId)",
+          "lines": [
+            3370
+          ]
+        },
+        {
+          "anchor": "setBounds(runningTaskInfo.token, rectCalculateMaximizeBounds)",
+          "lines": [
+            1599
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N28",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership-fallback/sources/com/android/wm/shell/desktopmode/DesktopTasksTransitionObserver.java",
+      "decompiled_file_sha256": "360b1acd5b1f094c60d3f686a09134e4dee42ead7aeb5f19925efe538d207fde",
+      "anchors": [
+        {
+          "anchor": "registerObserver(",
+          "lines": [
+            682
+          ]
+        },
+        {
+          "anchor": "onTransitionReady(",
+          "lines": [
+            746
+          ]
+        },
+        {
+          "anchor": "r1.updateRememberedBoundsIfNeeded(r3, r2)",
+          "lines": [
+            771
+          ]
+        },
+        {
+          "anchor": "r1.reorder(r6, r3)",
+          "lines": [
+            712
+          ]
+        },
+        {
+          "anchor": "r1.removeTask(r6)",
+          "lines": [
+            719
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N29",
+      "input": "shell",
+      "local_output": "analysis/local/jadx/native-stage2/ownership/sources/com/android/wm/shell/freeform/FreeformTaskListener.java",
+      "decompiled_file_sha256": "f73a1f1e7819bea26aca215653b7b1b427be0e57b46dcc8a046165b45d3f044c",
+      "anchors": [
+        {
+          "anchor": "instanceof MulWinSwitchDecorViewModelStub",
+          "lines": [
+            141
+          ]
+        },
+        {
+          "anchor": "windowDecorViewModel.onTaskInfoChanged(",
+          "lines": [
+            142
+          ]
+        }
+      ]
     }
   ],
   "native_anchors": {
@@ -558,15 +941,73 @@
     "ui_vtable_va": "0xe1d318",
     "window_vtable_va": "0xe1e1f8",
     "callbacks": [
-      {"name": "on_create", "table": "ui", "runtime_accessor_va": "0x1e310c", "slot": "0x18", "launcher_target_va": "0x776854"},
-      {"name": "on_resume", "table": "ui", "runtime_accessor_va": "0x1e312c", "slot": "0x28", "launcher_target_va": "0xd49a28", "returns_immediately": true},
-      {"name": "on_destroy", "table": "ui", "runtime_accessor_va": "0x1e2ecc", "slot": "0x40", "launcher_target_va": "0xd49a28", "returns_immediately": true},
-      {"name": "request_window", "table": "ui", "runtime_accessor_va": "0x1e2f4c", "slot": "0x48", "launcher_target_va": "0x776834"},
-      {"name": "on_configuration_changed", "table": "ui", "runtime_accessor_va": "0x1e2fec", "slot": "0x78", "launcher_target_va": "0x74cbe4", "returns_immediately": true},
-      {"name": "on_new_intent", "table": "ui", "runtime_accessor_va": "0x1e2f2c", "slot": "0x80", "launcher_target_va": "0x74cbe4", "returns_immediately": true},
-      {"name": "on_surface_created", "table": "window", "runtime_accessor_va": "0x1e30ec", "slot": "0x20", "launcher_target_va": "0x77a110"},
-      {"name": "on_surface_changed", "table": "window", "runtime_accessor_va": "0x1e312c", "slot": "0x28", "launcher_target_va": "0xd49c40"},
-      {"name": "on_window_config_changed", "table": "window", "runtime_accessor_va": "0x1e2f8c", "slot": "0x50", "launcher_target_va": "0xd49c5c"}
+      {
+        "name": "on_create",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e310c",
+        "slot": "0x18",
+        "launcher_target_va": "0x776854"
+      },
+      {
+        "name": "on_resume",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e312c",
+        "slot": "0x28",
+        "launcher_target_va": "0xd49a28",
+        "returns_immediately": true
+      },
+      {
+        "name": "on_destroy",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e2ecc",
+        "slot": "0x40",
+        "launcher_target_va": "0xd49a28",
+        "returns_immediately": true
+      },
+      {
+        "name": "request_window",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e2f4c",
+        "slot": "0x48",
+        "launcher_target_va": "0x776834"
+      },
+      {
+        "name": "on_configuration_changed",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e2fec",
+        "slot": "0x78",
+        "launcher_target_va": "0x74cbe4",
+        "returns_immediately": true
+      },
+      {
+        "name": "on_new_intent",
+        "table": "ui",
+        "runtime_accessor_va": "0x1e2f2c",
+        "slot": "0x80",
+        "launcher_target_va": "0x74cbe4",
+        "returns_immediately": true
+      },
+      {
+        "name": "on_surface_created",
+        "table": "window",
+        "runtime_accessor_va": "0x1e30ec",
+        "slot": "0x20",
+        "launcher_target_va": "0x77a110"
+      },
+      {
+        "name": "on_surface_changed",
+        "table": "window",
+        "runtime_accessor_va": "0x1e312c",
+        "slot": "0x28",
+        "launcher_target_va": "0xd49c40"
+      },
+      {
+        "name": "on_window_config_changed",
+        "table": "window",
+        "runtime_accessor_va": "0x1e2f8c",
+        "slot": "0x50",
+        "launcher_target_va": "0xd49c5c"
+      }
     ]
   }
 }
