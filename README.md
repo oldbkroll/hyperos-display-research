@@ -31,8 +31,9 @@
 | [15 桌面资格实测](reports/15-device-desktop-qualification-preflight.md) | 单资源 Overlay、次屏 HOME 和任务承载、黑屏诊断与回退 |
 | [16 外屏电源组](reports/16-external-desktop-power-group.md) | 外屏和背屏共组的 ROM 分支、DOZE/OFF 下发及同一启动周期的验证计划 |
 | [17 电源与合成对照](reports/17-external-desktop-power-and-composition-control.md) | 同一次启动验证共组继承、外屏重新点亮、黑底状态栏和停用回退 |
+| [18 次屏 HOME 首帧对照](reports/18-secondary-home-first-frame-control.md) | 外屏保持 ON 时比较 HOME 和计算器的绘制、buffer 与物理输出 |
 
-下一步追踪外屏已 ON、状态栏可见时，次屏 HOME 的图层为何未出现在物理画面。
+下一步从次屏窗口回调和 Flutter 桥接离线追踪 HOME 的首帧生成与 buffer 提交。
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 

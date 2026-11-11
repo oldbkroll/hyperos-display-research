@@ -35,7 +35,7 @@
 - Mapper 对已连接且从 disabled 变为 enabled 的逻辑屏可发出 ADDED。DMS 的 `handleLogicalDisplayAddedPreProcessLocked()` 将该显示的缓存状态设为 ON，后处理经 `updateLogicalDisplayState()` → `updateDisplayStateLocked()` → `DisplayDevice.requestDisplayStateLocked()` 下发。这个入口可解释日志中外屏物理 ON 早于次屏 HOME 启动，且同组 DPC 请求仍为 DOZE/OFF。两个状态分别来自 DMS 物理状态下发与 PMS 组策略。
 - 证据锚点位于 `analysis/local/jadx/services/sources/com/android/server/display/` 的 `DisplayManagerService.java:2711–2717,2749–2764,2904–2914,4167–4180,4578–4627`、`LogicalDisplayMapper.java:725–736,1317–1324`、`ExternalDisplayPolicy.java:109–122`，以及 `analysis/local/jadx/systemui/sources/com/android/systemui/display/ui/viewmodel/ConnectingDisplayViewModel.java:226–258`。
 
-[待真机] 下一次优先检查物理 ON 且 layer stack 有效时的画面。可先利用 D9 已观察到的「已连接、仍在组 0、关闭镜像」窗口，在同一采样点保存 HOME 与单个可见系统 Activity 的物理图，再比对 WM surface show/hide、transition、SF 的 buffer 与 visible region。若普通 Activity 能显示而 HOME 只有黑底，定位 MiuiHome 次屏渲染与图层可见性。若两者都缺失，继续查共用的 WM/SF 图层。D9 没有启动额外测试 Activity。独立组分配仍是后续电源隔离议题。
+D9 没有启动额外测试 Activity。D10 已利用「已连接、仍在组 0、关闭镜像」的窗口完成 HOME 与计算器对照，确认前者无可绘制内容、后者进入物理合成。[报告 18](18-secondary-home-first-frame-control.md)
 
 ## 停用回退
 

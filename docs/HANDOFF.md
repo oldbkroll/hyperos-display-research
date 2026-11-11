@@ -8,10 +8,10 @@
 
 ## 当前下一步
 
-单资源资格 Overlay 的启动对照和回退已完成。D9 结束时测试模块已停用并保留，设备恢复 1440p60 镜像。先读[报告 17](../reports/17-external-desktop-power-and-composition-control.md)。原始证据在 `analysis/local/device-validation/`。
+单资源资格 Overlay 的启动对照和回退已完成。D10 结束时测试模块已停用并保留，设备恢复 1440p60 镜像。先读[报告 18](../reports/18-secondary-home-first-frame-control.md)与[报告 17](../reports/17-external-desktop-power-and-composition-control.md)。原始证据在 `analysis/local/device-validation/`。
 
 1. `0x77a130` 已确认是指标向量析构。离线从次屏窗口其余事件槽与 Flutter 桥接入口定位点击处理，再追踪应用启动的来源 token 和 Bundle。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[窗口参数与应用落屏](../reports/12-native-secondary-home-display-routing.md)
-2. D9 重插确认外屏复用背屏组 1 的 `DOZE/OFF` 请求。连接确认后，物理外屏恢复 ON 和 layer stack 2，用户看到黑底和状态栏。下一步优先在外屏已 ON 的条件下对照 HOME 与单个普通 Activity 的图层可见性，再按 task 和 transition 核对窗口写入。组分配问题单独保留，组 1 共组时按外屏 ID 唤醒会作用于背屏。[电源组分析](../reports/16-external-desktop-power-group.md) · [外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
+2. D9 重插确认外屏复用背屏组 1 的 `DOZE/OFF` 请求。D10 保持组 0 和物理 ON，次屏 HOME 同步超时后以 `has_tx=false` 通知绘制完成，SF 的该图层无可绘制内容。计算器有 buffer，现场确认画面居中，WM 记录固定方向留黑。下一步离线追踪次屏 HOME 的首帧生产者与 Surface buffer 提交。组分配问题单独保留，组 1 共组时按外屏 ID 唤醒会作用于背屏。[电源组分析](../reports/16-external-desktop-power-group.md) · [窗口创建路径](../reports/12-native-secondary-home-display-routing.md)
 3. ROM 内 SF 的两个外屏模式拒绝分支已定位。1440p50 与 1080p60 的 DMS 目标能送到 SF，但 HWC 维持 1440p60。精确 `120.00001` 仍需追踪 DMS 的目标筛选。启动回退已验证有线 ADB 和本机 RescueBrick 的一次触发，内置安全模式仍未验证。
 
 ## 首轮研究交接
