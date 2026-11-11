@@ -1,6 +1,6 @@
 # 16 原生外接桌面黑屏与背屏电源组
 
-2026-11-11（北京时间），popsicle / `OS4.0.6.0.XPBCNXM`。复查[报告 15](15-device-desktop-qualification-preflight.md)的 D3 快照和匹配 ROM。完成离线追踪后，用户接通无线 ADB 并授权采集 D8 原厂基线。重新加载 Overlay 的桌面对照仍为 `NOT_RUN`。
+2026-11-11（北京时间），popsicle / `OS4.0.6.0.XPBCNXM`。复查[报告 15](15-device-desktop-qualification-preflight.md)的 D3 快照和匹配 ROM。完成离线追踪后，用户接通无线 ADB 并授权采集 D8 原厂基线。同一次启动的 D9 桌面对照及停用回退见[报告 17](17-external-desktop-power-and-composition-control.md)。
 
 ## 已保存的真机对照
 
@@ -40,7 +40,7 @@ D8 经无线 ADB 核对当前 ROM、`framework-res.apk` 哈希和镜像值 `1`�
 
 [ROM] 窗口与 Activity 有显式点亮分支，分别经 `WindowState` 或 `ActivityTaskSupervisor` 向 `PowerManager.wakeUp(…, displayId)` 发请求。任务已 resumed 本身不能证明进入这些分支。ROM 还有 `cmd power power-on <displayId>`，经 Binder `wakeUpWithDisplayId()` 检查 `DEVICE_POWER` 后，将 Display ID 映射为组 ID，再经 `wakeupDisplayGroupsLocked()` → `wakePowerGroupLocked()` → `PowerGroup.wakeUpLocked()`，保留系统就绪、强制休眠、背屏省电等检查。D3 拓扑下对外屏 ID 使用该命令会请求唤醒**整个组 1**，组内含背屏。将它排除出本轮单屏对照，同样不使用直写 SF/HWC 电源模式或全局电源策略。
 
-[待真机] 已完成 D8 原厂基线的无线只读采集。确认有线回退路径和批准范围后，再重新加载[原单资源 Overlay](15-device-desktop-qualification-preflight.md)。Overlay 激活、桌面对照和本次卸载回归均为 `NOT_RUN`。
+以下为 D8 基线后制定的对照计划。D9 执行时采用停用回退，实际步骤和结果见[报告 17](17-external-desktop-power-and-composition-control.md)。
 
 | 步骤 | 单次启动内的操作与判据 |
 | --- | --- |
