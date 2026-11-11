@@ -4,7 +4,7 @@
 
 ## 已接受的后续方向
 
-先读 [原生外接桌面接通与兼容性修复计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md)。用户要求不引入第三方桌面，优先复用 MiuiHome、SystemUI、WM Shell 与现有 MIUI 窗口能力。该计划调整了旧报告 05 的后续优先级：不将独立第三方桌面作为自动回退，不默认全局放开桌面限制。计划文档已建立，新阶段尚未执行；下文是首轮成果与技术交接。
+先读 [原生外接桌面接通与兼容性修复计划](NATIVE_EXTERNAL_DESKTOP_PLAN.md) 与 [阶段 1 证据矩阵](../reports/07-native-desktop-evidence-matrix.md)。优先复用 MiuiHome、SystemUI、WM Shell 与现有 MIUI 窗口能力，不引入第三方桌面，不默认全局放开桌面限制。下一离线检查点是阶段 2：补齐次屏 HOME 与双窗口体系链路。下文保留首轮成果与技术交接。
 
 ## 当前下一步
 
