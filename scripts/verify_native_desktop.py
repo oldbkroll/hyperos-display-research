@@ -25,6 +25,42 @@ def elf_sections(data):
             for entry in entries}
 
 
+def elf_relocations(data, section):
+    blob = data[section[4]:section[4] + section[5]]
+    if not blob.startswith(b'APS2'):
+        yield from struct.iter_unpack('<QQq', blob)
+        return
+
+    def signed_leb128_values():
+        value = shift = 0
+        for byte in blob[4:]:
+            value |= (byte & 0x7f) << shift
+            shift += 7
+            if byte & 0x80:
+                continue
+            yield value - (1 << shift) if byte & 0x40 else value
+            value = shift = 0
+
+    stream = signed_leb128_values()
+    remaining, offset = next(stream), next(stream)
+    addend = 0
+    while remaining:
+        count, flags = next(stream), next(stream)
+        assert 0 < count <= remaining and flags & ~15 == 0
+        group_offset = next(stream) if flags & 2 else None
+        group_info = next(stream) if flags & 1 else None
+        group_addend = next(stream) if flags & 8 and flags & 4 else None
+        for _ in range(count):
+            offset += next(stream) if group_offset is None else group_offset
+            info = next(stream) if group_info is None else group_info
+            if flags & 8:
+                addend += next(stream) if group_addend is None else group_addend
+            else:
+                addend = 0
+            yield offset, info, addend
+        remaining -= count
+
+
 def verify_native_lifecycle(record, launcher_path):
     roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
     runtime_path = Path(roots[record['runtime_partition']]['windows_path']) / record['runtime_path']
@@ -34,9 +70,8 @@ def verify_native_lifecycle(record, launcher_path):
     runtime_text = elf_sections(runtime)['.text']
     launcher_sections = elf_sections(launcher)
     launcher_text = launcher_sections['.text']
-    rela = launcher_sections['.rela.dyn']
     relative_targets = {address: addend for address, info, addend in
-                        struct.iter_unpack('<QQq', launcher[rela[4]:rela[4] + rela[5]]) if info == 1027}
+                        elf_relocations(launcher, launcher_sections['.rela.dyn']) if info == 1027}
     for callback in record['callbacks']:
         slot = int(callback['slot'], 16)
         base = int(record[f"{callback['table']}_vtable_va"], 16)
@@ -48,6 +83,39 @@ def verify_native_lifecycle(record, launcher_path):
         if callback.get('returns_immediately'):
             assert struct.unpack_from('<I', launcher, target - launcher_text[3] + launcher_text[4])[0] == 0xd65f03c0
     print(f"PASS: {len(record['callbacks'])} named lifecycle slots and launcher relocation targets")
+
+
+def verify_native_display_routing(record, launcher_path):
+    roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
+    paths = {'launcher': Path(launcher_path)}
+    for key, item in record['rom_libraries'].items():
+        path = Path(roots[item['partition']]['windows_path']) / item['path']
+        assert sha256(path) == item['sha256'], key
+        paths[key] = path
+    images = {key: path.read_bytes() for key, path in paths.items()}
+    layouts = {key: elf_sections(image) for key, image in images.items()}
+    for item in record['direct_branches']:
+        key = item['image']
+        text = layouts[key]['.text']
+        pc = int(item['pc'], 16)
+        word = struct.unpack_from('<I', images[key], text[4] + pc - text[3])[0]
+        assert word >> 26 in (5, 37), item
+        displacement = ((word & 0x3ffffff) ^ 0x2000000) - 0x2000000
+        assert pc + 4 * displacement == int(item['target'], 16), item
+    for item in record['symbol_relocations']:
+        key = item['image']
+        data, sections = images[key], layouts[key]
+        dynsym, dynstr = (sections[name][4] for name in ('.dynsym', '.dynstr'))
+        records = elf_relocations(data, sections['.rela.dyn'])
+        info, addend = next((info, addend) for address, info, addend in records
+                            if address == int(item['slot'], 16))
+        assert info & 0xffffffff == 257 and addend == 0, item
+        symbol = dynsym + 24 * (info >> 32)
+        name_offset = dynstr + struct.unpack_from('<I', data, symbol)[0]
+        name = data[name_offset:data.index(0, name_offset)].decode()
+        assert all(part in name for part in item['symbol_parts']), item
+        assert struct.unpack_from('<Q', data, symbol + 8)[0] == int(item['symbol_va'], 16), item
+    print('PASS: native display routing input hashes, direct branches and named relocations')
 
 
 def main():
@@ -85,6 +153,7 @@ def main():
                 stream.seek(int(native[field], 16))
                 assert stream.read(len(anchor)) == anchor, field
         verify_native_lifecycle(data['native_lifecycle'], data['inputs'][native['input']]['local'])
+        verify_native_display_routing(data['native_display_routing'], data['inputs'][native['input']]['local'])
     documents = [Path('README.md'), Path('analysis/README.md'), *Path('reports').glob('*.md'), *Path('docs').glob('*.md')]
     count = 0
     for source in documents:

@@ -1,5 +1,7 @@
 # 10 MiuiHome 次屏 HOME 生命周期
 
+窗口创建间接调用的目标已在后续检查点定位。见 [窗口参数与应用落屏](12-native-secondary-home-display-routing.md)。
+
 2026-11-11，`OS4.0.6.0.XPBCNXM`。用同一 ROM 的 Rust UI 运行库解读 MiuiHome 次屏组件的回调表，确认了创建、窗口请求和配置变化的直接路径。应用启动与窗口间接回调的最终目标仍待确认。设备验证 `NOT_RUN`。[回调表与输入哈希](../analysis/evidence/native-desktop-stage2.json)
 
 `libapp_launcher.so` 在组件名匹配后返回 UI 描述符 `0xe1d318`。`libhyper_os_ui_private.dylib.so` 的 `FfiUi` 和 `UiWindow` 导出符号标注了回调名。相应的读取函数从表指针加固定偏移取出目标，结合 Launcher 的 `R_AARCH64_RELATIVE` 重定位可定位具体函数。`request_window` 返回第二个描述符 `0xe1e1f8`，因此窗口回调可以继续按同样方式核对。

@@ -13,7 +13,9 @@
 
 两个路线都缺少次屏 HOME 的生命周期及配置传播证据。路线 A 的静态证据不足，不自动切换 B；保留独立输出或单个 Activity 的阶段结果，不用第三方桌面替换原生目标。
 
-后续静态检查已定位次屏 HOME 的九个回调槽位。应用启动和 `on_surface_created` 中的间接调用仍待追踪。共享装饰 provider 优先选择启用的 MIUI 实现，路线 B 的准入增加对真机绑定和实际装饰调用的核对。[次屏生命周期](10-native-secondary-home-lifecycle.md) · [外屏窗口归属](11-native-desktop-window-ownership.md)
+后续静态检查已定位次屏 HOME 的九个回调槽位，窗口创建间接调用已追到指标向量析构。D1 应分别验证首次启动与已有可见任务，记录来源 token、显式 options 和最终 display/TDA。系统启动 HOME 已确认显式指定目标显示区，普通应用的次屏点击入口仍待定位。[窗口参数与应用落屏](12-native-secondary-home-display-routing.md)
+
+共享装饰 provider 优先选择启用的 MIUI 实现。路线 B 需核对真机绑定和实际装饰调用。[外屏窗口归属](11-native-desktop-window-ownership.md)
 
 ## 候选变量与验证顺序
 

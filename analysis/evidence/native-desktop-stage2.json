@@ -917,6 +917,84 @@
           ]
         }
       ]
+    },
+    {
+      "id": "N30",
+      "input": "services",
+      "local_output": "analysis/local/jadx/native-stage2/launch-params-fallback/sources/com/android/server/wm/ActivityStartController.java",
+      "decompiled_file_sha256": "24f1975bf9348c2ccd07cefea4ee1bd865fd1d5eb94ed529339f06a088067dc7",
+      "anchors": [
+        {
+          "anchor": "startHomeActivity(",
+          "lines": [
+            1219
+          ]
+        },
+        {
+          "anchor": "setLaunchDisplayId(r1)",
+          "lines": [
+            1246
+          ]
+        },
+        {
+          "anchor": "setLaunchTaskDisplayArea(r2)",
+          "lines": [
+            1249
+          ]
+        }
+      ]
+    },
+    {
+      "id": "N31",
+      "input": "services",
+      "local_output": "analysis/local/jadx/native-stage2/launch-params-fallback/sources/com/android/server/wm/LaunchParamsUtil.java",
+      "decompiled_file_sha256": "b44c33c9d782d5cafb719e0395420dd5d298d48020f3580442bb74292a1a9ff7",
+      "anchors": [
+        {
+          "anchor": "getPreferredLaunchTaskDisplayArea(",
+          "lines": [
+            509
+          ]
+        },
+        {
+          "anchor": "getLaunchTaskDisplayArea()",
+          "lines": [
+            519
+          ]
+        },
+        {
+          "anchor": "getLaunchDisplayId()",
+          "lines": [
+            544,
+            549,
+            569
+          ]
+        },
+        {
+          "anchor": "prioritizeVisibleTaskDisplayOverSource()",
+          "lines": [
+            617
+          ]
+        },
+        {
+          "anchor": "display-area-from-source=",
+          "lines": [
+            626
+          ]
+        },
+        {
+          "anchor": "display-from-task=",
+          "lines": [
+            637
+          ]
+        },
+        {
+          "anchor": "display-from-caller=",
+          "lines": [
+            654
+          ]
+        }
+      ]
     }
   ],
   "native_anchors": {
@@ -1009,5 +1087,127 @@
         "launcher_target_va": "0xd49c5c"
       }
     ]
+  },
+  "native_display_routing": {
+    "rom_libraries": {
+      "ui_private": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_ui_private.dylib.so",
+        "sha256": "0da78c3ec0e3719893890ba21a5456e2c857fdc8b0bdd232bac43c765a3eedc3"
+      },
+      "ui_public": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_ui_public.so",
+        "sha256": "a3420bb72de275a7fcd9623256e0e1022da9f92e30fb93e76534f48ef3e08df7"
+      },
+      "aidl": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_aidl.dylib.so",
+        "sha256": "dc1e8372a446e69fdffa2c76903d685a4de1df9e55832f0c2ac2b6614d612792"
+      }
+    },
+    "surface_created": {
+      "runtime_handle_surface_callback": "0x1a6b70",
+      "runtime_build_window_display_info_call": "0x1a6ef0",
+      "runtime_metrics_vtable_address_instruction": "0x1a6ee0",
+      "runtime_ui_window_vtable_slot": "0x20",
+      "runtime_dispatch": "0x1a6f10",
+      "launcher_metrics_release_call": "0x77a130",
+      "metrics_vtable": "0x230840",
+      "metrics_destructor_slot": "0x230858"
+    },
+    "app_start": {
+      "ui_public_scene_start_activity": "0x6814c",
+      "ui_public_set_launch_display_id": "0x66fdc",
+      "ui_private_scene_activity_start_activity": "0x1e8d48",
+      "ui_private_activity_manager_dispatch": "0x1e9018",
+      "recents_caller": "0x94c794",
+      "safe_launcher_caller": "0xd4a02c",
+      "small_window_scene_caller": "0x5d2cc0",
+      "small_window_launcher_apps_caller": "0x5d2c04"
+    },
+    "direct_branches": [
+      {
+        "image": "ui_private",
+        "pc": "0x1a6be0",
+        "target": "0x226f70"
+      },
+      {
+        "image": "ui_private",
+        "pc": "0x1a6ef0",
+        "target": "0x227870"
+      },
+      {
+        "image": "ui_private",
+        "pc": "0x1e8f10",
+        "target": "0x22a048"
+      },
+      {
+        "image": "ui_public",
+        "pc": "0x681c8",
+        "target": "0x81ca8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xbafe08",
+        "target": "0xe076d0"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xbaffc4",
+        "target": "0xe076d0"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xbb010c",
+        "target": "0xe07710"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94c794",
+        "target": "0xbafdd4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xd4a02c",
+        "target": "0xbafdd4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x5d2cc0",
+        "target": "0xbafdd4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x5d2c04",
+        "target": "0xb8420c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xb8422c",
+        "target": "0xe06b80"
+      }
+    ],
+    "symbol_relocations": [
+      {
+        "image": "ui_private",
+        "slot": "0x230858",
+        "symbol_parts": [
+          "destructor_vec",
+          "MetricsEntry"
+        ],
+        "symbol_va": "0x17d504"
+      },
+      {
+        "image": "aidl",
+        "slot": "0xaf3a20",
+        "symbol_parts": [
+          "BpActivityManager",
+          "13startActivity"
+        ],
+        "symbol_va": "0x8d6834"
+      }
+    ],
+    "boundary": "Framework passes display ID and task display area for HOME itself. The secondary HOME to ordinary app launch edge remains unobserved."
   }
 }

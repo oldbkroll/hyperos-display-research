@@ -9,10 +9,10 @@
 | 原生计划阶段 | 状态 | 交付 / 下一步 |
 |---|---|---|
 | 1 统一证据 | 分析完成 | [N1–N6 证据矩阵、对照与缺项](../reports/07-native-desktop-evidence-matrix.md) |
-| 2 追踪原生调用链 | `PARTIAL` | 已确认九个次屏回调槽位、共享装饰选择顺序、两套组件的任务与 surface 写入点。待追踪应用启动、窗口间接回调及真机任务归属。[次屏生命周期](../reports/10-native-secondary-home-lifecycle.md) · [窗口归属](../reports/11-native-desktop-window-ownership.md) |
+| 2 追踪原生调用链 | `PARTIAL` | 已确认九个次屏回调槽位、窗口创建参数、HOME 启动显示区和窗口写入路径。待定位次屏点击启动与真机任务归属。[窗口归属](../reports/11-native-desktop-window-ownership.md) · [应用落屏](../reports/12-native-secondary-home-display-routing.md) |
 | 3 设计最小改动 | `PARTIAL`，条件设计已交付 | [路线准入、单变量实验和恢复](../reports/09-native-desktop-minimal-design.md)；A 优先评估、B 保留，均未通过实现准入 |
 
-阶段 2 首次检查点为 `340875d`，阶段 3 条件设计为 `95a3972`，次屏回调检查点为 `fcbbd7c`。最新窗口归属检查点校验 29 条方法证据、九个回调槽位及公开索引。阶段 4 的只读基线需另行明确设备操作范围，未开始。
+阶段 2 首次检查点为 `340875d`，阶段 3 条件设计为 `95a3972`，次屏回调和窗口归属检查点为 `fcbbd7c`、`f0efdd5`。本次校验 31 条方法证据、九个回调槽位、启动分支及指标向量析构重定位。阶段 4 的只读基线需另行明确设备操作范围，未开始。
 
 下表保留首轮研究阶段状态，不表示后续原生桌面实施与功能验收已经完成。
 

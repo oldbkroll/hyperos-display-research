@@ -8,7 +8,7 @@
 
 ## 当前下一步
 
-1. 离线接续从 `0x77a130` 的间接调用追查窗口回调实参，再定位次屏应用启动与目标显示传递。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[次屏 HOME 生命周期](../reports/10-native-secondary-home-lifecycle.md)
+1. `0x77a130` 已确认是指标向量析构。离线从次屏窗口其余事件槽与 Flutter 桥接入口定位点击处理，再追踪应用启动的来源 token 和 Bundle。现有证据用 `python scripts/verify_native_desktop.py --local` 复核。[窗口参数与应用落屏](../reports/12-native-secondary-home-display-routing.md)
 2. 阶段 4 先采断开及镜像的只读基线，确认真实 EXTERNAL、有效资格、HOME 解析、共享装饰绑定和恢复条件。按 task 和 transition 关联实际写入的实验留待基线之后。[外屏窗口归属](../reports/11-native-desktop-window-ownership.md)
 
 ## 首轮研究交接
