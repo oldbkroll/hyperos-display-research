@@ -49,6 +49,27 @@
         ],
         "0x1401084": [
           "MirrorDesktopBridgeApiImpl.performMirrorDeviceIconClick"
+        ],
+        "0x1468990": [
+          "_LauncherAppState.initState"
+        ],
+        "0x156f180": [
+          "_LauncherAppState.dispose"
+        ],
+        "0x1b25338": [
+          "RecentsClearReceiver.registerRecentsCleanReceiver"
+        ],
+        "0x1b24248": [
+          "OfflineWidgetReceiver.register"
+        ],
+        "0x1b240d0": [
+          "RecentsAndFSGestureUtils.init"
+        ],
+        "0x1b402bc": [
+          "RecentsClearReceiver.stopListening"
+        ],
+        "0x1b401cc": [
+          "OfflineWidgetReceiver.unregister"
         ]
       }
     },
@@ -116,6 +137,31 @@
         "image": "dart",
         "pc": "0x14010e0",
         "target": "0x14010f0"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1468b88",
+        "target": "0x1b25338"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1468bb0",
+        "target": "0x1b24248"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1468bb4",
+        "target": "0x1b240d0"
+      },
+      {
+        "image": "dart",
+        "pc": "0x156f238",
+        "target": "0x1b402bc"
+      },
+      {
+        "image": "dart",
+        "pc": "0x156f260",
+        "target": "0x1b401cc"
       }
     ]
   },
@@ -211,6 +257,84 @@
           "0x6b0e18": [
             "TaskbarManager",
             "on_display_add_system_decorations"
+          ],
+          "0x6a9bb0": [
+            "GlobalStates",
+            "set_window_operation"
+          ],
+          "0x6b97c4": [
+            "EngineSnapshot",
+            "set_token"
+          ],
+          "0x762204": [
+            "FlutterSceneWrapper",
+            "LauncherUi",
+            "on_destroy"
+          ],
+          "0x768754": [
+            "FlutterSceneWrapper",
+            "SettingsUi",
+            "on_create"
+          ],
+          "0x777990": [
+            "MainUiWindow",
+            "on_surface_destroyed"
+          ],
+          "0x77801c": [
+            "MainUiWindow",
+            "on_detached"
+          ],
+          "0x7b8ae8": [
+            "LauncherUi",
+            "new"
+          ],
+          "0x96fac8": [
+            "LauncherUi",
+            "on_create"
+          ],
+          "0xa59244": [
+            "WindowDelegate",
+            "on_detached"
+          ],
+          "0xa63b0c": [
+            "SceneDelegate",
+            "on_destroy"
+          ],
+          "0xa66024": [
+            "WindowDelegate",
+            "new"
+          ],
+          "0xa67680": [
+            "SceneDelegate",
+            "pre_on_create"
+          ],
+          "0xa6981c": [
+            "SceneDelegate",
+            "post_on_create"
+          ],
+          "0xaa1cac": [
+            "ApplicationContext",
+            "remove_multi_view_manager"
+          ],
+          "0xaa4f58": [
+            "HyperRustMessenger",
+            "shutdown"
+          ],
+          "0xaa5458": [
+            "MultiViewManager",
+            "get_overlay_view_with_window_id"
+          ],
+          "0xb9cd20": [
+            "FlutterWindowState",
+            "on_destroyed"
+          ],
+          "0xb9d150": [
+            "GroupedEngineInner",
+            "drop_slow"
+          ],
+          "0xd447a0": [
+            "on_first_frame",
+            "PlatformCallbacksDelegate"
           ]
         }
       },
@@ -231,6 +355,15 @@
           ],
           "0x6f0354": [
             "shell_holder_set_window_viewport_metrics"
+          ],
+          "0x6e7e90": [
+            "shell_holder_destroy"
+          ],
+          "0x6ea5d0": [
+            "shell_holder_surface_destroyed"
+          ],
+          "0x6efe0c": [
+            "shell_holder_window_surface_destroyed"
           ]
         }
       }
@@ -241,13 +374,23 @@
         "0xe1d6b0": "0x7780cc",
         "0xe89ee0": "0xa6ef1c",
         "0xe8c330": "0xa6f1a4",
-        "0xe86758": "0xa65640"
+        "0xe86758": "0xa65640",
+        "0xe1c478": "0x762204",
+        "0xe1c560": "0x768754",
+        "0xe1d690": "0x777a44",
+        "0xe1d6a8": "0x777990",
+        "0xe1d6c0": "0x77801c",
+        "0xf06570": "0xd447a0",
+        "0xf065a0": "0xd44930"
       }
     },
     "relr_relocations": {
       "flutter": {
         "0x1165c68": "0x6e808c",
-        "0x1165da0": "0x6f0354"
+        "0x1165da0": "0x6f0354",
+        "0x1165c58": "0x6e7e90",
+        "0x1165cd0": "0x6ea5d0",
+        "0x1165d98": "0x6efe0c"
       }
     },
     "direct_branches": [
@@ -370,6 +513,151 @@
         "image": "ui",
         "pc": "0x1f6100",
         "target": "0x1b293c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94e4a0",
+        "target": "0x9250c8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94e4cc",
+        "target": "0x7b8ae8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94e4e0",
+        "target": "0x5c0444"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x925170",
+        "target": "0x6b97c4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x925300",
+        "target": "0x7b8ae8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x5c058c",
+        "target": "0xa74f8c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x5c06dc",
+        "target": "0xd42db8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xd42e28",
+        "target": "0xb9e6a4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7661a0",
+        "target": "0xd4892c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x766240",
+        "target": "0xa67680"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x766270",
+        "target": "0x96fac8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x766294",
+        "target": "0xa6981c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x768810",
+        "target": "0xb9d430"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x768924",
+        "target": "0xa67680"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7693a4",
+        "target": "0xa6981c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x763c20",
+        "target": "0xa66024"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x777b04",
+        "target": "0xa5f330"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x777b40",
+        "target": "0x6a9bb0"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x971054",
+        "target": "0x6a9bb0"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xd447cc",
+        "target": "0xe04220"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xd44998",
+        "target": "0xaa5458"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xd44a20",
+        "target": "0xe04220"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7779a4",
+        "target": "0xb9cd20"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x777a20",
+        "target": "0xa5b624"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7780a8",
+        "target": "0xa59244"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x763234",
+        "target": "0xaa1cac"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x76323c",
+        "target": "0xa63b0c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x76324c",
+        "target": "0xaa4f58"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xb9cfe4",
+        "target": "0xb9d150"
       }
     ],
     "symbol_relocations": []

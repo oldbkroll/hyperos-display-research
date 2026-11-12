@@ -18,7 +18,7 @@
 | evidence/overlays.json | 97 个 packaged RRO 的哈希、manifest 条件、相关资源；无运行时状态 |
 | evidence/findings.json | F01–F24 方法定位、本地反编译文件哈希、数值资源和关键属性 |
 | evidence/native-first-frame.json | 主次屏渲染调用和超时闭包的 ELF 锚点，D10 归档哈希及 token / layer 锚点 |
-| evidence/native-secondary-aot.json | Flutter AOT 成员、迷你符号、Dart 入口及 Rust 窗口桥的分支和重定位锚点 |
+| evidence/native-secondary-aot.json | Flutter AOT 成员、迷你符号、Dart 入口、Rust 窗口桥、scene 及其生命周期的分支与重定位锚点 |
 | evidence/vendor-binaries.json | 显示 ELF 的哈希和字符串偏移；字符串本身不证明控制流 |
 | evidence/tools.json | 工具来源/版本/校验边界 |
 

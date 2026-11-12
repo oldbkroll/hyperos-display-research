@@ -34,6 +34,7 @@
 | [18 次屏 HOME 首帧对照](reports/18-secondary-home-first-frame-control.md) | 外屏保持 ON 时比较 HOME 和计算器的绘制、buffer 与物理输出 |
 | [19 次屏 HOME 渲染宿主](reports/19-secondary-home-render-host.md) | 对照主屏 Flutter Surface 绑定，复核 D10 初建和重建的图层与空事务完成路径 |
 | [20 次屏 HOME 的 Flutter AOT 入口](reports/20-secondary-home-aot-entry.md) | 追踪 Dart 路由、Rust 多视图窗口的 token 与落屏上下文，定位两条路线共用的缺口 |
+| [21 次屏 HOME 的 scene 与窗口生命周期](reports/21-secondary-home-scene-lifecycle.md) | 对照主屏、最近任务和设置的 scene，定位进程级窗口引用、首帧回调和 Surface 重建清理 |
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 
