@@ -1,0 +1,306 @@
+{
+  "rom": "popsicle / OS4.0.6.0.XPBCNXM",
+  "new_device_validation": "NOT_RUN",
+  "rom_libraries": {
+    "ui": {
+      "partition": "system_ext",
+      "path": "lib64/libhyper_os_ui_private.dylib.so",
+      "sha256": "0da78c3ec0e3719893890ba21a5456e2c857fdc8b0bdd232bac43c765a3eedc3"
+    },
+    "flutter": {
+      "partition": "system_ext",
+      "path": "lib64/libhyper_os_flutter.so",
+      "sha256": "77a3901d9df41d0d7db41a09250ea1627052225bf8661d0c992d4d668cc15e2b"
+    },
+    "aidl": {
+      "partition": "system_ext",
+      "path": "lib64/libhyper_os_aidl.dylib.so",
+      "sha256": "dc1e8372a446e69fdffa2c76903d685a4de1df9e55832f0c2ac2b6614d612792"
+    },
+    "sys": {
+      "partition": "system_ext",
+      "path": "lib64/libhyper_os_sys.dylib.so",
+      "sha256": "f56cf4607bf219c60367fa3943c60e1091d0717d1f00ea277ac17e33d116b7ab"
+    },
+    "public": {
+      "partition": "system_ext",
+      "path": "lib64/libhyper_os_ui_public.so",
+      "sha256": "a3420bb72de275a7fcd9623256e0e1022da9f92e30fb93e76534f48ef3e08df7"
+    }
+  },
+  "relative_relocations": {
+    "launcher": {
+      "0xe1d330": "0x776854",
+      "0xe1d338": "0xd49a28",
+      "0xe1d340": "0xd49a28",
+      "0xe1d348": "0xd49a28",
+      "0xe1d350": "0xd49a28",
+      "0xe1d358": "0xd49a28",
+      "0xe1d360": "0x776834",
+      "0xe1d368": "0xd49a4c",
+      "0xe1d370": "0xd49a50",
+      "0xe1d378": "0xd49a58",
+      "0xe1d380": "0xd49a60",
+      "0xe1d388": "0xd49a68",
+      "0xe1d390": "0x74cbe4",
+      "0xe1d398": "0x74cbe4",
+      "0xe1d3a0": "0x74cbe4",
+      "0xe1d3a8": "0x775ea4",
+      "0xe1d3b0": "0xd49af4",
+      "0xe1d3b8": "0xd49af4",
+      "0xe1d3c0": "0xd49af8",
+      "0xe1d3c8": "0x73b27c",
+      "0xe1d3d0": "0xd49afc",
+      "0xe1d3d8": "0xd49afc",
+      "0xe1d3e0": "0xd49afc",
+      "0xe1d3e8": "0x765484",
+      "0xe1e210": "0xd49bdc",
+      "0xe1e218": "0x77a110",
+      "0xe1e220": "0xd49c40",
+      "0xe1e228": "0xccbb98",
+      "0xe1e230": "0xd49c48",
+      "0xe1e238": "0xd49c58",
+      "0xe1e240": "0xccbb98",
+      "0xe1e248": "0xd49c5c",
+      "0xe1e250": "0x73df00",
+      "0xe1e258": "0xd49c64",
+      "0xe1e260": "0xd49c6c",
+      "0xe1e268": "0x73b27c",
+      "0xe1e270": "0xd49c74",
+      "0xe1c450": "0x766074",
+      "0xe1c480": "0x76391c",
+      "0xe1d690": "0x777a44",
+      "0xe1d698": "0x7776a4",
+      "0xf065a0": "0xd44930",
+      "0xf27450": "0xb8891c"
+    }
+  },
+  "direct_branches": [
+    {
+      "image": "launcher",
+      "pc": "0x94e4e0",
+      "target": "0x5c0444"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x5c06dc",
+      "target": "0xd42db8"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xd42e28",
+      "target": "0xb9e6a4"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x76612c",
+      "target": "0xb9d430"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x7776e0",
+      "target": "0xb9bfb8"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x777774",
+      "target": "0xa5d7a4"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xb9c038",
+      "target": "0xe06e10"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xb9c08c",
+      "target": "0xe06e10"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xd44a20",
+      "target": "0xe04220"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x77a138",
+      "target": "0xe041d0"
+    },
+    {
+      "image": "launcher",
+      "pc": "0x77a148",
+      "target": "0xe01f70"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xd49bf0",
+      "target": "0xe01210"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xd49c44",
+      "target": "0xe041d0"
+    },
+    {
+      "image": "launcher",
+      "pc": "0xd49c60",
+      "target": "0xe015c0"
+    },
+    {
+      "image": "ui",
+      "pc": "0x1a6d90",
+      "target": "0x227840"
+    },
+    {
+      "image": "ui",
+      "pc": "0x1ae73c",
+      "target": "0x227678"
+    },
+    {
+      "image": "ui",
+      "pc": "0x20a8a4",
+      "target": "0x227660"
+    },
+    {
+      "image": "ui",
+      "pc": "0x1ae9a8",
+      "target": "0x227660"
+    },
+    {
+      "image": "ui",
+      "pc": "0x1baac8",
+      "target": "0x228608"
+    },
+    {
+      "image": "ui",
+      "pc": "0x1bb740",
+      "target": "0x2276d8"
+    },
+    {
+      "image": "ui",
+      "pc": "0x18aa94",
+      "target": "0x225728"
+    },
+    {
+      "image": "flutter",
+      "pc": "0x6ea5bc",
+      "target": "0x6f2e14"
+    },
+    {
+      "image": "flutter",
+      "pc": "0x70caf8",
+      "target": "0x11539a0"
+    }
+  ],
+  "symbol_relocations": [
+    {
+      "image": "launcher",
+      "slot": "0xf117d8",
+      "type": 1025,
+      "symbol_parts": [
+        "HYPER_FLUTTER_INTERFACE"
+      ],
+      "symbol_va": "0x0"
+    },
+    {
+      "image": "aidl",
+      "slot": "0xaf5eb0",
+      "symbol_parts": [
+        "BpWindowSession",
+        "finishDrawing"
+      ],
+      "symbol_va": "0x8f0c40"
+    }
+  ],
+  "capture": {
+    "directory": "20261111-182904-D10-desktop-content-control",
+    "files": {
+      "live-logcat.txt": {
+        "sha256": "0df3ea2006e5472ec66c421421fc980e02c2f9aa9372afd9be1dc7580a8be178",
+        "lines": {
+          "38225": "SecondaryDisplayLauncherUi::on_create token=12970367465612758864",
+          "38473": "SecondaryDisplayLauncher#232)/@0x45384a for 3f30d8e",
+          "38511": "width: 2560, height: 1440, layer ID: 232",
+          "38518": "VRI[SecondaryDisplayLauncher#232]#5(BLAST Consumer)",
+          "38543": "surface_created:12970367465612758864",
+          "38544": "surface_changed:12970367465612758864",
+          "39071": "wmssync arm timeout, token:12970367465612758864",
+          "39333": "wmssync mark_sync_ready reason=timeout",
+          "39334": "token:12970367465612758864, seq:6, has_tx:false, render_target_valid:true, sc_valid:true, window_stopped:false",
+          "39342": "mDrawState=COMMIT_DRAW_PENDING Window{3f30d8e",
+          "39357": "showSurfaceRobustly mWin:Window{3f30d8e",
+          "39466": "invisibleChildLayer:VRI-com.miui.home/com.miui.home.launcher.SecondaryDisplayLauncher#232",
+          "41914": "id:197400000007,api:0,p:0,c:6516",
+          "44159": "width: 2560, height: 1440, layer ID: 273",
+          "44164": "SecondaryDisplayLauncher#273)/@0xd0d49f9 for 3f30d8e",
+          "44202": "surface_created:12970367465612758864",
+          "44765": "wmssync mark_sync_ready reason=timeout",
+          "44766": "token:12970367465612758864, seq:6, has_tx:false",
+          "45729": "id:197400000009,api:0,p:0,c:6516",
+          "79599": "VRI[Launcher#156]#4(BLAST Consumer)4](id:197400000005,api:1,p:6516,c:6516) disconnect"
+        }
+      },
+      "home-windows.txt": {
+        "sha256": "3c2b6cfb19d001c7bd6feee5ee5a3d6636c74bb2db2257a11db660b76e92f8b0",
+        "lines": {
+          "125": "Window{3f30d8e u0 com.miui.home/com.miui.home.launcher.SecondaryDisplayLauncher}",
+          "126": "mDisplayId=2 taskId=64",
+          "150": "mDrawState=HAS_DRAWN",
+          "157": "SecondaryDisplayLauncher#232",
+          "817": "mDisplayId=0",
+          "849": "Launcher#156"
+        }
+      },
+      "home-sf.txt": {
+        "sha256": "213032fefbe417208bb9eb3f802104df66c5cd85869d5135ca60908f486518fa",
+        "lines": {
+          "578": "Layer [156]",
+          "579": "frame=655",
+          "619": "LayerStack=2",
+          "632": "Layer [232]",
+          "633": "invisible reason=nothing to draw",
+          "952": "SecondaryDisplayLauncher#232 flags:256 a:1 pid=6516",
+          "2221": "VRI[Launcher#156]#4(BLAST Consumer)4"
+        }
+      },
+      "home-return-sf.txt": {
+        "sha256": "db67e90bb402c6275840dc8127c969e35d3e6ad99216bf591e038f9549142081",
+        "lines": {
+          "648": "Layer [273]",
+          "649": "invisible reason=nothing to draw"
+        }
+      },
+      "home-gfxinfo.txt": {
+        "sha256": "80ceb16e24a80871b0c14bf425333277dd03d7ba892093b60af3059a7436cb03",
+        "lines": {
+          "5": "Pipeline=Impeller (Vulkan)"
+        }
+      },
+      "calculator-sf.txt": {
+        "sha256": "1611986cc01bf14e20f536537edf49067f52390052395040091416b795af1721",
+        "lines": {
+          "399": "Layer [265]",
+          "400": "frame=6",
+          "1100": "CalculatorActivity"
+        }
+      },
+      "home-physical.png": {
+        "sha256": "115eb956524e4ab9e8678f239034171f291608f8d6a3c4bd163b085498a06f7e"
+      },
+      "calculator-physical.png": {
+        "sha256": "6d87026189ebbff7f2c3426766a75a55c3cce1d22899649d0590dddd38eea13a"
+      }
+    }
+  },
+  "relr_relocations": {
+    "ui": {
+      "0x239010": "0x18a828"
+    },
+    "flutter": {
+      "0x1165c50": "0x6e6754",
+      "0x1165c60": "0x6e6c38",
+      "0x1165cb8": "0x6ea52c",
+      "0x1165d80": "0x6ee744"
+    }
+  }
+}

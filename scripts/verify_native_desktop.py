@@ -61,6 +61,19 @@ def elf_relocations(data, section):
         remaining -= count
 
 
+def elf_relr_addresses(data, section):
+    base = 0
+    for (entry,) in struct.iter_unpack('<Q', data[section[4]:section[4] + section[5]]):
+        if entry & 1:
+            for bit in range(1, 64):
+                if entry & (1 << bit):
+                    yield base + 8 * (bit - 1)
+            base += 8 * 63
+        else:
+            yield entry
+            base = entry + 8
+
+
 def verify_native_lifecycle(record, launcher_path):
     roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
     runtime_path = Path(roots[record['runtime_partition']]['windows_path']) / record['runtime_path']
@@ -85,7 +98,7 @@ def verify_native_lifecycle(record, launcher_path):
     print(f"PASS: {len(record['callbacks'])} named lifecycle slots and launcher relocation targets")
 
 
-def verify_native_display_routing(record, launcher_path):
+def verify_native_elf_anchors(record, launcher_path):
     roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
     paths = {'launcher': Path(launcher_path)}
     for key, item in record['rom_libraries'].items():
@@ -94,6 +107,24 @@ def verify_native_display_routing(record, launcher_path):
         paths[key] = path
     images = {key: path.read_bytes() for key, path in paths.items()}
     layouts = {key: elf_sections(image) for key, image in images.items()}
+    relocations = {
+        key: {address: (info, addend) for address, info, addend in
+              elf_relocations(image, layouts[key]['.rela.dyn'])}
+        for key, image in images.items()
+    }
+    for image, slots in record.get('relative_relocations', {}).items():
+        for slot, target in slots.items():
+            assert relocations[image][int(slot, 16)] == (1027, int(target, 16)), (image, slot)
+    for image, slots in record.get('relr_relocations', {}).items():
+        data, sections = images[image], layouts[image]
+        addresses = set(elf_relr_addresses(data, sections['.relr.dyn']))
+        for slot, target in slots.items():
+            address = int(slot, 16)
+            assert address in addresses, (image, slot)
+            section = next(sh for sh in sections.values() if sh[2] & 2 and sh[1] != 8
+                           and sh[3] <= address <= sh[3] + sh[5] - 8)
+            offset = section[4] + address - section[3]
+            assert struct.unpack_from('<Q', data, offset)[0] == int(target, 16), (image, slot)
     for item in record['direct_branches']:
         key = item['image']
         text = layouts[key]['.text']
@@ -106,24 +137,36 @@ def verify_native_display_routing(record, launcher_path):
         key = item['image']
         data, sections = images[key], layouts[key]
         dynsym, dynstr = (sections[name][4] for name in ('.dynsym', '.dynstr'))
-        records = elf_relocations(data, sections['.rela.dyn'])
-        info, addend = next((info, addend) for address, info, addend in records
-                            if address == int(item['slot'], 16))
-        assert info & 0xffffffff == 257 and addend == 0, item
+        info, addend = relocations[key][int(item['slot'], 16)]
+        assert info & 0xffffffff == item.get('type', 257) and addend == 0, item
         symbol = dynsym + 24 * (info >> 32)
         name_offset = dynstr + struct.unpack_from('<I', data, symbol)[0]
         name = data[name_offset:data.index(0, name_offset)].decode()
         assert all(part in name for part in item['symbol_parts']), item
         assert struct.unpack_from('<Q', data, symbol + 8)[0] == int(item['symbol_va'], 16), item
-    print('PASS: native display routing input hashes, direct branches and named relocations')
+
+
+def verify_d10(capture):
+    root = Path('analysis/local/device-validation') / capture['directory']
+    for name, entry in capture['files'].items():
+        source = root / name
+        assert sha256(source) == entry['sha256'], source
+        if 'lines' in entry:
+            lines = source.read_bytes().split(b'\n')
+            for line, fragment in entry['lines'].items():
+                assert fragment.encode('utf-8') in lines[int(line) - 1], (source, line, fragment)
+    print('PASS: archived D10 log, window, compositor and screenshot hashes and line anchors')
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--local', action='store_true', help='verify private ROM copies and anchors')
+    parser.add_argument('--d10', action='store_true', help='verify the archived D10 capture')
     args = parser.parse_args()
     evidence = Path('analysis/evidence')
     data = json.loads((evidence / 'native-desktop-stage2.json').read_text(encoding='utf-8'))
+    first_frame = json.loads((evidence / 'native-first-frame.json').read_text(encoding='utf-8'))
+    assert first_frame['new_device_validation'] == 'NOT_RUN'
     pinned = {r['path']: r['sha256'] for r in json.loads((evidence / 'components.json').read_text(encoding='utf-8'))}
     pinned.update({r['local']: r['sha256'] for r in json.loads((evidence / 'input-copies.json').read_text(encoding='utf-8'))})
     methods = data['method_records']
@@ -153,7 +196,13 @@ def main():
                 stream.seek(int(native[field], 16))
                 assert stream.read(len(anchor)) == anchor, field
         verify_native_lifecycle(data['native_lifecycle'], data['inputs'][native['input']]['local'])
-        verify_native_display_routing(data['native_display_routing'], data['inputs'][native['input']]['local'])
+        launcher_path = data['inputs'][native['input']]['local']
+        verify_native_elf_anchors(data['native_display_routing'], launcher_path)
+        print('PASS: native display routing input hashes, direct branches and named relocations')
+        verify_native_elf_anchors(first_frame, launcher_path)
+        print('PASS: first-frame ROM input hashes, direct branches and relocations')
+    if args.d10:
+        verify_d10(first_frame['capture'])
     documents = [Path('README.md'), Path('analysis/README.md'), *Path('reports').glob('*.md'), *Path('docs').glob('*.md')]
     count = 0
     for source in documents:

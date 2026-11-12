@@ -26,10 +26,10 @@
 
 [ROM] 已知次屏窗口的 `on_surface_created` 槽走指标向量析构并释放传入对象。它提供了一个可对照的入口。[窗口回调与实参](12-native-secondary-home-display-routing.md)
 
-[待验证] 离线从次屏窗口描述符其余回调、窗口创建后的实际渲染宿主与 Flutter 桥接查首帧生产者。用 D10 的同一 token 对照 `surface_created`、绘制完成回调、buffer 提交与 `finishDrawing`。这一步可以使用现有 ROM 和日志。D9 已确认的背屏共组电源问题仍按独立组分配路径保留。
+[ROM] 后续离线对照已定位主屏 Flutter 的窗口绑定入口、次屏回调缺口及超时无事务路径。D10 回切后同一 HOME token 换用新图层，仍无可绘制内容。[报告 19](19-secondary-home-render-host.md)
 
 ## 回退与证据
 
 两次重启分别用于启用和停用 D3。停用后测试模块保留，挂载 APK、测试包和 Overlay 条目均退出，三项资格回到 false，其余 8 个模块状态与启用前相同。镜像值恢复为 1。无线调试原值为 1，重启后经有线恢复，最后从设备返回的 TLS 端口重新接入。用户确认镜像正常，复核外屏位于组 0、物理 ON、SF 活动模式为 2560×1440 @ 60 Hz。
 
-原始数据在 `analysis/local/device-validation/*-D10-desktop-content-control/`。主要锚点为 `home-windows.txt:125–155`、`home-sf.txt:632–635`、`calculator-sf.txt:399–402,1092–1102`、两张 `*-physical.png`，以及 `live-logcat.txt:38306–38315,38556,38594–38629,39415–39440,39549`。回退的画面和物理模式见 `rollback-live-*`，原始日志与截图留在本地。
+原始数据在 `analysis/local/device-validation/*-D10-desktop-content-control/`。主要锚点为 `home-windows.txt:125–157`、`home-sf.txt:632–635`、`calculator-sf.txt:399–402,1092–1102`、两张 `*-physical.png`，以及 `live-logcat.txt:38225,38473,38511–38546,39332–39357,39466`。回退的画面和物理模式见 `rollback-live-*`，原始日志与截图留在本地。

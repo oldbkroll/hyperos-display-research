@@ -4,7 +4,7 @@
 
 原生计划阶段 2 复用 `SelectiveJadx.java` 和 JADX 1.5.6，按 [新增证据](evidence/native-desktop-stage2.json) 的 `input`、类路径与输出分组定位；`dialog-fallback`、`shell-fallback` 分组使用 `fallback`。工具日志 `local/stage2-jadx-*.log` 保留常规重组失败及补查。类名分派用 NDK LLVM 在 `0x94e41c–0x94e469` 做定向反汇编，UI 名称用 `llvm-readelf -r -W` 核对 `0xe7e178` 重定位，应用入口用 `llvm-objdump -d --disassemble-symbols=app_entry_point`。完整日志和反汇编不入 Git。
 
-`python scripts/verify_native_desktop.py --local` 校验输入 SHA-256、私有方法文件和行锚点、两个 ELF 字符串偏移及公开索引；无本地输入时省略 `--local`。脚本只读，ELF 指令与重定位语义按 [报告 08](../reports/08-native-desktop-call-chain.md) 手动复核。
+`python scripts/verify_native_desktop.py --local` 校验输入 SHA-256、私有方法锚点、ELF 分支、字符串和重定位。有归档 D10 时加 `--d10` 校验日志、快照和截图哈希及文本锚点。无本地输入时可只校验公开索引。定向反汇编和 RELA/RELR 复查方法见[报告 19](../reports/19-secondary-home-render-host.md)。
 
 ## 证据入口
 
@@ -17,6 +17,7 @@
 | evidence/aosp-sources.json | 固定 Android 17 提交和每文件哈希 |
 | evidence/overlays.json | 97 个 packaged RRO 的哈希、manifest 条件、相关资源；无运行时状态 |
 | evidence/findings.json | F01–F24 方法定位、本地反编译文件哈希、数值资源和关键属性 |
+| evidence/native-first-frame.json | 主次屏渲染调用和超时闭包的 ELF 锚点，D10 归档哈希及 token / layer 锚点 |
 | evidence/vendor-binaries.json | 显示 ELF 的哈希和字符串偏移；字符串本身不证明控制流 |
 | evidence/tools.json | 工具来源/版本/校验边界 |
 
