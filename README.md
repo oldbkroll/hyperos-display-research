@@ -33,6 +33,7 @@
 | [17 电源与合成对照](reports/17-external-desktop-power-and-composition-control.md) | 同一次启动验证共组继承、外屏重新点亮、黑底状态栏和停用回退 |
 | [18 次屏 HOME 首帧对照](reports/18-secondary-home-first-frame-control.md) | 外屏保持 ON 时比较 HOME 和计算器的绘制、buffer 与物理输出 |
 | [19 次屏 HOME 渲染宿主](reports/19-secondary-home-render-host.md) | 对照主屏 Flutter Surface 绑定，复核 D10 初建和重建的图层与空事务完成路径 |
+| [20 次屏 HOME 的 Flutter AOT 入口](reports/20-secondary-home-aot-entry.md) | 追踪 Dart 路由、Rust 多视图窗口的 token 与落屏上下文，定位两条路线共用的缺口 |
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 

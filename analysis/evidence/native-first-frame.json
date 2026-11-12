@@ -219,11 +219,16 @@
         "sha256": "0df3ea2006e5472ec66c421421fc980e02c2f9aa9372afd9be1dc7580a8be178",
         "lines": {
           "38225": "SecondaryDisplayLauncherUi::on_create token=12970367465612758864",
+          "38226": "densityDpi: 150",
           "38473": "SecondaryDisplayLauncher#232)/@0x45384a for 3f30d8e",
           "38511": "width: 2560, height: 1440, layer ID: 232",
           "38518": "VRI[SecondaryDisplayLauncher#232]#5(BLAST Consumer)",
           "38543": "surface_created:12970367465612758864",
           "38544": "surface_changed:12970367465612758864",
+          "38563": "displayId: 2",
+          "38820": "display_id:2, type:2019, title:Some(BinderString8 { inner: \"MiuiTaskbarNavWindow_2\"",
+          "38833": "add_window success token:12970367470982283616",
+          "38934": "VRI-MiuiTaskbarNavWindow_2#244",
           "39071": "wmssync arm timeout, token:12970367465612758864",
           "39333": "wmssync mark_sync_ready reason=timeout",
           "39334": "token:12970367465612758864, seq:6, has_tx:false, render_target_valid:true, sc_valid:true, window_stopped:false",
@@ -236,8 +241,10 @@
           "44202": "surface_created:12970367465612758864",
           "44765": "wmssync mark_sync_ready reason=timeout",
           "44766": "token:12970367465612758864, seq:6, has_tx:false",
+          "45710": "secondary display present (display_count=3), skip relaunch-kill",
           "45729": "id:197400000009,api:0,p:0,c:6516",
-          "79599": "VRI[Launcher#156]#4(BLAST Consumer)4](id:197400000005,api:1,p:6516,c:6516) disconnect"
+          "79599": "VRI[Launcher#156]#4(BLAST Consumer)4](id:197400000005,api:1,p:6516,c:6516) disconnect",
+          "83258": "LauncherApp paused, initialRoute: /home"
         }
       },
       "home-windows.txt": {

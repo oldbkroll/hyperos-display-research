@@ -1,0 +1,377 @@
+{
+  "rom": "popsicle / OS4.0.6.0.XPBCNXM",
+  "new_device_validation": "NOT_RUN",
+  "apk_input": "home",
+  "dart": {
+    "member": "lib/arm64-v8a/libapp.so",
+    "sha256": "5030b84065cfbacd2db0a92f3af284a9bf71d592c05ba06b9292b7d004849610",
+    "mini_debug": {
+      "sha256": "fffbf737bebd8d73ee0f83b996c047b201bfaff756b6eaad972b8933becbc41a",
+      "symbols": {
+        "0x12d0c0c": [
+          "main"
+        ],
+        "0x1adb9e8": [
+          "main"
+        ],
+        "0x1ad83d8": [
+          "_startApp"
+        ],
+        "0x12cf3f0": [
+          "LauncherAddonManager.setInitialRoute"
+        ],
+        "0x12cf4cc": [
+          "AppEntrypoint.fromRoute"
+        ],
+        "0x12ce770": [
+          "runMultiWindowApp"
+        ],
+        "0x10ed2dc": [
+          "_MultiWindowRootState.build"
+        ],
+        "0x199e550": [
+          "MultiViewManager.addViewLight"
+        ],
+        "0x199e110": [
+          "RecentsWindowOverlay.showRecentWindow"
+        ],
+        "0x1b7c108": [
+          "GlobalHotseatWindowManager.createHotseatWindow"
+        ],
+        "0x1764c10": [
+          "FoldCalculateHandler.calExternalScreen"
+        ],
+        "0x1b9f8f4": [
+          "FoldCalculateHandler.handle"
+        ],
+        "0x1535368": [
+          "LaptopCellScreen.build"
+        ],
+        "0x1401084": [
+          "MirrorDesktopBridgeApiImpl.performMirrorDeviceIconClick"
+        ]
+      }
+    },
+    "data_anchors": {
+      "0x4ad4": "5d85d85296400e9b3992193deed317c9",
+      "0x705aa": "/recentsWindowPlaceholder",
+      "0x96195": "/home",
+      "0x1954fe": "MultiView.addLight",
+      "0x2ce751": "/recentsActivity",
+      "0x3006b1": "/desktop_setting",
+      "0x37b1c0": "flutter/platform"
+    },
+    "direct_branches": [
+      {
+        "image": "dart",
+        "pc": "0x12d0c18",
+        "target": "0x1adb9e8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1adba4c",
+        "target": "0x1ad83d8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1ad8d74",
+        "target": "0x12cf3f0"
+      },
+      {
+        "image": "dart",
+        "pc": "0x12cf45c",
+        "target": "0x12cf4cc"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1ad8f28",
+        "target": "0x12ce770"
+      },
+      {
+        "image": "dart",
+        "pc": "0x10ed484",
+        "target": "0xd27d78"
+      },
+      {
+        "image": "dart",
+        "pc": "0x199e608",
+        "target": "0x1ba52e4"
+      },
+      {
+        "image": "dart",
+        "pc": "0x199e3fc",
+        "target": "0x199e550"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1b7c3d0",
+        "target": "0x199e550"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1b9faec",
+        "target": "0x1764c10"
+      },
+      {
+        "image": "dart",
+        "pc": "0x14010e0",
+        "target": "0x14010f0"
+      }
+    ]
+  },
+  "bridge": {
+    "rom_libraries": {
+      "ui": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_ui_private.dylib.so",
+        "sha256": "0da78c3ec0e3719893890ba21a5456e2c857fdc8b0bdd232bac43c765a3eedc3"
+      },
+      "flutter": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_flutter.so",
+        "sha256": "77a3901d9df41d0d7db41a09250ea1627052225bf8661d0c992d4d668cc15e2b"
+      },
+      "public": {
+        "partition": "system_ext",
+        "path": "lib64/libhyper_os_ui_public.so",
+        "sha256": "a3420bb72de275a7fcd9623256e0e1022da9f92e30fb93e76534f48ef3e08df7"
+      }
+    },
+    "mini_debug": {
+      "launcher": {
+        "sha256": "fc90d8676bacf6acc857f52c464977908421d77cfcb6ad13f5fbf8dc9382a693",
+        "symbols": {
+          "0x94d558": [
+            "PlatformApplication",
+            "request_ui"
+          ],
+          "0x776834": [
+            "SecondaryDisplayLauncherUi",
+            "request_window"
+          ],
+          "0x776854": [
+            "SecondaryDisplayLauncherUi",
+            "on_create"
+          ],
+          "0x77a110": [
+            "NavBarStubView",
+            "on_surface_created"
+          ],
+          "0x5c0444": [
+            "engine_platform",
+            "LauncherUi"
+          ],
+          "0xb9d430": [
+            "EngineGroup",
+            "create_and_run_engine"
+          ],
+          "0xb9bfb8": [
+            "FlutterWindowState",
+            "on_created"
+          ],
+          "0x7780cc": [
+            "MainUiWindow",
+            "on_view_metrics_changed"
+          ],
+          "0x9250c8": [
+            "recents_activity_ui",
+            "create"
+          ],
+          "0xa8d248": [
+            "PlatformMethodHandler"
+          ],
+          "0xa6ef1c": [
+            "PlatformHandler",
+            "add_overlay_view_light"
+          ],
+          "0xa6f1a4": [
+            "PlatformHandler",
+            "add_overlay_view_light"
+          ],
+          "0xa65a00": [
+            "OverlayViewLight",
+            "add_window_impl"
+          ],
+          "0xa67098": [
+            "OverlayView",
+            "add_window_impl"
+          ],
+          "0xa537c0": [
+            "OverlayWindowLight",
+            "on_surface_created"
+          ],
+          "0xa53bf8": [
+            "OverlayWindowLight",
+            "on_view_metrics_changed"
+          ],
+          "0x747498": [
+            "PlatformApplication",
+            "on_configuration_changed"
+          ],
+          "0x6b0e18": [
+            "TaskbarManager",
+            "on_display_add_system_decorations"
+          ]
+        }
+      },
+      "flutter": {
+        "sha256": "933b8a64d191813234c01daf05b373d3f66a5d7ff4dc5ad9e3cdae4ed21c9088",
+        "symbols": {
+          "0x6e6754": [
+            "runtime_create_shell_holder"
+          ],
+          "0x6e6c38": [
+            "shell_holder_spawn"
+          ],
+          "0x6e808c": [
+            "shell_holder_launch"
+          ],
+          "0x6ee744": [
+            "shell_holder_window_surface_created"
+          ],
+          "0x6f0354": [
+            "shell_holder_set_window_viewport_metrics"
+          ]
+        }
+      }
+    },
+    "relative_relocations": {
+      "launcher": {
+        "0xe1e218": "0x77a110",
+        "0xe1d6b0": "0x7780cc",
+        "0xe89ee0": "0xa6ef1c",
+        "0xe8c330": "0xa6f1a4",
+        "0xe86758": "0xa65640"
+      }
+    },
+    "relr_relocations": {
+      "flutter": {
+        "0x1165c68": "0x6e808c",
+        "0x1165da0": "0x6f0354"
+      }
+    },
+    "direct_branches": [
+      {
+        "image": "launcher",
+        "pc": "0x94e468",
+        "target": "0x94dbc4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x92531c",
+        "target": "0x5c0444"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa8f2e0",
+        "target": "0xa90884"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa6582c",
+        "target": "0xa65a00"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa65df0",
+        "target": "0xa66184"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa65e10",
+        "target": "0xe02f50"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa65e2c",
+        "target": "0xa56c7c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa65e3c",
+        "target": "0xe06110"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa674a0",
+        "target": "0xe02f50"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa674cc",
+        "target": "0xe06110"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa537fc",
+        "target": "0xb9bfb8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xa53c1c",
+        "target": "0xb9ce60"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7780f8",
+        "target": "0xb9ce60"
+      },
+      {
+        "image": "launcher",
+        "pc": "0xb9cf10",
+        "target": "0xb9c3c0"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x7476a8",
+        "target": "0x8f6e74"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x747784",
+        "target": "0x7478d4"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94d090",
+        "target": "0x6b0e18"
+      },
+      {
+        "image": "public",
+        "pc": "0x6f6f8",
+        "target": "0x82f68"
+      },
+      {
+        "image": "public",
+        "pc": "0x6f720",
+        "target": "0x82f80"
+      },
+      {
+        "image": "ui",
+        "pc": "0x1f5f18",
+        "target": "0x228368"
+      },
+      {
+        "image": "ui",
+        "pc": "0x1b8b74",
+        "target": "0x228368"
+      },
+      {
+        "image": "ui",
+        "pc": "0x1b3a54",
+        "target": "0x228380"
+      },
+      {
+        "image": "ui",
+        "pc": "0x1b3a70",
+        "target": "0x1b293c"
+      },
+      {
+        "image": "ui",
+        "pc": "0x1f6100",
+        "target": "0x1b293c"
+      }
+    ],
+    "symbol_relocations": []
+  }
+}

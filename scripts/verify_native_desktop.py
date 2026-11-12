@@ -3,10 +3,12 @@
 import argparse
 import hashlib
 import json
+import lzma
 from pathlib import Path
 import re
 import struct
 import subprocess
+from zipfile import ZipFile
 
 
 def sha256(path):
@@ -98,6 +100,32 @@ def verify_native_lifecycle(record, launcher_path):
     print(f"PASS: {len(record['callbacks'])} named lifecycle slots and launcher relocation targets")
 
 
+def verify_direct_branches(branches, images, layouts):
+    for item in branches:
+        key = item['image']
+        text = layouts[key]['.text']
+        pc = int(item['pc'], 16)
+        assert text[3] <= pc <= text[3] + text[5] - 4, item
+        word = struct.unpack_from('<I', images[key], text[4] + pc - text[3])[0]
+        assert word >> 26 in (5, 37), item
+        displacement = ((word & 0x3ffffff) ^ 0x2000000) - 0x2000000
+        assert pc + 4 * displacement == int(item['target'], 16), item
+
+
+def verify_minidebug(image, sections, record):
+    section = sections['.gnu_debugdata']
+    debug = lzma.decompress(image[section[4]:section[4] + section[5]])
+    assert hashlib.sha256(debug).hexdigest() == record['sha256']
+    debug_sections = elf_sections(debug)
+    symtab, strtab = (debug_sections[name] for name in ('.symtab', '.strtab'))
+    symbols = {}
+    for name, _, _, _, value, _ in struct.iter_unpack('<IBBHQQ', debug[symtab[4]:symtab[4] + symtab[5]]):
+        offset = strtab[4] + name
+        symbols.setdefault(value, []).append(debug[offset:debug.index(0, offset)].decode())
+    for address, fragments in record['symbols'].items():
+        assert any(all(part in name for part in fragments) for name in symbols[int(address, 16)]), address
+
+
 def verify_native_elf_anchors(record, launcher_path):
     roots = json.loads(Path('extracted/native-files.json').read_text(encoding='utf-8'))
     paths = {'launcher': Path(launcher_path)}
@@ -125,14 +153,9 @@ def verify_native_elf_anchors(record, launcher_path):
                            and sh[3] <= address <= sh[3] + sh[5] - 8)
             offset = section[4] + address - section[3]
             assert struct.unpack_from('<Q', data, offset)[0] == int(target, 16), (image, slot)
-    for item in record['direct_branches']:
-        key = item['image']
-        text = layouts[key]['.text']
-        pc = int(item['pc'], 16)
-        word = struct.unpack_from('<I', images[key], text[4] + pc - text[3])[0]
-        assert word >> 26 in (5, 37), item
-        displacement = ((word & 0x3ffffff) ^ 0x2000000) - 0x2000000
-        assert pc + 4 * displacement == int(item['target'], 16), item
+    verify_direct_branches(record['direct_branches'], images, layouts)
+    for key, debug in record.get('mini_debug', {}).items():
+        verify_minidebug(images[key], layouts[key], debug)
     for item in record['symbol_relocations']:
         key = item['image']
         data, sections = images[key], layouts[key]
@@ -144,6 +167,22 @@ def verify_native_elf_anchors(record, launcher_path):
         name = data[name_offset:data.index(0, name_offset)].decode()
         assert all(part in name for part in item['symbol_parts']), item
         assert struct.unpack_from('<Q', data, symbol + 8)[0] == int(item['symbol_va'], 16), item
+
+
+def verify_secondary_aot(record, launcher_path, apk_path):
+    dart = record['dart']
+    with ZipFile(apk_path) as apk:
+        image = apk.read(dart['member'])
+    assert hashlib.sha256(image).hexdigest() == dart['sha256']
+    sections = elf_sections(image)
+    verify_minidebug(image, sections, dart['mini_debug'])
+    verify_direct_branches(dart['direct_branches'], {'dart': image}, {'dart': sections})
+    for offset, text in dart['data_anchors'].items():
+        start = int(offset, 16)
+        value = text.encode('ascii')
+        assert image[start:start + len(value)] == value, offset
+    verify_native_elf_anchors(record['bridge'], launcher_path)
+    print('PASS: MiuiHome AOT member, mini debug symbols and native window bridge anchors')
 
 
 def verify_d10(capture):
@@ -166,7 +205,9 @@ def main():
     evidence = Path('analysis/evidence')
     data = json.loads((evidence / 'native-desktop-stage2.json').read_text(encoding='utf-8'))
     first_frame = json.loads((evidence / 'native-first-frame.json').read_text(encoding='utf-8'))
+    secondary_aot = json.loads((evidence / 'native-secondary-aot.json').read_text(encoding='utf-8'))
     assert first_frame['new_device_validation'] == 'NOT_RUN'
+    assert secondary_aot['new_device_validation'] == 'NOT_RUN'
     pinned = {r['path']: r['sha256'] for r in json.loads((evidence / 'components.json').read_text(encoding='utf-8'))}
     pinned.update({r['local']: r['sha256'] for r in json.loads((evidence / 'input-copies.json').read_text(encoding='utf-8'))})
     methods = data['method_records']
@@ -201,6 +242,7 @@ def main():
         print('PASS: native display routing input hashes, direct branches and named relocations')
         verify_native_elf_anchors(first_frame, launcher_path)
         print('PASS: first-frame ROM input hashes, direct branches and relocations')
+        verify_secondary_aot(secondary_aot, launcher_path, data['inputs'][secondary_aot['apk_input']]['local'])
     if args.d10:
         verify_d10(first_frame['capture'])
     documents = [Path('README.md'), Path('analysis/README.md'), *Path('reports').glob('*.md'), *Path('docs').glob('*.md')]
