@@ -8,10 +8,10 @@
 
 ## 当前下一步
 
-单资源资格 Overlay 的启动对照和回退已完成。D10 结束时测试模块已停用并保留，设备恢复 1440p60 镜像。先读[报告 21](../reports/21-secondary-home-scene-lifecycle.md)、[报告 20](../reports/20-secondary-home-aot-entry.md)与[报告 18](../reports/18-secondary-home-first-frame-control.md)。原始证据在 `analysis/local/device-validation/`。
+单资源资格 Overlay 的启动对照和回退已完成。D10 结束时测试模块已停用并保留，设备恢复 1440p60 镜像。先读[报告 22](../reports/22-secondary-home-first-frame-entry.md)、[报告 21](../reports/21-secondary-home-scene-lifecycle.md)与[报告 18](../reports/18-secondary-home-first-frame-control.md)。原始证据在 `analysis/local/device-validation/`。
 
-1. 已对照主屏、最近任务和设置，定位可复用的 scene、窗口绑定和销毁链。最小设计为给 `SecondaryDisplayLauncher` 独立 scene。`LauncherUi` 的进程级 `WindowOperation` 及最近任务的 `EngineSnapshot` 要避开。继续离线确定可达的首帧 Dart 根视图，核对 Surface 重建后的首帧注册与迟到回调。随后核对桌面模型、手势及点击图标的来源 token / Bundle 和目标任务。复核命令为 `python scripts/verify_native_desktop.py --local --d10`。
-2. 有可审查的首帧实现后再单独安排真机。D10 的 HOME token 保持不变，前台切换后 VRI 从 232 重建为 273；拔线后销毁活动并移除窗口。后续需关联 scene、Surface、首个 buffer 入队与 latch、实际画面和拔线清理。D9 重插后外屏复用背屏组 1 的 `DOZE/OFF` 请求，共组时按外屏 ID 唤醒会作用于背屏。[应用落屏](../reports/12-native-secondary-home-display-routing.md) · [电源对照](../reports/17-external-desktop-power-and-composition-control.md)
+1. 原厂 `CategorySettingActivity → categorySettingsPage` 已定位，可作为 Flutter 出帧正对照候选。独立次屏 HOME 仍需自己的内容入口。根 Surface 创建会注册下一帧回调，已查平台闭包没有 Surface 代次。独立 scene 设计需在注册时绑定当前 Surface 身份，并在销毁后拒绝旧回调。复核命令为 `python scripts/verify_native_desktop.py --local --d10`。
+2. 分类设置页正对照需另行授权后才可在外屏观察，记录实际落点、图层、首个 buffer 入队和 latch。独立 HOME 要等首帧实现可审查后再安排实机。D10 的 HOME token 保持不变，前台切换后 VRI 从 232 重建为 273；拔线后销毁活动并移除窗口。应用启动的来源 token / Bundle 与目标任务归属仍待查。D9 重插后外屏复用背屏组 1 的 `DOZE/OFF` 请求，共组时按外屏 ID 唤醒会作用于背屏。[应用落屏](../reports/12-native-secondary-home-display-routing.md) · [电源对照](../reports/17-external-desktop-power-and-composition-control.md)
 3. ROM 内 SF 的两个外屏模式拒绝分支已定位。1440p50 与 1080p60 的 DMS 目标能送到 SF，但 HWC 维持 1440p60。精确 `120.00001` 仍需追踪 DMS 的目标筛选。启动回退已验证有线 ADB 和本机 RescueBrick 的一次触发，内置安全模式仍未验证。
 
 ## 首轮研究交接

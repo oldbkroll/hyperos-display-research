@@ -112,6 +112,13 @@ def verify_direct_branches(branches, images, layouts):
         assert pc + 4 * displacement == int(item['target'], 16), item
 
 
+def verify_data_anchors(image, anchors):
+    for offset, text in anchors.items():
+        start = int(offset, 16)
+        value = text.encode('ascii')
+        assert image[start:start + len(value)] == value, offset
+
+
 def verify_minidebug(image, sections, record):
     section = sections['.gnu_debugdata']
     debug = lzma.decompress(image[section[4]:section[4] + section[5]])
@@ -154,6 +161,8 @@ def verify_native_elf_anchors(record, launcher_path):
             offset = section[4] + address - section[3]
             assert struct.unpack_from('<Q', data, offset)[0] == int(target, 16), (image, slot)
     verify_direct_branches(record['direct_branches'], images, layouts)
+    for key, anchors in record.get('data_anchors', {}).items():
+        verify_data_anchors(images[key], anchors)
     for key, debug in record.get('mini_debug', {}).items():
         verify_minidebug(images[key], layouts[key], debug)
     for item in record['symbol_relocations']:
@@ -177,10 +186,7 @@ def verify_secondary_aot(record, launcher_path, apk_path):
     sections = elf_sections(image)
     verify_minidebug(image, sections, dart['mini_debug'])
     verify_direct_branches(dart['direct_branches'], {'dart': image}, {'dart': sections})
-    for offset, text in dart['data_anchors'].items():
-        start = int(offset, 16)
-        value = text.encode('ascii')
-        assert image[start:start + len(value)] == value, offset
+    verify_data_anchors(image, dart['data_anchors'])
     verify_native_elf_anchors(record['bridge'], launcher_path)
     print('PASS: MiuiHome AOT member, mini debug symbols and native window bridge anchors')
 

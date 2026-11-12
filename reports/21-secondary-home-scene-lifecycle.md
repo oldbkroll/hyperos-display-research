@@ -31,7 +31,7 @@
 
 先保留 `SecondaryDisplayLauncher` 的 Activity 和系统分配的窗口，在 MiuiHome 内给该 Activity 一个独立 scene。可复用 `SceneDelegate`、引擎组和 `FlutterWindowState`；首个验证版本只需一个可达、能提交可辨认帧的 Dart 根视图。次屏 scene 只接受自身窗口的 `WindowOperation`、`NativeWindow` 和 viewport，按当前 Surface 身份配对回调。次屏 HOME 不应调用会覆盖 `GlobalStates` 主窗口引用的 Launcher 业务路径，也不应占用最近任务的 `EngineSnapshot` token。这个设计仍需找到或实现可进入的 Dart 根视图，当前 ROM 未确认可直接用的次屏内容入口。
 
-1. `on_create` 建立 Activity 级 scene，并从该 Activity 配置初始化显示属性。attached 后将该 scene 与运行库给出的窗口对象关联。绑定当前 Surface 并应用该窗口最新的 viewport。原厂默认首帧回调没有 Surface 代次参数，需要核对重建后如何重新注册，以及如何排除上一代 Surface 的迟到通知。
+1. `on_create` 建立 Activity 级 scene，并从该 Activity 配置初始化显示属性。attached 后将该 scene 与运行库给出的窗口对象关联。绑定当前 Surface 并应用该窗口最新的 viewport。根 Surface 创建会重新注册原厂下一帧回调；平台通知没有 Surface 代次，独立 scene 仍需核对通知归属。[首帧注册与迟到通知](22-secondary-home-first-frame-entry.md)
 2. `on_surface_destroyed` 使旧 Surface 对应的异步绘制结果失效，释放其渲染目标。Activity 和窗口仍有效时允许重建，重新绑定和确认首帧。最终退出时按 scene/窗口归属注销监听、释放 `WindowOperation` 和引擎引用。清理需要容忍 Surface 先销毁、晚到回调和重复退出通知。
 3. 在恢复完整桌面前，另行核对 `/home` 的模型和手势注册能否按 scene 隔离，并查清点击图标的来源 token、目标 display 和任务复用规则。应用落屏链仍待查。路线 A/B 的窗口管理准入以这部分证据为前提。[应用落屏已有证据](12-native-secondary-home-display-routing.md) · [两条路线的准入条件](09-native-desktop-minimal-design.md)
 

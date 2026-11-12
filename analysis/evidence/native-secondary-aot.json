@@ -70,6 +70,33 @@
         ],
         "0x1b401cc": [
           "OfflineWidgetReceiver.unregister"
+        ],
+        "0x12d000c": [
+          "categorySettingsPage"
+        ],
+        "0x1ad835c": [
+          "categorySettingsPage"
+        ],
+        "0x153ff18": [
+          "CategorySettingsPage.build"
+        ],
+        "0x12d0e20": [
+          "drawerBackgroundSettingsPage"
+        ],
+        "0x1adc0e4": [
+          "drawerBackgroundSettingsPage"
+        ],
+        "0x12d0d00": [
+          "demoFinishPage"
+        ],
+        "0x1adbd04": [
+          "demoFinishPage"
+        ],
+        "0x1b29a9c": [
+          "_DemoFinishPageState._restoreStateFromSettings"
+        ],
+        "0x198740c": [
+          "Settings.putInt"
         ]
       }
     },
@@ -80,7 +107,10 @@
       "0x1954fe": "MultiView.addLight",
       "0x2ce751": "/recentsActivity",
       "0x3006b1": "/desktop_setting",
-      "0x37b1c0": "flutter/platform"
+      "0x37b1c0": "flutter/platform",
+      "0x7ed79": "/category_setting",
+      "0x1347b8": "categorySettingsPage",
+      "0x389584": "/drawer_background_setting"
     },
     "direct_branches": [
       {
@@ -162,6 +192,46 @@
         "image": "dart",
         "pc": "0x156f260",
         "target": "0x1b401cc"
+      },
+      {
+        "image": "dart",
+        "pc": "0x12d0020",
+        "target": "0x1ad835c"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1ad83cc",
+        "target": "0x1ad83d8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x12d0e34",
+        "target": "0x1adc0e4"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1adc154",
+        "target": "0x1ad83d8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x12d0d14",
+        "target": "0x1adbd04"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1adbd74",
+        "target": "0x1ad83d8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1540104",
+        "target": "0x128ebd8"
+      },
+      {
+        "image": "dart",
+        "pc": "0x1b29b68",
+        "target": "0x198740c"
       }
     ]
   },
@@ -335,6 +405,26 @@
           "0xd447a0": [
             "on_first_frame",
             "PlatformCallbacksDelegate"
+          ],
+          "0x92536c": [
+            "all_apps_settings_ui",
+            "create"
+          ],
+          "0xaa4e6c": [
+            "SceneConfiguration",
+            "with_user_args"
+          ],
+          "0x7738b0": [
+            "AllAppsSettingsUi",
+            "on_create"
+          ],
+          "0x7731e4": [
+            "AllAppsSettingsUi",
+            "request_window"
+          ],
+          "0x779df0": [
+            "AllAppsSettingsUiWindow",
+            "on_surface_created"
           ]
         }
       },
@@ -364,6 +454,56 @@
           ],
           "0x6efe0c": [
             "shell_holder_window_surface_destroyed"
+          ],
+          "0x6ea52c": [
+            "shell_holder_surface_created"
+          ],
+          "0x6f2e14": [
+            "hyper_SurfaceCreated"
+          ],
+          "0x6ff008": [
+            "PlatformViewAndroid",
+            "NotifyDestroyed"
+          ],
+          "0x700e54": [
+            "PlatformViewAndroid",
+            "InstallFirstFrameCallback"
+          ],
+          "0x701094": [
+            "PlatformViewAndroid",
+            "InstallFirstFrameCallback"
+          ],
+          "0x7010d4": [
+            "PlatformViewAndroid",
+            "DispatchFirstFrameToDart"
+          ],
+          "0x741028": [
+            "TaskRunner",
+            "PostTask"
+          ],
+          "0xe34b30": [
+            "Rasterizer",
+            "UnregisterViewSurface"
+          ],
+          "0xe36e44": [
+            "Rasterizer",
+            "DrawToSurfacesUnsafe"
+          ],
+          "0xe4d9ac": [
+            "Shell",
+            "OnPlatformViewDestroyed"
+          ],
+          "0xe4ea54": [
+            "Shell",
+            "OnPlatformViewSetNextFrameCallback"
+          ],
+          "0xe5e7ac": [
+            "Shell",
+            "OnPlatformViewSetNextFrameCallback"
+          ],
+          "0xe607a0": [
+            "Shell",
+            "OnPlatformViewDestroyed"
           ]
         }
       }
@@ -381,7 +521,11 @@
         "0xe1d6a8": "0x777990",
         "0xe1d6c0": "0x77801c",
         "0xf06570": "0xd447a0",
-        "0xf065a0": "0xd44930"
+        "0xf065a0": "0xd44930",
+        "0xe1cde0": "0x7738b0",
+        "0xe1ce08": "0x772b54",
+        "0xe1ce10": "0x7731e4",
+        "0xe1dd10": "0x779df0"
       }
     },
     "relr_relocations": {
@@ -390,7 +534,15 @@
         "0x1165da0": "0x6f0354",
         "0x1165c58": "0x6e7e90",
         "0x1165cd0": "0x6ea5d0",
-        "0x1165d98": "0x6efe0c"
+        "0x1165d98": "0x6efe0c",
+        "0x1165cb8": "0x6ea52c",
+        "0x1166bb8": "0x700e54",
+        "0x1166c00": "0x701094",
+        "0x1169b78": "0x741028",
+        "0x11a0358": "0xe4d9ac",
+        "0x11a0388": "0xe4ea54",
+        "0x11a1208": "0xe607a0",
+        "0x11a16d0": "0xe5e7ac"
       }
     },
     "direct_branches": [
@@ -658,8 +810,117 @@
         "image": "launcher",
         "pc": "0xb9cfe4",
         "target": "0xb9d150"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94f338",
+        "target": "0x92536c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x925408",
+        "target": "0xe00c10"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x9254cc",
+        "target": "0xaa4e6c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x925790",
+        "target": "0xd42db8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x77396c",
+        "target": "0xb9d430"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x773a80",
+        "target": "0xa67680"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x773c48",
+        "target": "0xa56c7c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x773c5c",
+        "target": "0x6aa718"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x773c88",
+        "target": "0x73347c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x774500",
+        "target": "0xa6981c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x779e2c",
+        "target": "0xb9bfb8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x772d24",
+        "target": "0xa63b0c"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x94ded0",
+        "target": "0x923fc8"
+      },
+      {
+        "image": "launcher",
+        "pc": "0x924094",
+        "target": "0xaa4e6c"
+      },
+      {
+        "image": "flutter",
+        "pc": "0x6ea5bc",
+        "target": "0x6f2e14"
+      },
+      {
+        "image": "flutter",
+        "pc": "0x6ee9d4",
+        "target": "0x6f2e14"
+      },
+      {
+        "image": "flutter",
+        "pc": "0x6ea648",
+        "target": "0x6ff008"
+      },
+      {
+        "image": "flutter",
+        "pc": "0x7010cc",
+        "target": "0x7010d4"
+      },
+      {
+        "image": "flutter",
+        "pc": "0xe60814",
+        "target": "0xe34b30"
       }
     ],
-    "symbol_relocations": []
+    "symbol_relocations": [],
+    "data_anchors": {
+      "launcher": {
+        "0x21a88c": "com.miui.home.launcher.allapps.settings.CategorySettingActivity",
+        "0x21a84c": "com.miui.home.launcher.allapps.settings.DrawerBackgroundActivity",
+        "0x21a8de": "categorySettingsPage",
+        "0x21a8f2": "drawerBackgroundSettingsPage",
+        "0x21a77b": "demoFinishPage"
+      },
+      "flutter": {
+        "0xe5565": "Shell::OnPlatformViewDestroyed::RasterTask",
+        "0xe6788": " check surface: rasterizer SetNextFrameCallback",
+        "0x119637": "PlatformView::NotifyDestroyed() Done"
+      }
+    }
   }
 }

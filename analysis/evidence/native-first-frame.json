@@ -250,6 +250,7 @@
           "45730": "(12970367465612758864) on_destroy",
           "45731": "remove_component_token: 12970367465612758864",
           "45732": "remove_window_with_immediate, token:12970367465612758864, immediate: true",
+          "79596": "PlatformView::NotifyDestroyed() Done",
           "79599": "VRI[Launcher#156]#4(BLAST Consumer)4](id:197400000005,api:1,p:6516,c:6516) disconnect",
           "83258": "LauncherApp paused, initialRoute: /home"
         }
