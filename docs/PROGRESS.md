@@ -1,6 +1,6 @@
 # 分阶段进度
 
-最后更新：2026-11-12（北京时间）。离线已定位原厂分类设置页的独立 Dart 入口，核对根 Surface 的首帧注册和销毁等待范围。D10 测试模块已停用，设备恢复 1440p60 镜像。[首帧对照入口](../reports/22-secondary-home-first-frame-entry.md)
+最后更新：2026-11-14（北京时间）。D12 普通应用外屏落屏及回切 `PASS`。空闲解锁后外屏留在背屏组且物理 OFF，恢复 `FAIL`。重插选「桌面」后恢复供电，仍为黑底和状态栏。D11 分类设置页已确认出帧，但启动会切换内屏模式，回切 `NOT_RUN`。[D11 实测](../reports/23-stock-flutter-external-display-preflight.md) · [D12 实测](../reports/24-external-activity-lifecycle-and-idle-power.md)
 
 ## 已接受的后续计划
 
@@ -10,7 +10,7 @@
 |---|---|---|
 | 1 统一证据 | 分析完成 | [N1–N6 证据矩阵、对照与缺项](../reports/07-native-desktop-evidence-matrix.md) |
 | 2 追踪原生调用链 | `PARTIAL` | 已核对分类设置页的 Flutter entrypoint 和根 Surface 重建时的下一帧回调。独立次屏内容入口、点击启动与任务归属仍待查。[首帧对照入口](../reports/22-secondary-home-first-frame-entry.md) · [应用落屏](../reports/12-native-secondary-home-display-routing.md) |
-| 3 设计最小改动 | `PARTIAL`，条件设计已交付 | A 优先评估、B 保留。独立次屏 scene 的首帧设计需在注册时绑定 Surface 身份。分类设置页可作为原厂 Flutter 正对照，外屏落点和实际出帧待验。[首帧设计](../reports/22-secondary-home-first-frame-entry.md) · [路线准入](../reports/09-native-desktop-minimal-design.md) |
+| 3 设计最小改动 | `PARTIAL`，条件设计已交付 | A 优先评估、B 保留。独立次屏 scene 的首帧设计需在注册时绑定 Surface 身份。分类设置页已确认外屏出帧，启动会改变内屏模式，后续只读对照需另选入口。[首帧设计](../reports/22-secondary-home-first-frame-entry.md) · [D11 实测](../reports/23-stock-flutter-external-display-preflight.md) · [路线准入](../reports/09-native-desktop-minimal-design.md) |
 | 4 真机基线 | `PARTIAL` | 已采镜像、断开和插线待选，核对 ROM、资格、HOME、EDID 和模式。有线 ADB 和一次 RescueBrick 回退已实测。外屏窗口写入归属仍待验。 |
 | 5 原生桌面 | `PARTIAL` | D9 确认外屏可复用背屏组的 `DOZE/OFF`。D10 在组 0、外屏 ON 时确认计算器出帧，次屏 HOME 初建及重建后均无可绘制内容。静态确认超时后的空事务完成路径，次屏首个 buffer 的入队和 latch 待验证。[电源对照](../reports/17-external-desktop-power-and-composition-control.md) · [首帧对照](../reports/19-secondary-home-render-host.md) |
 | 6 尺寸和高刷 | `PARTIAL` | 1440p60 与 OSD 一致。精确 120 Hz 偏好已匹配但 DMS 目标维持 60。1440p50 和精确 1080p60 请求到达 SF 后触发外屏警告，HWC 维持 1440p60。 |

@@ -36,6 +36,8 @@
 | [20 次屏 HOME 的 Flutter AOT 入口](reports/20-secondary-home-aot-entry.md) | 追踪 Dart 路由、Rust 多视图窗口的 token 与落屏上下文，定位两条路线共用的缺口 |
 | [21 次屏 HOME 的 scene 与窗口生命周期](reports/21-secondary-home-scene-lifecycle.md) | 对照主屏、最近任务和设置的 scene，定位进程级窗口引用、首帧回调和 Surface 重建清理 |
 | [22 原厂首帧对照入口](reports/22-secondary-home-first-frame-entry.md) | 定位分类设置页的 Dart 入口、根 Surface 首帧注册及迟到通知的归属边界 |
+| [23 原厂 Flutter 外屏出帧对照](reports/23-stock-flutter-external-display-preflight.md) | 分类页外屏出帧、内屏桌面模式变化、切走销毁及回退 |
+| [24 外屏任务回切与电源回归](reports/24-external-activity-lifecycle-and-idle-power.md) | 普通应用重建图层、息屏迁组、解锁及独立模式重插 |
 
 复现、证据索引和工具参数见 [analysis/README.md](analysis/README.md)。本地完整性验证：`python scripts/verify_research.py --local --rom`；不带两个选项可只检查公共产物。
 

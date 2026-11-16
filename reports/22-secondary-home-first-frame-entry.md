@@ -2,6 +2,8 @@
 
 2026-11-12（北京时间），popsicle / `OS4.0.6.0.XPBCNXM`，从 `e5717c7` 续查。使用同版 ROM 和 D10 归档，新增真机验证为 `NOT_RUN`。[AOT、Rust 和引擎锚点](../analysis/evidence/native-secondary-aot.json) · [D10 归档锚点](../analysis/evidence/native-first-frame.json)
 
+后续 D11 已确认分类设置页在外屏出帧。该页启动同时触发内屏从经典模式切到抽屉模式，后续只读对照应避开此入口。内屏布局及镜像已恢复。[D11 实测与恢复](23-stock-flutter-external-display-preflight.md)
+
 **[ROM] 应用分类设置页有可达的原厂 Dart entrypoint，可作为独立 Flutter scene 的首帧正对照候选。** 原厂根 Surface 创建路径会重新安装下一帧回调。回调检查平台视图的弱引用，但携带的参数没有 Surface 身份；窗口销毁等待渲染目标释放，尚无证据表明它会撤销已投递的平台线程回调。次屏 HOME 的独立 scene 仍需一个自己的内容入口和可归属到当前 Surface 的首帧通知。[独立 scene 条件设计](21-secondary-home-scene-lifecycle.md)
 
 ## [ROM] 应用分类设置页的启动链
