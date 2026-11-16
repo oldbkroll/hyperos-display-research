@@ -1,0 +1,923 @@
+{
+  "build": "OS4.0.6.0.XPBCNXM",
+  "baseline": "3c17468249d09b6ef97b38fd6dee1dd353546dac",
+  "report": "reports/25-external-display-group-recompute.md",
+  "rom_component_manifest": "analysis/evidence/components.json",
+  "rom_input": "extracted/files/system/system/framework/services.jar",
+  "rom_input_sha256": "fe7406b3899872c3cf43239512e8e6b787e3bcd8080e0d91f50fa04af54a99b3",
+  "tool": "JADX 1.5.6; use the fallback Mapper control flow for assignDisplayGroupLocked",
+  "launcher_aot": {
+    "dart": {
+      "local_path": "analysis/local/aot-secondary/libapp.so",
+      "sha256": "5030b84065cfbacd2db0a92f3af284a9bf71d592c05ba06b9292b7d004849610",
+      "symbol_index": "analysis/local/aot-secondary/symbols.txt",
+      "calls": [
+        [
+          "0x1ad83cc",
+          "0x1ad83d8"
+        ],
+        [
+          "0x192ddcc",
+          "0xa8227c"
+        ],
+        [
+          "0x192ddd8",
+          "0x8e15a4"
+        ],
+        [
+          "0x192dfb0",
+          "0xa8227c"
+        ],
+        [
+          "0x192dfbc",
+          "0x8e15a4"
+        ],
+        [
+          "0x8e15bc",
+          "0xa812b8"
+        ],
+        [
+          "0x8e19a0",
+          "0x192e498"
+        ],
+        [
+          "0x192e568",
+          "0xa7a3a8"
+        ],
+        [
+          "0xa7a400",
+          "0xa7a42c"
+        ],
+        [
+          "0xa7a4e4",
+          "0x8e1b00"
+        ]
+      ]
+    },
+    "rust": {
+      "local_path": "analysis/local/inputs/libapp_launcher.so",
+      "sha256": "971e62def084aa58848ac3c061f030794afbc42020f5cb7a9e7b1582c07286db",
+      "symbol_index": "analysis/local/aot-secondary/rust-symbols.txt",
+      "calls": [
+        [
+          "0x7fae60",
+          "0x881564"
+        ],
+        [
+          "0x560dc0",
+          "0x72c52c"
+        ],
+        [
+          "0x72cbb4",
+          "0x90cd6c"
+        ],
+        [
+          "0x72cc58",
+          "0x731460"
+        ],
+        [
+          "0x72cc68",
+          "0x7314bc"
+        ]
+      ],
+      "shared_controller_pointer": "0xf2a348",
+      "controller_write_candidate": "0x72cb00"
+    }
+  },
+  "anchors": [
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/DisplayManagerService.java",
+      "sha256": "da00322d9354ceaf7a77f03bda26c66d500f8a19c96a7ed5d72124d5612f316b",
+      "spans": [
+        {
+          "lines": [
+            1169,
+            1191
+          ],
+          "observation": "有效镜像值与资格更新"
+        },
+        {
+          "lines": [
+            2695,
+            2700
+          ],
+          "observation": "连接初始化补写任务资格"
+        },
+        {
+          "lines": [
+            2720,
+            2730
+          ],
+          "observation": "CONNECTED 双阶段处理"
+        },
+        {
+          "lines": [
+            2749,
+            2764
+          ],
+          "observation": "ADDED 缓存 ON 与实际下发"
+        },
+        {
+          "lines": [
+            2986,
+            2990
+          ],
+          "observation": "资格更新与逻辑变更通知"
+        },
+        {
+          "lines": [
+            3777,
+            3784
+          ],
+          "observation": "blank 配置由物理状态判断"
+        },
+        {
+          "lines": [
+            3974,
+            3993
+          ],
+          "observation": "转发组事件给监听器"
+        },
+        {
+          "lines": [
+            6361,
+            6400
+          ],
+          "observation": "向组内 DPC 扇出请求"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/LogicalDisplay.java",
+      "sha256": "b41e0e0aad092ce528a6ee4e66a08a7ce77f637503c33260e88e90fca2bb8b48",
+      "spans": [
+        {
+          "lines": [
+            471,
+            488
+          ],
+          "observation": "物理 blank 时使用空 layer stack"
+        },
+        {
+          "lines": [
+            673,
+            697
+          ],
+          "observation": "设置资格及内筛规则"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/DisplayGroupAllocator.java",
+      "sha256": "7139c986a1a41f53e37437f0c27cc73c034fe5f3043ecb6af6193271f8f9aa0e",
+      "spans": [
+        {
+          "lines": [
+            31,
+            82
+          ],
+          "observation": "资格缓存、投射 reason、分组名称及扫描"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/LogicalDisplayMapper.java",
+      "sha256": "d957b3ae06fc849fb287b3549e5bf23b5be7841e034b876b9632921b7710700c",
+      "spans": [
+        {
+          "lines": [
+            191,
+            216
+          ],
+          "observation": "设备增删改的监听入口"
+        },
+        {
+          "lines": [
+            599,
+            610
+          ],
+          "observation": "布局过渡提交使逻辑显示更新"
+        },
+        {
+          "lines": [
+            640,
+            647
+          ],
+          "observation": "物理新增、创建逻辑屏及布局更新"
+        },
+        {
+          "lines": [
+            675,
+            687
+          ],
+          "observation": "设备事件后重算所有逻辑屏的组"
+        },
+        {
+          "lines": [
+            719,
+            721
+          ],
+          "observation": "首次遍历标记 CONNECTED 并要求第二轮"
+        },
+        {
+          "lines": [
+            800,
+            842
+          ],
+          "observation": "组事件发送及受限第二次遍历"
+        },
+        {
+          "lines": [
+            1192,
+            1206
+          ],
+          "observation": "修改启用位的底层入口"
+        },
+        {
+          "lines": [
+            1317,
+            1324
+          ],
+          "observation": "启用改变后主动重算"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/desktop-power-fallback/sources/com/android/server/display/LogicalDisplayMapper.java",
+      "sha256": "a3c57347ecd3e203bbfd18a3e484269088763bdf30519ae1663a37991da6aa52",
+      "spans": [
+        {
+          "lines": [
+            428,
+            470
+          ],
+          "observation": "现成 ID 的采用条件、组名映射与分配"
+        },
+        {
+          "lines": [
+            503,
+            642
+          ],
+          "observation": "空布局名分支、分配实参、新组 flags 和成员移入"
+        },
+        {
+          "lines": [
+            1976,
+            1983
+          ],
+          "observation": "首次发现逻辑显示时置 CONNECTED 与第二轮标记"
+        },
+        {
+          "lines": [
+            2229,
+            2253
+          ],
+          "observation": "同步发 CONNECTED 后执行第二轮"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/LocalDisplayAdapter.java",
+      "sha256": "aa18817e6aed59c527b3c446e8ce5e1e7d684fdf355f7275a228fbb335643f0f",
+      "spans": [
+        {
+          "lines": [
+            234,
+            284
+          ],
+          "observation": "本地物理设备接入与移除"
+        },
+        {
+          "lines": [
+            1067,
+            1099
+          ],
+          "observation": "requested state 变化时发设备通知"
+        },
+        {
+          "lines": [
+            1196,
+            1238
+          ],
+          "observation": "下发 SF 电源并提交状态"
+        },
+        {
+          "lines": [
+            1274,
+            1279
+          ],
+          "observation": "committed state 更新事件"
+        },
+        {
+          "lines": [
+            1694,
+            1698
+          ],
+          "observation": "清设备信息缓存并发 CHANGED"
+        },
+        {
+          "lines": [
+            1918,
+            1933
+          ],
+          "observation": "热插拔回调"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/group-recompute-fallback/sources/com/android/server/display/LocalDisplayAdapter.java",
+      "sha256": "f13b3bfd6ee853bc6e36d99d57339354e346bfd21f7330d864cea1b21bb3c7da",
+      "spans": [
+        {
+          "lines": [
+            969,
+            1359
+          ],
+          "observation": "单独亮度方法的 fallback 控制流"
+        },
+        {
+          "lines": [
+            1650,
+            1725
+          ],
+          "observation": "同一 Runnable 可处理亮度及厂商状态覆盖"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/DisplayAdapter.java",
+      "sha256": "005ed4cd8d4a3f62115cb2c34ae3bb761c95424ea226eb72cf6e475d9c60c13a",
+      "spans": [
+        {
+          "lines": [
+            75,
+            88
+          ],
+          "observation": "设备事件投递 Handler"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/DisplayDeviceRepository.java",
+      "sha256": "b18dd38ec0992032dfadc96c439732a5ca0a1d51568754a75789155e73c34db0",
+      "spans": [
+        {
+          "lines": [
+            147,
+            188
+          ],
+          "observation": "计算 diff 并通知，纯 committed-state 的日志受 DEBUG 控制"
+        },
+        {
+          "lines": [
+            210,
+            216
+          ],
+          "observation": "分发变更给 Mapper 等监听者"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/display/ExternalDisplayPolicy.java",
+      "sha256": "89de1e9df3f3bcafdde8007024be405408027381575182b7800fe91f175da066",
+      "spans": [
+        {
+          "lines": [
+            109,
+            122
+          ],
+          "observation": "确认启用的允许条件和 Mapper 入口"
+        },
+        {
+          "lines": [
+            125,
+            156
+          ],
+          "observation": "连接待确认时使用底层 disable 入口"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/power/PowerManagerService.java",
+      "sha256": "1a6efb73acf6f061f1d5aab53c5f518b4c0bdb19feba9d4c306777cdd32d275c",
+      "spans": [
+        {
+          "lines": [
+            573,
+            625
+          ],
+          "observation": "新增、变化、移除的 PMS 处理及邻接 flag"
+        },
+        {
+          "lines": [
+            2151,
+            2167
+          ],
+          "observation": "非默认组睡眠和邻接组影响默认组 Doze"
+        },
+        {
+          "lines": [
+            2328,
+            2358
+          ],
+          "observation": "组事件对全局唤醒态和通知的影响"
+        },
+        {
+          "lines": [
+            3241,
+            3269
+          ],
+          "observation": "按组处理空闲"
+        },
+        {
+          "lines": [
+            3716,
+            3775
+          ],
+          "observation": "按组组装策略与 Doze override"
+        },
+        {
+          "lines": [
+            6091,
+            6135
+          ],
+          "observation": "普通与定向唤醒的目标组"
+        },
+        {
+          "lines": [
+            7221,
+            7235
+          ],
+          "observation": "对枚举出的组执行唤醒"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/power/PowerGroup.java",
+      "sha256": "d9d4d6b6d9e691ca420d0d3bda6097296aec8e652af7b42345414948c046435e",
+      "spans": [
+        {
+          "lines": [
+            209,
+            243
+          ],
+          "observation": "邻接组判定及组标志"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/services/sources/com/android/server/dreams/DreamManagerService.java",
+      "sha256": "6809c72299ff5068f4d66164eb252fc296829e5feabc7dc95c35dcf86d03baca",
+      "spans": [
+        {
+          "lines": [
+            1061,
+            1115
+          ],
+          "observation": "token 归组、组 override 与 doze wake lock"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261111-181256-D9-desktop-power-control/live-logcat.txt",
+      "sha256": "4b9fa8f8ac22b0f7645fb4cb5feae541f5a13ef0ad84935573ddc33794b4bc38",
+      "spans": [
+        {
+          "lines": [
+            8036,
+            8042
+          ],
+          "observation": "18:16:12.906 Dream 请求 OFF"
+        },
+        {
+          "lines": [
+            19927,
+            19928
+          ],
+          "observation": "18:16:43.174 关闭镜像"
+        },
+        {
+          "lines": [
+            30383,
+            30385
+          ],
+          "observation": "18:17:10.261 新外屏首次分到组 0，reason 3"
+        },
+        {
+          "lines": [
+            30410,
+            30411
+          ],
+          "observation": "18:17:10.263 禁用及物理 ON"
+        },
+        {
+          "lines": [
+            30446,
+            30446
+          ],
+          "observation": "18:17:10.275 组 0→1，reason 1"
+        },
+        {
+          "lines": [
+            30514,
+            30514
+          ],
+          "observation": "18:17:10.278 物理 OFF"
+        },
+        {
+          "lines": [
+            33895,
+            33897
+          ],
+          "observation": "18:17:19.514–19.515 启用及物理 ON"
+        },
+        {
+          "lines": [
+            38092,
+            38093
+          ],
+          "observation": "18:17:34.361 恢复镜像设置"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-162945-D11-stock-flutter-control-resume/group-transition-logs.txt",
+      "sha256": "bf916cc72a044854e185b5cf8ea6fec3d8075cfba336e0270b1294b145ceede7",
+      "spans": [
+        {
+          "lines": [
+            434,
+            434
+          ],
+          "observation": "16:36:42.990 关闭镜像"
+        },
+        {
+          "lines": [
+            713,
+            716
+          ],
+          "observation": "16:36:56.046 超时，56.048 组 0 Dozing"
+        },
+        {
+          "lines": [
+            748,
+            753
+          ],
+          "observation": "16:36:56.098 组 0→1，随后外屏 Off"
+        },
+        {
+          "lines": [
+            1171,
+            1181
+          ],
+          "observation": "16:36:58.418 生物识别唤醒，58.432 组 0 Awake"
+        },
+        {
+          "lines": [
+            1432,
+            1432
+          ],
+          "observation": "16:37:37.749 恢复镜像设置"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/return-guard-logs.txt",
+      "sha256": "ecc72a50f6a81f9df151cd1fcd32928ca57a6d28adba497b12b8f1bf19b02322",
+      "spans": [
+        {
+          "lines": [
+            139,
+            140
+          ],
+          "observation": "16:51:23.707 内屏亮度，23.708 组 0→1"
+        },
+        {
+          "lines": [
+            148,
+            152
+          ],
+          "observation": "16:51:23.715 外屏 Off"
+        },
+        {
+          "lines": [
+            155,
+            157
+          ],
+          "observation": "16:51:23.753 物理 layer stack −1"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/return-guard-timeout.txt",
+      "sha256": "d90302bb4c454d17a829f6e21bda09493d113aa9ceca71e87013b79f94dc5bfc",
+      "spans": [
+        {
+          "lines": [
+            1,
+            1
+          ],
+          "observation": "设定 600000 毫秒"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/return-guard-power.txt",
+      "sha256": "87e899aeab406b2886b2399ea7f4d78c5699c3f6292117e125da1939d9e127f6",
+      "spans": [
+        {
+          "lines": [
+            220,
+            222
+          ],
+          "observation": "电源快照的息屏设置"
+        },
+        {
+          "lines": [
+            384,
+            409
+          ],
+          "observation": "组 0 Awake，组 1 Dozing，0x40"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/category-switch-logcat.txt",
+      "sha256": "2685a0acfe9942da5052a760a1126c922af24c5dee62cf04bd613367105cf6df",
+      "spans": [
+        {
+          "lines": [
+            3358,
+            3383
+          ],
+          "observation": "16:50:42.118–42.136 已出帧页面的旧 Surface 销毁"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/watch-power-system.log",
+      "sha256": "890b5747829d3fbcf6dc63e037a5df607e32d796b205c05ebadb726fac33937d",
+      "spans": [
+        {
+          "lines": [
+            263,
+            266
+          ],
+          "observation": "17:00:53.530 超时，53.533 组 0 Dozing"
+        },
+        {
+          "lines": [
+            297,
+            297
+          ],
+          "observation": "17:00:53.588 组 0→1，reason 1"
+        },
+        {
+          "lines": [
+            305,
+            305
+          ],
+          "observation": "17:00:53.603 物理 OFF"
+        },
+        {
+          "lines": [
+            1092,
+            1092
+          ],
+          "observation": "17:01:10.104 生物识别唤醒"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/idle-wake-state.json",
+      "sha256": "84d6143848781b5e302ed81e93bd788ded34a4399de4787c55c034f194512993",
+      "spans": [
+        {
+          "lines": [
+            1,
+            38
+          ],
+          "observation": "同连接解锁后的组、资格和物理状态"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/idle-wake-power.txt",
+      "sha256": "3ab96078e4106b124fd1fa58d2e3729eb05d4a7dc70a57c013e2900cda0a9be4",
+      "spans": [
+        {
+          "lines": [
+            209,
+            209
+          ],
+          "observation": "组 1 持有 doze wake lock"
+        },
+        {
+          "lines": [
+            391,
+            415
+          ],
+          "observation": "组 0 Awake，组 1 Dozing"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/idle-wake-display.txt",
+      "sha256": "dc5c928cc19daa6f14a6ea0eadd771a5478fa76a8f0b51b615188970cad32d8d",
+      "spans": [
+        {
+          "lines": [
+            501,
+            553
+          ],
+          "observation": "背屏和外屏共组"
+        },
+        {
+          "lines": [
+            1465,
+            1465
+          ],
+          "observation": "背屏请求 DOZE/OFF"
+        },
+        {
+          "lines": [
+            2245,
+            2245
+          ],
+          "observation": "外屏请求 DOZE/OFF"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/watch-replug-system.log",
+      "sha256": "45ec2ced3f4bce2a658e7b7573e4296d21bdfb55278a42200a44755d4c2208f1",
+      "spans": [
+        {
+          "lines": [
+            195,
+            206
+          ],
+          "observation": "17:02:05.383 组 0；待选 ON；05.398 迁至组 1；05.401 OFF"
+        },
+        {
+          "lines": [
+            257,
+            258
+          ],
+          "observation": "17:02:26.059 启用并物理 ON"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/replug-enabled-state.json",
+      "sha256": "7d88846ddc3ba59366c3f87dac600f0aa379d243b63bbc7b0b25959e65a2cc2b",
+      "spans": [
+        {
+          "lines": [
+            1,
+            38
+          ],
+          "observation": "外屏启用、仍为组 1 且物理 ON"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/replug-enabled-display.txt",
+      "sha256": "3d63bbe402409e14538c8c748e5e8b69a1b84feea64b822542682141972235ea",
+      "spans": [
+        {
+          "lines": [
+            2252,
+            2252
+          ],
+          "observation": "重新启用后外屏 DPC 快照仍为 DOZE/OFF"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/before-return-by-task-gate-display.txt",
+      "sha256": "68d858d3ec3550562bd7c94d34aa650cbca9704eaba2d191d2c8f09cc9f0283d",
+      "spans": [
+        {
+          "lines": [
+            531,
+            531
+          ],
+          "observation": "600 秒对照停止时外屏为组 1"
+        },
+        {
+          "lines": [
+            2216,
+            2216
+          ],
+          "observation": "外屏收到 DOZE/OFF"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261112-164452-D11-stock-flutter-retry/category-first-logcat.txt",
+      "sha256": "16f2a3ede81734b50f5908a4a798618d03785f1f6b1b49cc1738b63527580c3b",
+      "spans": [
+        {
+          "lines": [
+            2698,
+            2698
+          ],
+          "observation": "创建分类页原厂 scene"
+        },
+        {
+          "lines": [
+            2818,
+            2819
+          ],
+          "observation": "16:48:25.323 分类页进入 Dart 启动"
+        },
+        {
+          "lines": [
+            3264,
+            3266
+          ],
+          "observation": "16:48:25.342 准备切换动效"
+        },
+        {
+          "lines": [
+            3279,
+            3285
+          ],
+          "observation": "16:48:25.343 Dart 选 drawer，FRB 调用共享 Rust 控制器"
+        },
+        {
+          "lines": [
+            3290,
+            3292
+          ],
+          "observation": "同毫秒更换模型数据库"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/group-recompute-wake-systemui/sources/com/android/systemui/statusbar/phone/BiometricUnlockController.java",
+      "sha256": "62bbd5f93af2164d6344fff4ce5c0c0e851987941c9e0282e8b5d7839335e7e9",
+      "spans": [
+        {
+          "lines": [
+            741,
+            762
+          ],
+          "observation": "构造生物识别唤醒回调"
+        },
+        {
+          "lines": [
+            835,
+            844
+          ],
+          "observation": "执行生物识别唤醒回调"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/group-recompute-wake-systemui/sources/com/android/systemui/statusbar/phone/BiometricUnlockController$$ExternalSyntheticLambda0.java",
+      "sha256": "5b5d02e29e0c763beab3deb3daa55d1ea24f677e5ba615522616342f826f0892",
+      "spans": [
+        {
+          "lines": [
+            20,
+            34
+          ],
+          "observation": "生物识别 details 以及三参数 wakeUp"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/jadx/group-recompute-wake-framework/sources/android/os/PowerManager.java",
+      "sha256": "0684808ea39c459d76d871e6d8f7c407b73e0d43865ecb5b0e3170fca87f3378",
+      "spans": [
+        {
+          "lines": [
+            669,
+            695
+          ],
+          "observation": "普通和指定 Display ID 的 Binder 唤醒入口"
+        }
+      ]
+    },
+    {
+      "local_path": "analysis/local/device-validation/20261114-165052-D12-external-lifecycle/rollback-verified-modules.txt",
+      "sha256": "86909dd0ef4f014ab5111a5d0ef2b2da9f961183abb7fbb722f28c98a7ccd22f",
+      "spans": [
+        {
+          "lines": [
+            134,
+            143
+          ],
+          "observation": "D3 版本 0.1，已停用且未标记移除或更新"
+        }
+      ]
+    }
+  ],
+  "new_device_validation": "NOT_RUN",
+  "wake_rom_inputs": {
+    "analysis/local/inputs/MiuiSystemUI.apk": "dc849ade5543ed6452020f7bbb2a165cd4da77a20c46618d072f8a23cebcb555",
+    "extracted/files/system/system/framework/framework.jar": "bfe477943ca7c58ea151897b2498f705ec4e9470ae727b6aa7d18305d342f5b8"
+  }
+}
